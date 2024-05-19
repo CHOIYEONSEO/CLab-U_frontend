@@ -1,0 +1,14 @@
+.separator {
+  border: 1.6px solid var(--color-darkslategray-400);
+  background-color: var(--color-whitesmoke-300);
+  height: 229px;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  position: relative;
+  border-radius: 19.37px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+}

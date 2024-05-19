@@ -1,0 +1,79 @@
+.frameChild {
+  border: 1.6px solid var(--color-darkslategray-400);
+  background-color: var(--color-whitesmoke-300);
+  height: 229px;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  position: relative;
+  border-radius: 19.37px;
+  box-sizing: border-box;
+  padding: var(--padding-6xl) var(--padding-base);
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: var(--font-size-mid-7);
+  color: var(--color-black);
+}
+.clublogoParent {
+  height: 477px;
+  width: 284px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg-8);
+}
+.description {
+  position: absolute;
+  top: 23px;
+  left: 17px;
+  line-height: 130%;
+  display: inline-block;
+  width: 865px;
+  height: 93px;
+  z-index: 1;
+}
+.clubdescriptionParent {
+  align-self: stretch;
+  height: 229px;
+  position: relative;
+}
+.descriptionPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lgi);
+  max-width: calc(100% - 296px);
+}
+.clubBanner,
+.contentPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.clubBanner {
+  flex: 1;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.contentPanel {
+  width: 1249px;
+  justify-content: flex-end;
+  padding: 0 var(--padding-10xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-mid-7);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 800px) {
+  .clublogoParent {
+    display: none;
+  }
+  .descriptionPanel {
+    max-width: 100%;
+  }
+}

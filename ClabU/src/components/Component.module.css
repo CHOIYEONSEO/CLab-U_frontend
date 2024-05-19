@@ -1,0 +1,12 @@
+.textarea {
+  border: 1.6px solid var(--color-darkslategray-400);
+  background-color: var(--color-whitesmoke-300);
+  height: 229.2px;
+  width: 284px;
+  outline: 0;
+  position: relative;
+  border-radius: 19.37px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+}
