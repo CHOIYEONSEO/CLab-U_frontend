@@ -1,71 +1,114 @@
-import { useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
+import Account from "./Account";
+import PortalPopup from "./PortalPopup";
+import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import styles from "./Navigation1.module.css";
 
 const Navigation1 = ({
-  logoIconDebugCommit,
-  clabUDebugCommit,
-  navigationDebugCommit,
-  onClabUTextClick,
-  onSearchClick,
-  onListContainerClick,
+  className = "",
+  logIn,
+  account1,
+  logo,
+  propWidth,
+  propRight,
   onApplicationContainerClick,
+  onListContainerClick,
+  onSearchContainerClick,
+  onClabUTextClick,
+  onLogoIconClick,
 }) => {
-  const logoIconStyle = useMemo(() => {
-    return {
-      debugCommit: logoIconDebugCommit,
-    };
-  }, [logoIconDebugCommit]);
-
-  const clabUStyle = useMemo(() => {
-    return {
-      debugCommit: clabUDebugCommit,
-    };
-  }, [clabUDebugCommit]);
-
+  const [isAccountOpen, setAccountOpen] = useState(false);
   const navigationStyle = useMemo(() => {
     return {
-      debugCommit: navigationDebugCommit,
+      width: propWidth,
+      right: propRight,
     };
-  }, [navigationDebugCommit]);
+  }, [propWidth, propRight]);
+
+  const navigate = useNavigate();
+
+  const onLogInImageClick = useCallback(() => {
+    navigate("/application-login");
+  }, [navigate]);
+
+  const openAccount = useCallback(() => {
+    setAccountOpen(true);
+  }, []);
+
+  const closeAccount = useCallback(() => {
+    setAccountOpen(false);
+  }, []);
 
   return (
-    <header className={styles.navigation} style={navigationStyle}>
-      <div className={styles.logoParent}>
+    <>
+      <div
+        className={[styles.navigation, className].join(" ")}
+        style={navigationStyle}
+      >
         <img
-          className={styles.logoIcon}
-          loading="lazy"
+          className={styles.loginIcon}
           alt=""
-          src="/logo@2x.png"
-          style={logoIconStyle}
+          src={logIn}
+          onClick={onLogInImageClick}
+        />
+        <img
+          className={styles.account1Icon}
+          alt=""
+          src={account1}
+          onClick={openAccount}
         />
         <div
-          className={styles.clabu}
-          onClick={onClabUTextClick}
-          style={clabUStyle}
+          className={styles.application}
+          onClick={onApplicationContainerClick}
         >
+          <div className={styles.application1}>Application</div>
+        </div>
+        <div className={styles.list} onClick={onListContainerClick}>
+          <div className={styles.application1}>List</div>
+        </div>
+        <div className={styles.search} onClick={onSearchContainerClick}>
+          <div className={styles.search1}>Search</div>
+        </div>
+        <div className={styles.clabu} onClick={onClabUTextClick}>
           Clab-U
         </div>
+        <img
+          className={styles.logoIcon}
+          alt=""
+          src={logo}
+          onClick={onLogoIconClick}
+        />
       </div>
-      <nav className={styles.searchParent}>
-        <button className={styles.search} onClick={onSearchClick}>
-          <div className={styles.search1}>Search</div>
-        </button>
-        <div className={styles.listContainerParent}>
-          <div className={styles.listContainer}>
-            <div className={styles.list} onClick={onListContainerClick}>
-              <div className={styles.list1}>List</div>
-            </div>
-          </div>
-          <div
-            className={styles.application}
-            onClick={onApplicationContainerClick}
-          >
-            <div className={styles.application1}>Application</div>
-          </div>
-        </div>
-      </nav>
-    </header>
+      {isAccountOpen && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closeAccount}
+        >
+          <Account onClose={closeAccount} />
+        </PortalPopup>
+      )}
+    </>
   );
+};
+
+Navigation1.propTypes = {
+  className: PropTypes.string,
+  logIn: PropTypes.string,
+  account1: PropTypes.string,
+  logo: PropTypes.string,
+
+  /** Style props */
+  propWidth: PropTypes.any,
+  propRight: PropTypes.any,
+
+  /** Action props */
+  onApplicationContainerClick: PropTypes.func,
+  onListContainerClick: PropTypes.func,
+  onSearchContainerClick: PropTypes.func,
+  onClabUTextClick: PropTypes.func,
+  onLogoIconClick: PropTypes.func,
 };
 
 export default Navigation1;

@@ -1,0 +1,239 @@
+.clubMembersChild {
+  position: absolute;
+  top: 152.5px;
+  left: 26.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 1151px;
+  height: 1px;
+}
+.b,
+.b1 {
+  position: absolute;
+  line-height: 130%;
+}
+.b {
+  top: 102px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+.b1 {
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+}
+.clubMembers {
+  position: absolute;
+  top: 1932px;
+  box-sizing: border-box;
+}
+.clubMembers,
+.clubPage,
+.clubRepEmail {
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.clubPage {
+  position: absolute;
+  top: 1733px;
+  box-sizing: border-box;
+}
+.clubRepEmail {
+  top: 1534px;
+}
+.clubLocation,
+.clubRepEmail,
+.clubRepName {
+  position: absolute;
+  box-sizing: border-box;
+}
+.clubRepName {
+  top: 1335px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.clubLocation {
+  top: 1136px;
+}
+.clubDescription,
+.clubLocation,
+.clubTag {
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.clubTag {
+  position: absolute;
+  top: 937px;
+  box-sizing: border-box;
+}
+.clubDescription {
+  top: 738px;
+}
+.clubDescription,
+.clubName,
+.labIdPasswordChild {
+  position: absolute;
+  box-sizing: border-box;
+}
+.clubName {
+  top: 539px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.labIdPasswordChild {
+  top: 145.5px;
+  left: 167.5px;
+  border-top: 1px dashed var(--color-black);
+  width: 251px;
+  height: 1px;
+}
+.b14,
+.b15 {
+  position: absolute;
+  top: 109px;
+  left: 34px;
+  line-height: 130%;
+}
+.b15 {
+  left: 168px;
+}
+.labIdPasswordItem {
+  position: absolute;
+  top: 217.5px;
+  left: 167.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 251px;
+  height: 1px;
+}
+.b16,
+.b17 {
+  top: 181px;
+  line-height: 130%;
+}
+.b16 {
+  position: absolute;
+  left: 34px;
+}
+.b17 {
+  left: 168px;
+}
+.b17,
+.b19,
+.div {
+  position: absolute;
+}
+.div {
+  top: 103px;
+  left: 461px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-silver);
+  width: 163px;
+  height: 41px;
+}
+.b19 {
+  top: 112px;
+  left: 480px;
+  font-size: var(--font-size-lg);
+  line-height: 130%;
+}
+.labIdPassword {
+  top: 2131px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 1200px;
+  height: 289px;
+  overflow: hidden;
+}
+.b20,
+.labIdPassword,
+.submit {
+  position: absolute;
+}
+.b20 {
+  top: 12px;
+  left: 127px;
+  line-height: 130%;
+}
+.submit {
+  top: 2473px;
+  left: 488px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-cornflowerblue);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 300px;
+  height: 55px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+}
+.club {
+  top: 10px;
+  left: 61px;
+}
+.club,
+.lab,
+.tab {
+  position: absolute;
+}
+.lab {
+  top: 10px;
+  left: 137px;
+  color: var(--color-darkgray-200);
+  cursor: pointer;
+}
+.tab {
+  top: 130px;
+  left: 522px;
+  width: 227px;
+  height: 44px;
+  overflow: hidden;
+  font-size: var(--font-size-xl);
+}
+.applicationFormClubChild {
+  position: absolute;
+  top: -47.3px;
+  left: 138px;
+  background-color: var(--color-gainsboro-200);
+  width: 100px;
+  height: 100px;
+}
+.applicationFormClub {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 2657px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

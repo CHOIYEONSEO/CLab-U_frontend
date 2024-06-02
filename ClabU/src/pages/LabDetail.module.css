@@ -20,16 +20,16 @@
   right: 59px;
   height: 229px;
 }
-.codedang1 {
-  text-decoration: underline;
-}
-.codedang {
-  color: inherit;
-}
-.skkudingSkkuCoding {
+.hci {
   margin: 0;
 }
-.skkudingSkkuCodingContainer {
+.span {
+  text-decoration: underline;
+}
+.a {
+  color: inherit;
+}
+.hciContainer {
   position: absolute;
   top: 529px;
   left: 73px;
@@ -38,14 +38,19 @@
   width: 1122px;
   height: 205px;
 }
-.b,
-.div1 {
-  position: absolute;
+.p {
+  margin: 0;
+  white-space: pre-wrap;
 }
 .b {
   top: 846px;
   left: 66px;
   line-height: 130%;
+}
+.b,
+.b1,
+.div1 {
+  position: absolute;
 }
 .div1 {
   width: calc(100% - 400px);
@@ -61,19 +66,23 @@
   opacity: 0.8;
   cursor: pointer;
 }
-.onlinejudge {
-  position: absolute;
+.b1 {
   top: 850px;
   left: 360px;
   font-size: var(--font-size-5xl);
   line-height: 130%;
 }
+.b2,
+.b3,
+.b4,
 .lablogoIcon {
   position: absolute;
+  left: 60px;
+}
+.lablogoIcon {
   width: calc(100% - 980px);
   top: 140px;
   right: 920px;
-  left: 60px;
   border-radius: 19.37px;
   max-width: 100%;
   overflow: hidden;
@@ -82,62 +91,57 @@
   opacity: 0.8;
   cursor: pointer;
 }
-.b1,
 .b2,
 .b3,
-.skkuding1 {
-  position: absolute;
+.b4 {
   top: 465px;
-  left: 60px;
   font-size: var(--font-size-7xl);
   line-height: 130%;
 }
-.b2,
 .b3,
-.skkuding1 {
+.b4 {
   top: 783px;
   left: 341px;
 }
-.b3,
-.skkuding1 {
+.b4 {
   top: 779px;
   left: 60px;
 }
-.skkuding1 {
+.naturalLanguageProcessing {
+  margin: 0;
+  font-size: 32px;
+}
+.naturalLanguageProcessingContainer {
+  position: absolute;
   top: 146px;
   left: 382px;
+  line-height: 130%;
   font-size: var(--font-size-17xl);
 }
-.p1 {
-  margin: 0;
-  white-space: pre-wrap;
-}
-.b4 {
+.googleScholarHttpsscholContainer {
+  position: absolute;
   top: 310px;
   left: 382px;
+  line-height: 130%;
   display: inline-block;
   width: 885px;
 }
-.b4,
 .b5,
-.httpswealthyHeliumFfenot {
+.httpsnlplabSkkugithubio {
   position: absolute;
+  font-size: var(--font-size-5xl);
   line-height: 130%;
 }
-.httpswealthyHeliumFfenot {
+.httpsnlplabSkkugithubio {
   top: 246px;
   left: 382px;
-  font-size: var(--font-size-lg);
-  text-decoration: underline;
-  font-weight: 700;
   color: var(--color-blue);
 }
 .b5 {
-  top: 159px;
-  left: 1023px;
-  font-size: var(--font-size-5xl);
+  top: 152px;
+  left: 984px;
 }
-.clubDetail {
+.labDetail {
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);

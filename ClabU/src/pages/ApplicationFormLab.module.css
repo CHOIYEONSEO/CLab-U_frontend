@@ -1,0 +1,405 @@
+.labMembersChild {
+  position: absolute;
+  top: 349.5px;
+  left: 627.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b,
+.b1 {
+  position: absolute;
+  left: 627px;
+  line-height: 130%;
+}
+.b {
+  top: 299px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b1 {
+  top: 240px;
+}
+.labMembersItem {
+  position: absolute;
+  top: 349.5px;
+  left: 27.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b2,
+.b3 {
+  position: absolute;
+  left: 27px;
+  line-height: 130%;
+}
+.b2 {
+  top: 299px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b3 {
+  top: 240px;
+}
+.labMembersInner {
+  position: absolute;
+  top: 209.5px;
+  left: 627.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b4 {
+  top: 159px;
+  left: 627px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b4,
+.b5,
+.lineDiv {
+  position: absolute;
+}
+.b5 {
+  top: 100px;
+  left: 627px;
+  line-height: 130%;
+}
+.lineDiv {
+  top: 209.5px;
+  left: 27.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b6,
+.b7 {
+  position: absolute;
+  left: 27px;
+  line-height: 130%;
+}
+.b6 {
+  top: 159px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b7 {
+  top: 100px;
+}
+.labMembers,
+.labPageChild {
+  position: absolute;
+  box-sizing: border-box;
+}
+.labMembers {
+  top: 2330px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 1200px;
+  height: 373px;
+  overflow: hidden;
+}
+.labPageChild {
+  top: 152.5px;
+  left: 26.5px;
+  border-top: 1px dashed var(--color-black);
+  width: 1151px;
+  height: 1px;
+}
+.b9 {
+  position: absolute;
+  top: 102px;
+  left: 23px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+.labPage,
+.labRepEmail,
+.labRepName {
+  position: absolute;
+  top: 2131px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.labRepEmail,
+.labRepName {
+  top: 1932px;
+}
+.labRepName {
+  top: 1733px;
+}
+.b16 {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+  display: inline-block;
+  width: 134px;
+  height: 29px;
+}
+.labDescription,
+.labLocation,
+.labName,
+.labTag,
+.profName {
+  position: absolute;
+  top: 1335px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.labDescription,
+.labLocation,
+.labName,
+.labTag {
+  top: 1136px;
+}
+.labDescription,
+.labName,
+.labTag {
+  top: 937px;
+}
+.labDescription,
+.labName {
+  top: 738px;
+}
+.labName {
+  top: 539px;
+}
+.googleScolar {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+.profName2 {
+  position: absolute;
+  top: 1534px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 1200px;
+  height: 180px;
+  overflow: hidden;
+}
+.b28,
+.div1,
+.div2 {
+  position: absolute;
+  line-height: 130%;
+}
+.b28 {
+  top: 102px;
+  left: 23px;
+  display: none;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+.div1,
+.div2 {
+  top: 13px;
+  left: 15px;
+  font-weight: 800;
+}
+.div2 {
+  left: 92px;
+  font-weight: 300;
+  color: #979797;
+}
+.div {
+  top: 98px;
+  left: 27px;
+  width: 168px;
+  height: 55px;
+  overflow: hidden;
+}
+.b30,
+.div,
+.wrapper {
+  position: absolute;
+}
+.b30 {
+  top: 13px;
+  left: 10px;
+  line-height: 130%;
+}
+.wrapper {
+  top: 98px;
+  left: 196px;
+  width: 289px;
+  height: 55px;
+  overflow: hidden;
+}
+.club,
+.lab,
+.tab {
+  position: absolute;
+  top: 10px;
+}
+.club {
+  left: 61px;
+  cursor: pointer;
+}
+.lab,
+.tab {
+  left: 137px;
+  color: var(--color-black);
+}
+.tab {
+  top: 130px;
+  left: 522px;
+  width: 227px;
+  height: 44px;
+  overflow: hidden;
+  font-size: var(--font-size-xl);
+  color: var(--color-darkgray-200);
+}
+.labIdPasswordChild {
+  position: absolute;
+  top: 145.5px;
+  left: 167.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 251px;
+  height: 1px;
+}
+.b37,
+.b38 {
+  position: absolute;
+  top: 109px;
+  left: 34px;
+  line-height: 130%;
+}
+.b38 {
+  left: 168px;
+}
+.labIdPasswordItem {
+  position: absolute;
+  top: 217.5px;
+  left: 167.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 251px;
+  height: 1px;
+}
+.b39,
+.b40 {
+  top: 181px;
+  line-height: 130%;
+}
+.b39 {
+  position: absolute;
+  left: 34px;
+}
+.b40 {
+  left: 168px;
+}
+.b40,
+.b42,
+.div3 {
+  position: absolute;
+}
+.div3 {
+  top: 103px;
+  left: 461px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-silver);
+  width: 163px;
+  height: 41px;
+  cursor: pointer;
+}
+.b42 {
+  top: 112px;
+  left: 480px;
+  font-size: var(--font-size-lg);
+  line-height: 130%;
+}
+.labIdPassword {
+  position: absolute;
+  top: 2722px;
+  left: 40px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 1200px;
+  height: 289px;
+  overflow: hidden;
+}
+.applicationFormLabChild {
+  position: absolute;
+  top: 2529px;
+  left: 1280px;
+  width: 594px;
+  height: 339px;
+  overflow: hidden;
+}
+.b43,
+.submit {
+  position: absolute;
+}
+.b43 {
+  top: 12px;
+  left: 127px;
+  line-height: 130%;
+}
+.submit {
+  top: 3072px;
+  left: 488px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-cornflowerblue);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 300px;
+  height: 55px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+}
+.applicationFormLab {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 3447px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
