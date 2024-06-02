@@ -341,10 +341,9 @@ color: #000000;
   height: 41px;
 }
 .b19 {
-  top: 112px;
-  left: 480px;
+  top: 10px;
+  left: 23px;
   font-size: var(--font-size-lg);
-  line-height: 130%;
 }
 .labIdPassword {
   top: 2131px;

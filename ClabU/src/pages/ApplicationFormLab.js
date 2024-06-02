@@ -423,8 +423,9 @@ const ApplicationFormLab = () => {
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>회원가입 아이디 및 비밀번호</b>
-          <div className={styles.div3} onClick={openFrame} />
-          <b className={styles.b42}>아이디 중복 확인</b>
+          <div className={styles.div3} onClick={openFrame}>
+            <b className={styles.b42}>아이디 중복 확인</b>
+          </div>
         </div>
         <div className={styles.applicationFormLabChild} />
         <div className={styles.submit} onClick={openSubmit}>

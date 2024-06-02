@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import Frame from "../components/Frame";
 import Submit from "../components/Submit";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +8,7 @@ import Navigation1 from "../components/Navigation1";
 import styles from "./ApplicationFormClub.module.css";
 
 const ApplicationFormClub = () => {
+  const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -43,6 +45,14 @@ const ApplicationFormClub = () => {
   const onLogoIconClick = useCallback(() => {
     navigate("/main");
   }, [navigate]);
+
+  const openFrame = useCallback(() => {
+    setFrameOpen(true);
+  }, []);
+
+  const closeFrame = useCallback(() => {
+    setFrameOpen(false);
+  }, []);
 
   const openSubmit = useCallback(() => {
     setSubmitOpen(true);
@@ -264,8 +274,9 @@ const ApplicationFormClub = () => {
           onChange={handleChange} 
           />
           <b className={styles.b1}>회원가입 아이디 및 비밀번호</b>
-          <div className={styles.div} />
+          <div className={styles.div} onClick={openFrame}>
           <b className={styles.b19}>아이디 중복 확인</b>
+          </div>
         </div>
         <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b20}>제출</b>
@@ -278,6 +289,15 @@ const ApplicationFormClub = () => {
         </div>
         <div className={styles.applicationFormClubChild} />
       </div>
+      {isFrameOpen && (
+        <PortalPopup
+          overlayColor="rgba(113, 113, 113, 0.3)"
+          placement="Centered"
+          onOutsideClick={closeFrame}
+        >
+          <Frame onClose={closeFrame} />
+        </PortalPopup>
+      )}
       {isSubmitOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
