@@ -12,7 +12,7 @@ const ApplicationFormLab = () => {
   const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
   const navigate = useNavigate();
 
-  const [form, setForm] = useState({
+  const [labform, setLabForm] = useState({
     logo: '',
     labName: '',
     description: '',
@@ -93,8 +93,8 @@ const ApplicationFormLab = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
+    setLabForm({
+      ...labform,
       [name]: value,
     });
   };
@@ -129,7 +129,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<학부연구생>"}
           type="text"
           name="undergradResearchers"
-          value={form.undergradResearchers} 
+          value={labform.undergradResearchers} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>학부연구생</b>
@@ -145,7 +145,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<석사과정>"}
           type="text"
           name="mastersStudents"
-          value={form.mastersStudents} 
+          value={labform.mastersStudents} 
           onChange={handleChange} 
           />
           <b className={styles.b3}>석사과정</b>
@@ -161,7 +161,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<박사과정 / 석박 통합>"}
           type="text"
           name="phdStudents"
-          value={form.phdStudents} 
+          value={labform.phdStudents} 
           onChange={handleChange} 
           />
           <b className={styles.b5}>박사과정 / 석박 통합</b>
@@ -177,7 +177,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<포닥>"}
           type="text"
           name="postdocs"
-          value={form.postdocs} 
+          value={labform.postdocs} 
           onChange={handleChange} 
           />
           <b className={styles.b7}>포닥</b>
@@ -196,7 +196,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<홈페이지>"}
           type="text"
           name="website"
-          value={form.website} 
+          value={labform.website} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>홈페이지 주소</b>
@@ -214,7 +214,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<대표자 연락처>"}
           type="text"
           name="representativeContact"
-          value={form.representativeContact} 
+          value={labform.representativeContact} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>대표자 연락처</b>
@@ -232,7 +232,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<대표자 이름>"}
           type="text"
           name="representativeName"
-          value={form.representativeName} 
+          value={labform.representativeName} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>대표자 이름</b>
@@ -260,7 +260,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<연구실 설명>"}
           type="text"
           name="description"
-          value={form.description}
+          value={labform.description}
           onChange={handleChange} 
           />
         </div>
@@ -278,7 +278,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<연구실 이름>"}
           type="text"
           name="labName"
-          value={form.labName} 
+          value={labform.labName} 
           onChange={handleChange} 
           />
         </div>
@@ -307,7 +307,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<교수>"}
           type="text"
           name="professor"
-          value={form.professor} 
+          value={labform.professor} 
           onChange={handleChange} 
           />
           <b className={styles.b16}>교수</b>
@@ -325,7 +325,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<교수 Google scolar 링크>"}
           type="text"
           name="professorGoogleScholar"
-          value={form.professorGoogleScholar} 
+          value={labform.professorGoogleScholar} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>교수 Google scolar 링크</b>
@@ -352,7 +352,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<방 번호>"}
           type="text"
           name="labLocation"
-          value={form.labLocation} 
+          value={labform.labLocation} 
           onChange={handleChange} 
           />
           </div>
@@ -370,7 +370,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<연구실 태그>"}
           type="text"
           name="labTags"
-          value={form.labTags} 
+          value={labform.labTags} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>연구실 태그</b>
@@ -412,7 +412,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<아이디>"}
           type="text"
           name="username"
-          value={form.username} 
+          value={labform.username} 
           onChange={handleChange} 
           />
           <div className={styles.labIdPasswordItem} />
@@ -428,7 +428,7 @@ const ApplicationFormLab = () => {
           placeholder={isInputClicked === true ? "" : "<비밀번호>"}
           type="text"
           name="password"
-          value={form.password} 
+          value={labform.password} 
           onChange={handleChange} 
           />
           <b className={styles.googleScolar}>회원가입 아이디 및 비밀번호</b>

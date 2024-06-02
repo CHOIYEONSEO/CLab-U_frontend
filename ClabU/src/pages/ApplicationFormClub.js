@@ -6,23 +6,23 @@ import ClubLogo from "../components/ClubLogo";
 import Navigation1 from "../components/Navigation1";
 import styles from "./ApplicationFormClub.module.css";
 
-const [form, setForm] = useState({
-  logo: '',
-  clubName: '',
-  description: '',
-  clubTags: '',
-  clubLocation: '',
-  representativeName: '',
-  representativeContact: '',
-  website: '',
-  members: '',
-  username: '',
-  password: '',
-});
-
 const ApplicationFormClub = () => {
   const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
   const navigate = useNavigate();
+
+  const [clubform, setclubForm] = useState({
+    logo: '',
+    clubName: '',
+    description: '',
+    clubTags: '',
+    clubLocation: '',
+    representativeName: '',
+    representativeContact: '',
+    website: '',
+    members: '',
+    username: '',
+    password: '',
+  });
 
   const onApplicationContainerClick = useCallback(() => {
     navigate("/application-login");
@@ -58,8 +58,8 @@ const ApplicationFormClub = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
+    setClubForm({
+      ...clubform,
       [name]: value,
     });
   };
@@ -82,7 +82,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<구성원>"}
           type="text"
           name="members"
-          value={form.members} 
+          value={clubform.members} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리 구성원 (명)</b>
@@ -100,7 +100,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<동아리 홈페이지 / sns>"}
           type="text"
           name="website"
-          value={form.website} 
+          value={clubform.website} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리 홈페이지 / sns</b>
@@ -118,7 +118,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<대표자 이메일 등 연락처>"}
           type="text"
           name="representativeContact"
-          value={form.representativeContact} 
+          value={clubform.representativeContact} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>대표자 연락처</b>
@@ -136,7 +136,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<대표자 이름>"}
           type="text"
           name="representativeName"
-          value={form.representativeName} 
+          value={clubform.representativeName} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>대표자 이름</b>
@@ -154,7 +154,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<위치>"}
           type="text"
           name="clubLocation"
-          value={form.clubLocation} 
+          value={clubform.clubLocation} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리방 / 활동 장소 위치</b>
@@ -172,7 +172,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<동아리 태그>"}
           type="text"
           name="clubTags"
-          value={form.clubTags} 
+          value={clubform.clubTags} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리 태그</b>
@@ -190,7 +190,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<동아리 설명>"}
           type="text"
           name="description"
-          value={form.description} 
+          value={clubform.description} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리 설명</b>
@@ -208,7 +208,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<동아리 이름>"}
           type="text"
           name="clubName"
-          value={form.clubName} 
+          value={clubform.clubName} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>동아리 이름</b>
@@ -244,7 +244,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<아이디>"}
           type="text"
           name="username"
-          value={form.username} 
+          value={clubform.username} 
           onChange={handleChange} 
           />
           <div className={styles.labIdPasswordItem} />
@@ -260,7 +260,7 @@ const ApplicationFormClub = () => {
           placeholder={isInputClicked === true ? "" : "<비밀번호>"}
           type="text"
           name="password"
-          value={form.password} 
+          value={clubform.password} 
           onChange={handleChange} 
           />
           <b className={styles.b1}>회원가입 아이디 및 비밀번호</b>
