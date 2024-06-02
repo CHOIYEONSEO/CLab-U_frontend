@@ -114,8 +114,12 @@
   width: 190px;
   height: 36px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   font-size: var(--font-size-mini);
+}
+
+.typeHere:focus {
+  outline: none;
 }
 
 .div2 {
