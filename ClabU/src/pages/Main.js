@@ -35,7 +35,7 @@ const Main = () => {
     <div className={styles.main}>
       <div className={styles.inputfield}>
         <input className={styles.typeHere}
-        placeholder="무엇이든 물어보세요!"
+        placeholder="    무엇이든 물어보세요!"
         type="text"
         value={question}
         onChange={(e)=>setQuestion(e.target.value)}
