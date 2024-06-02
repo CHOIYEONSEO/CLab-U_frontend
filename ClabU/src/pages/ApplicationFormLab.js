@@ -32,7 +32,7 @@ const ApplicationFormLab = () => {
   });
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
@@ -126,8 +126,9 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<학부연구생>"}
-          type="text"
+          placeholder={isInputClicked === true ? "" : "몇명인지 입력해 주세요"}
+          type="number"
+          min="0"
           name="undergradResearchers"
           value={labform.undergradResearchers} 
           onChange={handleChange} 
@@ -142,8 +143,9 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<석사과정>"}
-          type="text"
+          placeholder={isInputClicked === true ? "" : "몇명인지 입력해 주세요"}
+          type="number"
+          min="0"
           name="mastersStudents"
           value={labform.mastersStudents} 
           onChange={handleChange} 
@@ -158,8 +160,9 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<박사과정 / 석박 통합>"}
-          type="text"
+          placeholder={isInputClicked === true ? "" : "몇명인지 입력해 주세요"}
+          type="number"
+          min="0"
           name="phdStudents"
           value={labform.phdStudents} 
           onChange={handleChange} 
@@ -174,8 +177,9 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<포닥>"}
-          type="text"
+          placeholder={isInputClicked === true ? "" : "몇명인지 입력해 주세요"}
+          type="number"
+          min="0"
           name="postdocs"
           value={labform.postdocs} 
           onChange={handleChange} 
@@ -193,7 +197,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<홈페이지>"}
+          placeholder={isInputClicked === true ? "" : "연구실 홈페이지 주소를 입력해 주세요"}
           type="text"
           name="website"
           value={labform.website} 
@@ -211,7 +215,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<대표자 연락처>"}
+          placeholder={isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요"}
           type="text"
           name="representativeContact"
           value={labform.representativeContact} 
@@ -229,7 +233,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<대표자 이름>"}
+          placeholder={isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"}
           type="text"
           name="representativeName"
           value={labform.representativeName} 
@@ -247,7 +251,7 @@ const ApplicationFormLab = () => {
         <div className={styles.labDescription}>
           <div className={styles.labPageChild} />
           <b className={styles.googleScolar}>
-            연구실 설명(현재 진행 중인 연구 과제 중심으로 작성)
+            연구실 설명
           </b>
           <input className={styles.labDescInput}
           onFocus={() => {
@@ -257,7 +261,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<연구실 설명>"}
+          placeholder={isInputClicked === true ? "" : "현재 진행 중인 연구 과제를 중심으로 작성해 주세요"}
           type="text"
           name="description"
           value={labform.description}
@@ -275,7 +279,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<연구실 이름>"}
+          placeholder={isInputClicked === true ? "" : "연구실 이름을 입력해 주세요"}
           type="text"
           name="labName"
           value={labform.labName} 
@@ -304,7 +308,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<교수>"}
+          placeholder={isInputClicked === true ? "" : "교수님 이름을 입력해 주세요"}
           type="text"
           name="professor"
           value={labform.professor} 
@@ -322,7 +326,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<교수 Google scolar 링크>"}
+          placeholder={isInputClicked === true ? "" : "교수님 Google scolar 링크를 입력해 주세요"}
           type="text"
           name="professorGoogleScholar"
           value={labform.professorGoogleScholar} 
@@ -349,7 +353,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<방 번호>"}
+          placeholder={isInputClicked === true ? "" : "연구실 번호를 입력해 주세요"}
           type="text"
           name="labLocation"
           value={labform.labLocation} 
@@ -367,7 +371,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<연구실 태그>"}
+          placeholder={isInputClicked === true ? "" : "연구실 태그를 입력해 주세요"}
           type="text"
           name="labTags"
           value={labform.labTags} 
@@ -396,7 +400,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<아이디>"}
+          placeholder={isInputClicked === true ? "" : "아이디를 입력해 주세요"}
           type="text"
           name="username"
           value={labform.username} 
@@ -412,7 +416,7 @@ const ApplicationFormLab = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<비밀번호>"}
+          placeholder={isInputClicked === true ? "" : "비밀번호를 입력해 주세요"}
           type="text"
           name="password"
           value={labform.password} 
