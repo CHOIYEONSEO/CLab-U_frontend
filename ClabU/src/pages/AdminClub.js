@@ -102,6 +102,8 @@ const AdminClub = () => {
           logIn="/login@2x.png"
           account1="/account-1@2x.png"
           logo="/logo@2x.png"
+          propWidth="100%"
+          propRight="0px"
           onApplicationContainerClick={onApplicationContainerClick}
           onListContainerClick={onListContainerClick}
           onSearchContainerClick={onSearchContainerClick}
