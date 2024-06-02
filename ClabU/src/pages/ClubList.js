@@ -153,7 +153,7 @@ const ClubList = () => {
           value={clubQuery}
           onChange={(e)=>setclubQuery(e.target.value)}
           onKeyDown={(e) => activeEnter(e)}
-          />
+        />
       </div>
     </div>
   );

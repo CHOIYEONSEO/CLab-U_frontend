@@ -3,7 +3,7 @@ import Frame from "../components/Frame";
 import PortalPopup from "../components/PortalPopup";
 import Submit from "../components/Submit";
 import { useNavigate } from "react-router-dom";
-import ClubLogo from "../components/ClubLogo";
+import LabLogo from "../components/LabLogo";
 import Navigation1 from "../components/Navigation1";
 import styles from "./ApplicationFormLab.module.css";
 
@@ -375,8 +375,7 @@ const ApplicationFormLab = () => {
           />
           <b className={styles.googleScolar}>연구실 태그</b>
         </div>
-        <ClubLogo
-          prop={`<연구실 로고 업로드 기능>`}
+        <LabLogo
           prop1="연구실 로고"
           propTop="220px"
         />

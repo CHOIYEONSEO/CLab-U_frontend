@@ -214,12 +214,11 @@ const ApplicationFormClub = () => {
           <b className={styles.b1}>동아리 이름</b>
         </div>
         <ClubLogo
-          prop={`<동아리 로고 업로드 기능>`}
           prop1="동아리 로고"
           propTop="220px"
         />
         <Navigation1
-          //logIn="/login@2x.png"
+          logIn="/login@2x.png"
           account1="/account-1@2x.png"
           logo="/logo@2x.png"
           propWidth="100%"

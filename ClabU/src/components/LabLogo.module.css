@@ -1,4 +1,4 @@
-.clubLogoChild {
+.labLogoChild {
   position: absolute;
   top: 274.5px;
   left: 296.5px;
@@ -19,8 +19,8 @@
   font-size: medium;
 }
 .b1,
-.clubLogo,
-.clubLogo1 {
+.labLogo,
+.labLogo1 {
   position: absolute;
   left: 27px;
 }
@@ -29,14 +29,14 @@
   font-size: var(--font-size-5xl);
   line-height: 130%;
 }
-.clubLogo,
-.clubLogo1 {
+.labLogo,
+.labLogo1 {
   top: 75px;
   background-color: var(--color-gainsboro-200);
   width: 200px;
   height: 200px;
 }
-.clubLogo {
+.labLogo {
   top: 106px;
   left: 40px;
   border-radius: var(--br-xl);

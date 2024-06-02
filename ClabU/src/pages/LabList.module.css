@@ -94,27 +94,25 @@
 }
 .nameSearch {
   top: 113px;
-  left: 983px;
+  left: 960px;
   border-radius: var(--br-xl);
   background-color: var(--color-white);
   border: 1px solid var(--color-darkslategray-200);
   box-sizing: border-box;
   width: 237px;
   height: 44px;
-  overflow: hidden;
-  text-align: left;
-  font-size: var(--font-size-mini);
 }
 
 .typeHere {
-  top: 113px;
-  left: 983px;
+  position: absolute;
+  left: 42px;
+  top: 3px;
   border-radius: var(--br-xl);
   background-color: var(--color-white);
-  border: 1px solid var(--color-darkslategray-200);
+  border: 1px solid white;
   box-sizing: border-box;
-  width: 238px;
-  height: 44px;
+  width: 190px;
+  height: 36px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-mini);
