@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nico+Moji:wght@400&display=swap");
 body {
   margin: 0;
   line-height: normal;
@@ -7,12 +6,11 @@ body {
 :root {
   /* fonts */
   --font-inter: Inter;
-  --font-nico-moji: "Nico Moji";
 
   /* font sizes */
   --font-size-base: 16px;
   --font-size-xl: 20px;
-  --font-size-18xl-1: 37.1px;
+  --font-size-18xl-1: 40px;
   --font-size-lg-6: 18.6px;
   --font-size-5xl: 24px;
   --font-size-3xl: 22px;

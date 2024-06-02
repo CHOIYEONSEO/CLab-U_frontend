@@ -25,7 +25,7 @@ const ApplicationFormClub = () => {
   });
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
