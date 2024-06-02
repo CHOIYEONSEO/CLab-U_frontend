@@ -42,7 +42,7 @@ const Search = () => {
   return (
     <div className={styles.search}>
       <div className={styles.firstchat}>
-        <div className={styles.div}>(캐릭터 이름)</div>
+        <div className={styles.div}>Clab-U</div>
         <div className={styles.clabuContainer}>
           <p className={styles.clabu}>
             소프트웨어융합대학의 동아리와 연구실을 쉽게 찾을 수 있도록 도와주는
@@ -56,7 +56,7 @@ const Search = () => {
         <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
       </div>
       <div className={styles.firstchat1}>
-        <div className={styles.div}>(캐릭터 이름)</div>
+        <div className={styles.div}>Clab-U</div>
         <div className={styles.div2}>
           <p
             className={styles.p}

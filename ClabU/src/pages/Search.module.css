@@ -1,9 +1,12 @@
 .div {
   position: absolute;
-  top: 73.8px;
-  left: 15.8px;
-  line-height: 130%;
+  top: 69px;
+  left: 22px;
+  color: var(--color-darkslategray-300);
+  font-family: "Niko Moji";
+  font-size: 12px;
 }
+
 .clabu,
 .div {
   font-weight: 600;
@@ -150,16 +153,21 @@
   width: 1200px;
   height: 62px;
   background-color: var(--color-white);
-  border: 1.5px solid var(--color-gray-200);
+  border: none;
   box-sizing: border-box;
   overflow: scroll;
   font-size: medium;
   top: calc(50% - 31px);
+  left: 10px;
   line-height: 130%;
   display: flex;
   white-space: pre-wrap;
   align-items: center;
   justify-content: center;
+}
+
+.typeHere:focus {
+  outline: none;
 }
 
 .search {
