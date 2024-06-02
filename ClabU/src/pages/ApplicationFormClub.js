@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import AdminAccept from "../components/AdminAccept";
+import Submit from "../components/Submit";
 import PortalPopup from "../components/PortalPopup";
 import { useNavigate } from "react-router-dom";
 import ClubLogo from "../components/ClubLogo";
@@ -7,10 +7,10 @@ import Navigation1 from "../components/Navigation1";
 import styles from "./ApplicationFormClub.module.css";
 
 const ApplicationFormClub = () => {
-  const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
+  const [isSubmitOpen, setSubmitOpen] = useState(false);
   const navigate = useNavigate();
 
-  const [clubform, setclubForm] = useState({
+  const [clubform, setClubForm] = useState({
     logo: '',
     clubName: '',
     description: '',
@@ -44,12 +44,12 @@ const ApplicationFormClub = () => {
     navigate("/main");
   }, [navigate]);
 
-  const openAdminAccept = useCallback(() => {
-    setAdminAcceptOpen(true);
+  const openSubmit = useCallback(() => {
+    setSubmitOpen(true);
   }, []);
 
-  const closeAdminAccept = useCallback(() => {
-    setAdminAcceptOpen(false);
+  const closeSubmit = useCallback(() => {
+    setSubmitOpen(false);
   }, []);
 
   const onLabTextClick = useCallback(() => {
@@ -161,7 +161,7 @@ const ApplicationFormClub = () => {
         </div>
         <div className={styles.clubTag}>
           <div className={styles.clubMembersChild} />
-          <input className={styles.clubTabInput}
+          <input className={styles.clubTagInput}
           onFocus={() => {
             setIsInputClicked(true);
           }}
@@ -219,7 +219,7 @@ const ApplicationFormClub = () => {
           propTop="220px"
         />
         <Navigation1
-          logIn="/login@2x.png"
+          //logIn="/login@2x.png"
           account1="/account-1@2x.png"
           logo="/logo@2x.png"
           propWidth="100%"
@@ -267,7 +267,7 @@ const ApplicationFormClub = () => {
           <div className={styles.div} />
           <b className={styles.b19}>아이디 중복 확인</b>
         </div>
-        <div className={styles.submit} onClick={openAdminAccept}>
+        <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b20}>제출</b>
         </div>
         <div className={styles.tab}>
@@ -278,13 +278,13 @@ const ApplicationFormClub = () => {
         </div>
         <div className={styles.applicationFormClubChild} />
       </div>
-      {isAdminAcceptOpen && (
+      {isSubmitOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
           placement="Centered"
-          onOutsideClick={closeAdminAccept}
+          onOutsideClick={closeSubmit}
         >
-          <AdminAccept onClose={closeAdminAccept} />
+          <Submit onClose={closeSubmit} />
         </PortalPopup>
       )}
     </>

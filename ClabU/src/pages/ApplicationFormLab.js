@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Frame from "../components/Frame";
 import PortalPopup from "../components/PortalPopup";
-import AdminAccept from "../components/AdminAccept";
+import Submit from "../components/Submit";
 import { useNavigate } from "react-router-dom";
 import ClubLogo from "../components/ClubLogo";
 import Navigation1 from "../components/Navigation1";
@@ -9,7 +9,7 @@ import styles from "./ApplicationFormLab.module.css";
 
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
-  const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
+  const [isSubmitOpen, setSubmitOpen] = useState(false);
   const navigate = useNavigate();
 
   const [labform, setLabForm] = useState({
@@ -83,12 +83,12 @@ const ApplicationFormLab = () => {
     setFrameOpen(false);
   }, []);
 
-  const openAdminAccept = useCallback(() => {
-    setAdminAcceptOpen(true);
+  const openSubmit = useCallback(() => {
+    setSubmitOpen(true);
   }, []);
 
-  const closeAdminAccept = useCallback(() => {
-    setAdminAcceptOpen(false);
+  const closeSubmit = useCallback(() => {
+    setSubmitOpen(false);
   }, []);
 
   const handleChange = (e) => {
@@ -386,18 +386,6 @@ const ApplicationFormLab = () => {
           </div>
           <b className={styles.lab}>lab</b>
         </div>
-        <Navigation1
-          logIn="/login@2x.png"
-          account1="/account-1@2x.png"
-          logo="/logo@2x.png"
-          propWidth="1280px"
-          propRight="unset"
-          onApplicationContainerClick={onApplicationContainer2Click}
-          onListContainerClick={onListContainer2Click}
-          onSearchContainerClick={onSearchContainer2Click}
-          onClabUTextClick={onClabUText2Click}
-          onLogoIconClick={onLogoIcon2Click}
-        />
         <div className={styles.labIdPassword}>
           <div className={styles.labIdPasswordChild} />
           <b className={styles.b37}>아이디</b>
@@ -436,7 +424,7 @@ const ApplicationFormLab = () => {
           <b className={styles.b42}>아이디 중복 확인</b>
         </div>
         <div className={styles.applicationFormLabChild} />
-        <div className={styles.submit} onClick={openAdminAccept}>
+        <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b43}>제출</b>
         </div>
       </div>
@@ -449,13 +437,13 @@ const ApplicationFormLab = () => {
           <Frame onClose={closeFrame} />
         </PortalPopup>
       )}
-      {isAdminAcceptOpen && (
+      {isSubmitOpen && (
         <PortalPopup
           overlayColor="rgba(113, 113, 113, 0.3)"
           placement="Centered"
-          onOutsideClick={closeAdminAccept}
+          onOutsideClick={closeSubmit}
         >
-          <AdminAccept onClose={closeAdminAccept} />
+          <Submit onClose={openSubmit} />
         </PortalPopup>
       )}
     </>

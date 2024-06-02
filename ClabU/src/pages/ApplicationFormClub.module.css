@@ -129,7 +129,7 @@ color: #000000;
 
 .idInput {
 position: absolute;
-width: 91px;
+width: 240px;
 height: 29px;
 left: 168px;
 top: 109px;
@@ -148,7 +148,7 @@ color: #000000;
 
 .pwInput {
 position: absolute;
-width: 111px;
+width: 240px;
 height: 29px;
 left: 168px;
 top: 181px;
@@ -164,6 +164,7 @@ align-items: center;
 
 color: #000000;
 }
+
 .membersInput {
 position: absolute;
 width: 1150px;
@@ -182,6 +183,7 @@ align-items: center;
 
 color: #000000;
 }
+
 .clubMembersChild {
   position: absolute;
   top: 152.5px;
@@ -402,14 +404,7 @@ color: #000000;
   overflow: hidden;
   font-size: var(--font-size-xl);
 }
-.applicationFormClubChild {
-  position: absolute;
-  top: -47.3px;
-  left: 138px;
-  background-color: var(--color-gainsboro-200);
-  width: 100px;
-  height: 100px;
-}
+
 .applicationFormClub {
   width: 100%;
   position: relative;

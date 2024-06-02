@@ -31,6 +31,14 @@ const LabList = () => {
     navigate("/search");
   }, [navigate]);
 
+  const onClabUTextClick = useCallback(() => {
+    navigate("/main");
+  }, [navigate]);
+
+  const onLogoIconClick = useCallback(() => {
+    navigate("/main");
+  }, [navigate]);
+
   const [labQuery, setlabQuery] = useState("");
 
   const activeEnter = (e) => {
@@ -61,6 +69,8 @@ const LabList = () => {
         onApplicationContainerClick={onApplicationContainerClick}
         onListContainerClick={onListContainerClick}
         onSearchContainerClick={onSearchContainerClick}
+        onClabUTextClick={onClabUTextClick}
+        onLogoIconClick={onLogoIconClick}
       />
       <div className={styles.nameSearch}>
         <img
