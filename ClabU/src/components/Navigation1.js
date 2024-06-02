@@ -46,15 +46,16 @@ const Navigation1 = ({
         className={[styles.navigation, className].join(" ")}
         style={navigationStyle}
       >
-        <div className={styles.clabu} onClick={onClabUTextClick}>
-          Clab-U
-        </div>
         <img
           className={styles.logoIcon}
           alt=""
           src={logo}
           onClick={onLogoIconClick}
         />
+        <div className={styles.clabu} onClick={onClabUTextClick}>
+          Clab-U
+        </div>
+        
         
         <div className={styles.search} onClick={onSearchContainerClick}>
           <div className={styles.search1}>Search</div>

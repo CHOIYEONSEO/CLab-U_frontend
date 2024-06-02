@@ -28,6 +28,11 @@
   top: 6.8px;
   left: 152.9px;
   line-height: 130%;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
 }
 .login {
   width: calc(100% - 925px);
@@ -41,6 +46,11 @@
   cursor: pointer;
   font-size: var(--font-size-mid-7);
   color: var(--color-white);
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
 }
 .passwdIcon,
 .passwdInput {
