@@ -4,13 +4,14 @@
   left: 48px;
 }
 .account2Icon,
-.freeIconX38189271 {
+.CloseIcon {
   position: absolute;
   top: 6px;
   left: 185px;
   width: 30px;
   height: 30px;
   object-fit: cover;
+  cursor: pointer;
 }
 .account2Icon {
   top: 31px;
@@ -23,6 +24,7 @@
   top: 115px;
   left: 77px;
   font-size: var(--font-size-xs);
+  cursor: pointer;
 }
 .account {
   width: 220px;
