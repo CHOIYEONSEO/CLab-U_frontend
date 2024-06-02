@@ -47,6 +47,31 @@ const Navigation1 = ({
         style={navigationStyle}
       >
         <img
+          className={styles.logoIcon}
+          alt=""
+          src={logo}
+          onClick={onLogoIconClick}
+        />
+        <div className={styles.clabu} onClick={onClabUTextClick}>
+          Clab-U
+        </div>
+        
+        
+        <div className={styles.search} onClick={onSearchContainerClick}>
+          <div className={styles.search1}>Search</div>
+        </div>
+        <div className={styles.list} onClick={onListContainerClick}>
+          <div className={styles.application1}>List</div>
+        </div>
+        <div
+          className={styles.application}
+          onClick={onApplicationContainerClick}
+        >
+          <div className={styles.application1}>Application</div>
+        </div>
+        <div 
+          className={styles.application1}>
+        <img
           className={styles.loginIcon}
           alt=""
           src={logIn}
@@ -57,28 +82,10 @@ const Navigation1 = ({
           alt=""
           src={account1}
           onClick={openAccount}
-        />
-        <div
-          className={styles.application}
-          onClick={onApplicationContainerClick}
-        >
-          <div className={styles.application1}>Application</div>
-        </div>
-        <div className={styles.list} onClick={onListContainerClick}>
-          <div className={styles.application1}>List</div>
-        </div>
-        <div className={styles.search} onClick={onSearchContainerClick}>
-          <div className={styles.search1}>Search</div>
-        </div>
-        <div className={styles.clabu} onClick={onClabUTextClick}>
-          Clab-U
-        </div>
-        <img
-          className={styles.logoIcon}
-          alt=""
-          src={logo}
-          onClick={onLogoIconClick}
-        />
+        /></div>
+        
+        
+        
       </div>
       {isAccountOpen && (
         <PortalPopup

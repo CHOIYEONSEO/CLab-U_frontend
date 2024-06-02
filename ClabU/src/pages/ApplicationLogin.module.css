@@ -28,6 +28,11 @@
   top: 6.8px;
   left: 152.9px;
   line-height: 130%;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
 }
 .login {
   width: calc(100% - 925px);
@@ -41,6 +46,11 @@
   cursor: pointer;
   font-size: var(--font-size-mid-7);
   color: var(--color-white);
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
 }
 .passwdIcon,
 .passwdInput {
@@ -63,15 +73,15 @@
   height: 25px;
   object-fit: cover;
 }
-.passwd {
+.passwd{
   position: absolute;
   top: calc(50% - 56px);
-  left: calc(50% - 177px);
+  left: 462px;
   border-radius: var(--br-base);
   background-color: var(--color-whitesmoke-200);
   border: 1.4px solid var(--color-darkslategray-200);
   box-sizing: border-box;
-  width: 355px;
+  width: calc(100% - 925px);
   height: 36px;
   overflow: hidden;
   opacity: 0.8;
@@ -79,7 +89,7 @@
 }
 .idInput {
   top: calc(50% - 18px);
-  left: calc(50% - 126.5px);
+  left: 50px;
   line-height: 130%;
   display: flex;
   align-items: center;

@@ -1,100 +1,86 @@
-.account1Icon,
-.loginIcon {
-  position: absolute;
-  object-fit: cover;
-  cursor: pointer;
-}
-.loginIcon {
-  top: 12px;
-  left: 1190px;
-  width: 60px;
-  height: 60px;
-  display: none;
-}
-.account1Icon {
-  top: 17px;
-  left: 1195px;
-  width: 50px;
-  height: 50px;
-}
-.application1 {
-  position: absolute;
-  top: 7px;
-  left: 15px;
-  line-height: 130%;
-  font-weight: 600;
-}
-.application {
-  top: 23px;
-  right: 141px;
-  border-radius: 3.09px;
-  width: 143px;
-  height: 38px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.application,
-.list,
-.search1 {
-  position: absolute;
-}
-.list {
-  top: 23px;
-  right: 357px;
-  width: 67px;
-  height: 38px;
-  overflow: hidden;
-  cursor: pointer;
-}
-.search1 {
-  top: 7px;
-  left: 17px;
-  line-height: 130%;
-  font-weight: 600;
-}
-.search {
-  top: 23px;
-  right: 507px;
-  width: 104px;
-  height: 38px;
-  overflow: hidden;
-}
-.clabu,
-.logoIcon,
-.search {
-  position: absolute;
-  cursor: pointer;
-}
-.clabu {
-  top: 20px;
-  left: 95px;
-  font-size: var(--font-size-18xl-1);
-  letter-spacing: -0.01em;
-  line-height: 100%;
-  font-family: var(--font-nico-moji);
-  color: var(--color-whitesmoke-300);
-  text-align: left;
-  display: inline-block;
-  width: 177.9px;
-  height: 44.1px;
-}
-.logoIcon {
-  top: 22px;
-  left: 40px;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-}
 .navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
   background-color: var(--color-darkslategray-300);
-  width: 1280px;
   height: 84px;
   overflow: hidden;
   text-align: center;
   font-size: var(--font-size-lg-6);
   color: var(--color-white);
   font-family: var(--font-inter);
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.clabu {
+  font-size: var(--font-size-18xl-1);
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  font-family: var(--font-nico-moji);
+  color: var(--color-whitesmoke-300);
+  text-align: right;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.search,
+.list,
+.application {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  border-radius: 3.09px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.search {
+  width: 104px;
+  margin-left: auto;
+}
+
+.search1 {
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.list {
+  width: 67px;
+  margin-left: 20px;
+}
+
+.application {
+  width: 143px;
+  margin-left: 20px;
+}
+
+.application1 {
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.account1Icon,
+.loginIcon {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.loginIcon {
+  width: 60px;
+  height: 60px;
+  display: none;
+  margin-left: 20px;
+}
+
+.account1Icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
 }
