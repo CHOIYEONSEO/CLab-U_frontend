@@ -79,8 +79,9 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<구성원>"}
-          type="text"
+          placeholder={isInputClicked === true ? "" : "몇명인지 입력해 주세요"}
+          type="number"
+          min="0"
           name="members"
           value={clubform.members} 
           onChange={handleChange} 
@@ -97,7 +98,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<동아리 홈페이지 / sns>"}
+          placeholder={isInputClicked === true ? "" : "동아리 홈페이지 및 sns를 입력해주세요"}
           type="text"
           name="website"
           value={clubform.website} 
@@ -115,7 +116,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<대표자 이메일 등 연락처>"}
+          placeholder={isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요>"}
           type="text"
           name="representativeContact"
           value={clubform.representativeContact} 
@@ -133,7 +134,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<대표자 이름>"}
+          placeholder={isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"}
           type="text"
           name="representativeName"
           value={clubform.representativeName} 
@@ -151,7 +152,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<위치>"}
+          placeholder={isInputClicked === true ? "" : "동아리방 번호와 활동 장소 위치를 입력해주세요"}
           type="text"
           name="clubLocation"
           value={clubform.clubLocation} 
@@ -169,7 +170,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<동아리 태그>"}
+          placeholder={isInputClicked === true ? "" : "동아리 태그를 입력해주세요"}
           type="text"
           name="clubTags"
           value={clubform.clubTags} 
@@ -187,7 +188,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<동아리 설명>"}
+          placeholder={isInputClicked === true ? "" : "동아리를 설명해주세요"}
           type="text"
           name="description"
           value={clubform.description} 
@@ -205,7 +206,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<동아리 이름>"}
+          placeholder={isInputClicked === true ? "" : "동아리 이름을 입력해 주세요"}
           type="text"
           name="clubName"
           value={clubform.clubName} 
@@ -240,7 +241,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<아이디>"}
+          placeholder={isInputClicked === true ? "" : "아이디를 입력해 주세요"}
           type="text"
           name="username"
           value={clubform.username} 
@@ -256,7 +257,7 @@ const ApplicationFormClub = () => {
           onBlur={() => {
             setIsInputClicked(false);
           }}
-          placeholder={isInputClicked === true ? "" : "<비밀번호>"}
+          placeholder={isInputClicked === true ? "" : "비밀번호를 입력해 주세요"}
           type="text"
           name="password"
           value={clubform.password} 
