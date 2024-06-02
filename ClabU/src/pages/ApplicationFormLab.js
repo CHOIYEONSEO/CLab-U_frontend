@@ -32,7 +32,7 @@ const ApplicationFormLab = () => {
   });
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
+    navigate("/application-login");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
