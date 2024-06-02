@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import AdminRejectReason from "/";
+import AdminRejectReason from "./AdminRejectReason";
 import PortalPopup from "./PortalPopup";
 import PropTypes from "prop-types";
 import styles from "./AdminReject.module.css";
