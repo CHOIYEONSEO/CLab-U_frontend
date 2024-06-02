@@ -22,7 +22,9 @@
   font-size: var(--font-size-18xl-1);
   letter-spacing: -0.01em;
   line-height: 100%;
-  font-family: var(--font-nico-moji);
+  font-family: "Niko Moji";
+  font-weight: normal;
+  font-style: normal;
   color: var(--color-whitesmoke-300);
   text-align: right;
   margin-left: 15px;

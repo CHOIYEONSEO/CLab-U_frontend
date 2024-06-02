@@ -7,7 +7,7 @@ const ApplicationLogin = () => {
   const navigate = useNavigate();
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {

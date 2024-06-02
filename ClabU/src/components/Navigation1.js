@@ -4,6 +4,7 @@ import PortalPopup from "./PortalPopup";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./Navigation1.module.css";
+import "../fonts/Font.css"
 
 const Navigation1 = ({
   className = "",
