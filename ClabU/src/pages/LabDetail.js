@@ -120,7 +120,7 @@ const LabDetail = () => {
         <p className={styles.hci}>교수 : 고영중 교수</p>
         <p
           className={styles.hci}
-        >{`교수 Google Scholar:  https://scholar.google.com/citations?user=VQeFpwsAAAAJ&hl=en&oi=sra`}</p>
+        >{`교수 Google Scholar: https://scholar.google.com/citations?user=VQeFpwsAAAAJ&hl=en&oi=sra`}</p>
         <p className={styles.p}>대표자 : 고영중 교수</p>
         <p className={styles.hci}>대표자 이메일 : yjko@skku.edu</p>
       </b>

@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./Main.module.css";
+import React, {useState} from "react";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -22,13 +23,24 @@ const Main = () => {
     navigate("/search");
   }, [navigate]);
 
+  const [question, setQuestion] = useState("");
+
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      onIconClick();
+    }
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.inputfield}>
-        <b className={styles.typeHere}>
-          무엇이든 물어보세요! (예시: "인공지능 분야 연구실 중 학부생 인턴
-          모집하는 곳 있어요?")
-        </b>
+        <input className={styles.typeHere}
+        placeholder="무엇이든 물어보세요!"
+        type="text"
+        value={question}
+        onChange={(e)=>setQuestion(e.target.value)}
+        onKeyDown={(e) => activeEnter(e)}
+        />
         <img
           className={styles.icon}
           alt=""

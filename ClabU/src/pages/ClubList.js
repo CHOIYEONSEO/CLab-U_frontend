@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./ClubList.module.css";
+import React, {useState} from "react";
 
 const ClubList = () => {
   const navigate = useNavigate();
@@ -53,6 +54,18 @@ const ClubList = () => {
   const onLabTextClick = useCallback(() => {
     navigate("/lab-list");
   }, [navigate]);
+
+  const onIconClick = useCallback(() => {
+    navigate("/search");
+  }, [navigate]);
+
+  const [clubQuery, setclubQuery] = useState("");
+
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      
+    }
+  }
 
   return (
     <div className={styles.clubList}>
@@ -134,7 +147,13 @@ const ClubList = () => {
           alt=""
           src="/search-154734@2x.png"
         />
-        <div className={styles.div12}>동아리명으로 검색</div>
+        <input className={styles.typeHere}
+          placeholder="동아리명으로 검색"
+          type="text"
+          value={clubQuery}
+          onChange={(e)=>setclubQuery(e.target.value)}
+          onKeyDown={(e) => activeEnter(e)}
+          />
       </div>
     </div>
   );

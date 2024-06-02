@@ -12,6 +12,33 @@ const ApplicationFormLab = () => {
   const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
   const navigate = useNavigate();
 
+  const [form, setForm] = useState({
+    logo: '',
+    labName: '',
+    labDescription: '',
+    labTags: '',
+    labLocation: '',
+    professor: '',
+    professorGoogleScholar: '',
+    representativeName: '',
+    representativeContact: '',
+    website: '',
+    postdocs: '',
+    phdStudents: '',
+    mastersStudents: '',
+    undergradResearchers: '',
+    username: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
   const onApplicationContainerClick = useCallback(() => {
     navigate("/application-login");
   }, [navigate]);
@@ -72,6 +99,8 @@ const ApplicationFormLab = () => {
     setAdminAcceptOpen(false);
   }, []);
 
+  const [isInputClicked, setIsInputClicked] = useState(false);
+
   return (
     <>
       <div className={styles.applicationFormLab}>
@@ -131,8 +160,22 @@ const ApplicationFormLab = () => {
         </div>
         <div className={styles.labName}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 이름>`}</b>
           <b className={styles.googleScolar}>연구실 이름</b>
+          <input 
+          className={styles.b9}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<연구실 이름>"}
+          type="text"
+          name="labName" 
+          value={form.labName} 
+          onChange={handleChange} 
+          />
         </div>
         <ClubLogo
           prop={`<연구실 로고 업로드 기능>`}

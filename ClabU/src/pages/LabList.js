@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./LabList.module.css";
+import React, {useState} from "react";
 
 const LabList = () => {
   const navigate = useNavigate();
@@ -25,6 +26,18 @@ const LabList = () => {
   const onImageClick = useCallback(() => {
     navigate("/lab-detail");
   }, [navigate]);
+
+  const onIconClick = useCallback(() => {
+    navigate("/search");
+  }, [navigate]);
+
+  const [labQuery, setlabQuery] = useState("");
+
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      
+    }
+  }
 
   return (
     <div className={styles.labList}>
@@ -55,7 +68,13 @@ const LabList = () => {
           alt=""
           src="/search-154734@2x.png"
         />
-        <div className={styles.div}>연구실명으로 검색</div>
+        <input className={styles.typeHere}
+          placeholder="연구실명으로 검색"
+          type="text"
+          value={labQuery}
+          onChange={(e)=>setlabQuery(e.target.value)}
+          onKeyDown={(e) => activeEnter(e)}
+          />
       </div>
       <div className={styles.div1}>
         <div className={styles.div2}>인공지능을활용한보안</div>

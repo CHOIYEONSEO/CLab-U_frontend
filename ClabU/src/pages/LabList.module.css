@@ -105,6 +105,21 @@
   text-align: left;
   font-size: var(--font-size-mini);
 }
+
+.typeHere {
+  top: 113px;
+  left: 983px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  width: 238px;
+  height: 44px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-mini);
+}
+
 .div2 {
   top: 90.04%;
   left: 35.21%;

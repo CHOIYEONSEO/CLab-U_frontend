@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./Search.module.css";
+import React, {useState} from "react";
 
 const Search = () => {
   const navigate = useNavigate();
@@ -25,6 +26,18 @@ const Search = () => {
   const onLogoIconClick = useCallback(() => {
     navigate("/main");
   }, [navigate]);
+
+  const onIconClick = useCallback(() => {
+    
+  }, [navigate]);
+
+  const [question, setQuestion] = useState("");
+
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      onIconClick();
+    }
+  }
 
   return (
     <div className={styles.search}>
@@ -71,8 +84,24 @@ const Search = () => {
         </b>
       </div>
       <div className={styles.inputfield}>
-        <img className={styles.icon} alt="" src="/icon@2x.png" />
-        <b className={styles.text}>{`  `}</b>
+        <input className={styles.typeHere}
+          placeholder="무엇이든 물어보세요!"
+          type="text"
+          value={question}
+          onChange={(e)=>setQuestion(e.target.value)}
+          onKeyDown={(e) => activeEnter(e)}
+          />
+        <img
+          className={styles.icon}
+          alt=""
+          src="/icon@2x.png"
+          onClick={onIconClick}
+        />
+        <img className={styles.icon}
+        alt=""
+        src="/icon@2x.png"
+        onClick={onIconClick}
+        />
       </div>
       <Navigation1
         logIn="/login@2x.png"
