@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import Frame from "../components/Frame";
 import PortalPopup from "../components/PortalPopup";
 import AdminAccept from "../components/AdminAccept";
@@ -15,7 +15,7 @@ const ApplicationFormLab = () => {
   const [form, setForm] = useState({
     logo: '',
     labName: '',
-    labDescription: '',
+    description: '',
     labTags: '',
     labLocation: '',
     professor: '',
@@ -30,14 +30,6 @@ const ApplicationFormLab = () => {
     username: '',
     password: '',
   });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
 
   const onApplicationContainerClick = useCallback(() => {
     navigate("/application-login");
@@ -99,45 +91,151 @@ const ApplicationFormLab = () => {
     setAdminAcceptOpen(false);
   }, []);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
   const [isInputClicked, setIsInputClicked] = useState(false);
 
+  const [uploadImgUrl, setUploadImgUrl] = useState("");
+
+  const onchangeImageUpload = (e)=> {
+     const {files} = e.target;
+     const uploadFile = files[0];
+     const reader = new FileReader();
+     reader.readAsDataURL(uploadFile);
+     reader.onloadend = ()=> {
+     setUploadImgUrl(reader.result);
+    }
+  }
+  
   return (
     <>
       <div className={styles.applicationFormLab}>
         <div className={styles.labMembers}>
           <div className={styles.labMembersChild} />
-          <b className={styles.b}>{`<학부연구생>`}</b>
+          <input className={styles.undergradInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<학부연구생>"}
+          type="text"
+          name="undergradResearchers"
+          value={form.undergradResearchers} 
+          onChange={handleChange} 
+          />
           <b className={styles.b1}>학부연구생</b>
           <div className={styles.labMembersItem} />
-          <b className={styles.b2}>{`<석사>`}</b>
+          <input className={styles.masterInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<석사과정>"}
+          type="text"
+          name="mastersStudents"
+          value={form.mastersStudents} 
+          onChange={handleChange} 
+          />
           <b className={styles.b3}>석사과정</b>
           <div className={styles.labMembersInner} />
-          <b className={styles.b4}>{`<박사 / 석박>`}</b>
+          <input className={styles.docInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<박사과정 / 석박 통합>"}
+          type="text"
+          name="phdStudents"
+          value={form.phdStudents} 
+          onChange={handleChange} 
+          />
           <b className={styles.b5}>박사과정 / 석박 통합</b>
           <div className={styles.lineDiv} />
-          <b className={styles.b6}>{`<포닥>`}</b>
+          <input className={styles.postDocInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<포닥>"}
+          type="text"
+          name="postdocs"
+          value={form.postdocs} 
+          onChange={handleChange} 
+          />
           <b className={styles.b7}>포닥</b>
           <b className={styles.googleScolar}>연구실 구성원 (명)</b>
         </div>
         <div className={styles.labPage}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<홈페이지>`}</b>
+          <input className={styles.pageInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<홈페이지>"}
+          type="text"
+          name="website"
+          value={form.website} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>홈페이지 주소</b>
         </div>
         <div className={styles.labRepEmail}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<대표자 이메일 등 연락처>`}</b>
+          <input className={styles.contactInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<대표자 연락처>"}
+          type="text"
+          name="representativeContact"
+          value={form.representativeContact} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>대표자 연락처</b>
         </div>
         <div className={styles.labRepName}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<대표자 이름>`}</b>
+          <input className={styles.repInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<대표자 이름>"}
+          type="text"
+          name="representativeName"
+          value={form.representativeName} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>대표자 이름</b>
-        </div>
-        <div className={styles.profName}>
-          <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<교수>`}</b>
-          <b className={styles.b16}>교수</b>
         </div>
         <div className={styles.labLocation}>
           <div className={styles.labPageChild} />
@@ -146,23 +244,30 @@ const ApplicationFormLab = () => {
           >{` (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
           <b className={styles.googleScolar}>연구실 위치</b>
         </div>
-        <div className={styles.labTag}>
-          <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 태그>`}</b>
-          <b className={styles.googleScolar}>연구실 태그</b>
-        </div>
         <div className={styles.labDescription}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 설명>`}</b>
           <b className={styles.googleScolar}>
             연구실 설명(현재 진행 중인 연구 과제 중심으로 작성)
           </b>
+          <input className={styles.labDescInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<연구실 설명>"}
+          type="text"
+          name="description"
+          value={form.description}
+          onChange={handleChange} 
+          />
         </div>
         <div className={styles.labName}>
           <div className={styles.labPageChild} />
           <b className={styles.googleScolar}>연구실 이름</b>
-          <input 
-          className={styles.b9}
+          <input className={styles.labNameInput}
           onFocus={() => {
             setIsInputClicked(true);
           }}
@@ -172,16 +277,11 @@ const ApplicationFormLab = () => {
           }}
           placeholder={isInputClicked === true ? "" : "<연구실 이름>"}
           type="text"
-          name="labName" 
+          name="labName"
           value={form.labName} 
           onChange={handleChange} 
           />
         </div>
-        <ClubLogo
-          prop={`<연구실 로고 업로드 기능>`}
-          prop1="연구실 로고"
-          propTop="220px"
-        />
         <Navigation1
           logIn="/login@2x.png"
           account1="/account-1@2x.png"
@@ -196,12 +296,38 @@ const ApplicationFormLab = () => {
         />
         <div className={styles.profName}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<교수>`}</b>
+          <input className={styles.professorInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<교수>"}
+          type="text"
+          name="professor"
+          value={form.professor} 
+          onChange={handleChange} 
+          />
           <b className={styles.b16}>교수</b>
         </div>
         <div className={styles.profName2}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<교수 Google scolar 링크>`}</b>
+          <input className={styles.scholarInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<교수 Google scolar 링크>"}
+          type="text"
+          name="professorGoogleScholar"
+          value={form.professorGoogleScholar} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>교수 Google scolar 링크</b>
         </div>
         <div className={styles.labLocation}>
@@ -215,25 +341,39 @@ const ApplicationFormLab = () => {
             <div className={styles.div2}>인사캠</div>
           </div>
           <div className={styles.wrapper}>
-            <b className={styles.b30}>{` <방 번호 텍스트 입력란>`}</b>
+          <input className={styles.locInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<방 번호>"}
+          type="text"
+          name="labLocation"
+          value={form.labLocation} 
+          onChange={handleChange} 
+          />
           </div>
         </div>
         <div className={styles.labTag}>
           <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 태그>`}</b>
+          <input className={styles.labTagInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<연구실 태그>"}
+          type="text"
+          name="labTags"
+          value={form.labTags} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>연구실 태그</b>
-        </div>
-        <div className={styles.labDescription}>
-          <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 설명>`}</b>
-          <b className={styles.googleScolar}>
-            연구실 설명(현재 진행 중인 연구 과제 중심으로 작성)
-          </b>
-        </div>
-        <div className={styles.labName}>
-          <div className={styles.labPageChild} />
-          <b className={styles.b9}>{`<연구실 이름>`}</b>
-          <b className={styles.googleScolar}>연구실 이름</b>
         </div>
         <ClubLogo
           prop={`<연구실 로고 업로드 기능>`}
@@ -261,10 +401,36 @@ const ApplicationFormLab = () => {
         <div className={styles.labIdPassword}>
           <div className={styles.labIdPasswordChild} />
           <b className={styles.b37}>아이디</b>
-          <b className={styles.b38}>{`<아이디>`}</b>
+          <input className={styles.idInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<아이디>"}
+          type="text"
+          name="username"
+          value={form.username} 
+          onChange={handleChange} 
+          />
           <div className={styles.labIdPasswordItem} />
           <b className={styles.b39}>비밀번호</b>
-          <b className={styles.b40}>{`<비밀번호>`}</b>
+          <input className={styles.pwInput}
+          onFocus={() => {
+            setIsInputClicked(true);
+          }}
+          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
+          onBlur={() => {
+            setIsInputClicked(false);
+          }}
+          placeholder={isInputClicked === true ? "" : "<비밀번호>"}
+          type="text"
+          name="password"
+          value={form.password} 
+          onChange={handleChange} 
+          />
           <b className={styles.googleScolar}>회원가입 아이디 및 비밀번호</b>
           <div className={styles.div3} onClick={openFrame} />
           <b className={styles.b42}>아이디 중복 확인</b>

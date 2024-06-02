@@ -1,3 +1,187 @@
+.clubNameInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+.clubDescInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+.clubTagInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+.clubLocInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+}
+
+.clubRepInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.contactInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.pageInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.idInput {
+position: absolute;
+width: 91px;
+height: 29px;
+left: 168px;
+top: 109px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+.pwInput {
+position: absolute;
+width: 111px;
+height: 29px;
+left: 168px;
+top: 181px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.membersInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
 .clubMembersChild {
   position: absolute;
   top: 152.5px;
