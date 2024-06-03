@@ -69,9 +69,8 @@ border-color: transparent;
 
 .locInput {
 position: absolute;
-width: 255px;
+width: 980px;
 height: 51px;
-left: 10px;
 bottom: 0px;
 
 font-family: 'Inter';
@@ -88,6 +87,12 @@ border-color: transparent;
 }
 .locInput:focus {
   outline: none;
+}
+
+.Dropdown {
+  position: absolute;
+  left: 30px;
+  top: 105px;
 }
 
 .professorInput {
@@ -607,7 +612,7 @@ border-color: transparent;
 .wrapper {
   top: 98px;
   left: 196px;
-  width: 289px;
+  width: 1150px;
   height: 55px;
   overflow: hidden;
 }

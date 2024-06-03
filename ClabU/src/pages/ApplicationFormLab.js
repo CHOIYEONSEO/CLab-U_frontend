@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import LabLogo from "../components/LabLogo";
 import Navigation1 from "../components/Navigation1";
 import styles from "./ApplicationFormLab.module.css";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
@@ -17,6 +19,7 @@ const ApplicationFormLab = () => {
     labName: '',
     description: '',
     labTags: '',
+    campus: '',
     labLocation: '',
     professor: '',
     professorGoogleScholar: '',
@@ -71,6 +74,8 @@ const ApplicationFormLab = () => {
     setSubmitOpen(false);
   }, []);
 
+  const [selectedCampusTitle, setSelectedCampusTitle] = useState("캠퍼스 선택");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLabForm({
@@ -80,18 +85,6 @@ const ApplicationFormLab = () => {
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
-
-  const [uploadImgUrl, setUploadImgUrl] = useState("");
-
-  const onchangeImageUpload = (e)=> {
-     const {files} = e.target;
-     const uploadFile = files[0];
-     const reader = new FileReader();
-     reader.readAsDataURL(uploadFile);
-     reader.onloadend = ()=> {
-     setUploadImgUrl(reader.result);
-    }
-  }
   
   return (
     <>
@@ -216,9 +209,6 @@ const ApplicationFormLab = () => {
         </div>
         <div className={styles.labLocation}>
           <div className={styles.labPageChild} />
-          <b
-            className={styles.b9}
-          >{` (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
           <b className={styles.googleScolar}>연구실 위치</b>
         </div>
         <div className={styles.labDescription}>
@@ -305,14 +295,26 @@ const ApplicationFormLab = () => {
         </div>
         <div className={styles.labLocation}>
           <div className={styles.labPageChild} />
-          <b
-            className={styles.b28}
-          >{`<좌: (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
           <b className={styles.googleScolar}>연구실 위치</b>
-          <div className={styles.div}>
-            <div className={styles.div1}>자과캠</div>
-            <div className={styles.div2}>인사캠</div>
-          </div>
+          <DropdownButton
+          className={styles.Dropdown}
+          id="campus"
+          title={selectedCampusTitle}>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '인사캠'
+              }));
+              setSelectedCampusTitle('인사캠'); // 선택된 캠퍼스 이름을 업데이트
+            }}>인사캠</Dropdown.Item>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '자과캠'
+              }));
+              setSelectedCampusTitle('자과캠'); // 선택된 캠퍼스 이름을 업데이트
+            }}>자과캠</Dropdown.Item>
+            </DropdownButton>
           <div className={styles.wrapper}>
           <input className={styles.locInput}
           onFocus={() => {
