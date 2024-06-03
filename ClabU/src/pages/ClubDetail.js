@@ -86,7 +86,7 @@ const ClubDetail = () => {
       </div>
       <div className={styles.clubDescription}>
         <b className={styles.b1}>동아리 설명</b>
-        <div className={styles.labdescription} onClick={onLabDescriptionClick} />
+        <div className={styles.labdescription}>
         <b className={styles.skkudingSkkuCodingContainer}>
           <p className={styles.skkudingSkkuCoding}>
             SKKUDING은 SKKU와 Coding을 합친 이름으로, 
@@ -112,17 +112,18 @@ const ClubDetail = () => {
             참가한다는 경험을 의의로 합니다.
           </p>
         </b>
+        </div>
       </div>
       <div className={styles.clubDetails}>
         <div className={styles.memberCount}>
           <b className={styles.b3}>구성원</b>
-          <div className={styles.div} onClick={onInstanceClick} />
-          <b className={styles.b}>{`<구성원(명)>`}</b>
+          <div className={styles.div} >
+          <b className={styles.b}>{`<구성원(명)>`}</b></div>
         </div>
         <div className={styles.clubTags}>
           <b className={styles.b2}>동아리 태그</b>
-          <div className={styles.div1} onClick={onInstance1Click} />
-          <b className={styles.onlinejudge}>#코딩 #알고리즘 #onlineJudge #개발</b>
+          <div className={styles.div1} >
+          <b className={styles.onlinejudge}>#코딩 #알고리즘 #onlineJudge #개발</b></div>
         </div>
       </div>
     </div>
