@@ -1,92 +1,141 @@
 .labList {
+  width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 100vh;
-  overflow: auto;
+  height: 832px;
+  overflow: hidden;
   text-align: right;
   font-size: var(--font-size-xl);
   color: var(--color-darkslategray-200);
   font-family: var(--font-inter);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  margin-top: 60px;
-  margin-left: 60px;
+.labItem {
+  position: absolute;
+  width: 284px;
+  height: 261px;
+}
+
+.labItem:nth-child(1) {
+  top: 508px;
+  left: 871px;
+}
+
+.labItem:nth-child(2) {
+  top: 508px;
+  left: 494px;
+}
+
+.labItem:nth-child(3) {
+  top: 508px;
+  left: 126px;
+}
+
+.labItem:nth-child(4) {
+  top: 194px;
+  left: 871px;
+}
+
+.labItem:nth-child(5) {
+  top: 194px;
+  left: 494px;
+}
+
+.labItem:nth-child(6) {
+  top: 194px;
+  left: 126px;
+}
+
+.labName {
+  position: absolute;
+  top: 90.04%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 130%;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+.labImage {
+  height: 87.82%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 12.18%;
+  left: 0;
+  border-radius: 19.37px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .tab {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 113px;
+  left: 526px;
+  width: 227px;
+  height: 44px;
+  overflow: hidden;
+  text-align: left;
+  color: var(--color-black);
 }
 
 .club {
-  margin-right: 20px;
+  position: absolute;
+  top: 10px;
+  left: 61px;
   cursor: pointer;
 }
 
 .lab {
+  position: absolute;
+  top: 10px;
+  left: 137px;
   color: var(--color-black);
 }
 
 .nameSearch {
-  position: relative;
-}
-
-.search154734Icon {
   position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
-}
-
-.typeHere {
-  padding: 10px 10px 10px 40px;
+  top: 113px;
+  left: 960px;
   border-radius: var(--br-xl);
   background-color: var(--color-white);
   border: 1px solid var(--color-darkslategray-200);
   box-sizing: border-box;
   width: 237px;
   height: 44px;
+}
+
+.search154734Icon {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.typeHere {
+  position: absolute;
+  left: 42px;
+  top: 3px;
+  background-color: var(--color-white);
+  border: 1px solid white;
+  box-sizing: border-box;
+  width: 180px;
+  height: 36px;
+  overflow: hidden;
+  text-align: left;
   font-size: var(--font-size-mini);
 }
 
 .typeHere:focus {
   outline: none;
-}
-
-.labGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.labItem {
-  position: relative;
-}
-
-.labName {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  text-align: center;
-  font-weight: 500;
-}
-
-.labImage {
-  width: 100%;
-  height: auto;
-  border-radius: 19.37px;
-  opacity: 0.8;
-  cursor: pointer;
 }
