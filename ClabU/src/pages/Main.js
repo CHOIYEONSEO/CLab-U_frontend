@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./Main.module.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -26,28 +26,13 @@ const Main = () => {
   const [question, setQuestion] = useState("");
 
   const activeEnter = (e) => {
-    if(e.key === "Enter") {
+    if (e.key === "Enter") {
       onIconClick();
     }
-  }
+  };
 
   return (
     <div className={styles.main}>
-      <div className={styles.inputfield}>
-        <input className={styles.typeHere}
-        placeholder="무엇이든 물어보세요!"
-        type="text"
-        value={question}
-        onChange={(e)=>setQuestion(e.target.value)}
-        onKeyDown={(e) => activeEnter(e)}
-        />
-        <img
-          className={styles.icon}
-          alt=""
-          src="/icon@2x.png"
-          onClick={onIconClick}
-        />
-      </div>
       <Navigation1
         logIn="/login@2x.png"
         account1="/account-1@2x.png"
@@ -58,7 +43,25 @@ const Main = () => {
         onListContainerClick={onListContainerClick}
         onSearchContainerClick={onSearchContainerClick}
       />
-      <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
+      <div className={styles.content}>
+        <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
+        <div className={styles.inputField}>
+          <input
+            className={styles.typeHere}
+            placeholder="무엇이든 물어보세요!"
+            type="text"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            onKeyDown={(e) => activeEnter(e)}
+          />
+          <img
+            className={styles.icon}
+            alt=""
+            src="/icon@2x.png"
+            onClick={onIconClick}
+          />
+        </div>
+      </div>
     </div>
   );
 };
