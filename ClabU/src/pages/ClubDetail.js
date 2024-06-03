@@ -73,7 +73,7 @@ const ClubDetail = () => {
             href="https://wealthy-helium-ffe.notion.site/2023-1-SKKUDING-fbfacf1d414d4057953cebbd42b44987"
             target="_blank"
           >
-            https://wealthy-helium-ffe.notion.site/2023-1-SKKUDING-fbfacf1d414d4057953cebbd42b44987
+            동아리 홈페이지 바로가기
           </a>
           <b className={styles.b4}>
             <p className={styles.p1}>{`대표자              : <대표자 이름>`}</p>
