@@ -1,63 +1,64 @@
-.icon,
-.typeHere {
-  position: absolute;
-}
-.typeHere {
-  position: absolute;
-  width: 960px;
-  height: 54px;
-  left: 15px;
-  background-color: var(--color-white);
-  border: 1.5px solid white;
-  box-sizing: border-box;
-  overflow: scroll;
-  font-size: medium;
-  top: calc(50% - 27px);
-  line-height: 130%;
+.main {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--color-floralwhite);
   display: flex;
-  white-space: pre-wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 15.5px;
+  color: rgba(0, 0, 0, 0.24);
+  font-family: var(--font-inter);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
+  padding: 40px;
 }
-.typeHere:focus {
-  outline: none;
-}
-.icon {
-  top: calc(50% - 12.4px);
-  right: 15.5px;
-  width: 24.8px;
-  height: 24.8px;
+
+.logoIcon {
+  width: 299px;
+  height: 261px;
   object-fit: cover;
-  cursor: pointer;
+  margin-bottom: 60px;
 }
-.inputfield {
-  position: absolute;
-  width: 1034px;
+
+.inputField {
+  display: flex;
+  align-items: center;
+  width: 1000px;
+  max-width: 1034px;
   height: 54px;
-  bottom: 170px;
-  left: 103px;
   border-radius: 23px;
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray-200);
   box-sizing: border-box;
   overflow: hidden;
+  padding: 0 15px;
 }
-.logoIcon {
-  position: absolute;
-  top: 286px;
-  left: 490px;
-  width: 299px;
-  height: 261px;
+
+.typeHere {
+  flex-grow: 1;
+  height: 100%;
+  background-color: var(--color-white);
+  border: none;
+  font-size: medium;
+  line-height: 130%;
+  padding: 0 10px;
+}
+
+.typeHere:focus {
+  outline: none;
+}
+
+.icon {
+  width: 24.8px;
+  height: 24.8px;
   object-fit: cover;
-}
-.main {
-  width: 100%;
-  position: relative;
-  background-color: var(--color-floralwhite);
-  height: 832px;
-  overflow: hidden;
-  text-align: center;
-  font-size: 15.5px;
-  color: rgba(0, 0, 0, 0.24);
-  font-family: var(--font-inter);
+  cursor: pointer;
 }

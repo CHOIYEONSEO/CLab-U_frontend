@@ -1,98 +1,108 @@
-.icon,
-.icon1 {
-  height: 229.2px;
-}
-.icon {
-  position: absolute;
-  width: calc(100% - 995px);
-  top: 507.9px;
-  right: 125px;
-  left: 870px;
-  border-radius: 19.37px;
-  max-width: 100%;
+.labList {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 832px;
   overflow: hidden;
-  object-fit: cover;
-  opacity: 0.8;
+  text-align: right;
+  font-size: var(--font-size-xl);
+  color: var(--color-darkslategray-200);
+  font-family: var(--font-inter);
 }
-.icon1 {
-  width: calc(100% - 987px);
+
+.labItem {
+  position: absolute;
+  width: 284px;
+  height: 261px;
+}
+
+.labItem:nth-child(1) {
   top: 508px;
-  right: 493.5px;
-  left: 493.5px;
+  left: 871px;
 }
-.icon1,
-.icon2,
-.icon3,
-.icon4 {
+
+.labItem:nth-child(2) {
+  top: 508px;
+  left: 494px;
+}
+
+.labItem:nth-child(3) {
+  top: 508px;
+  left: 126px;
+}
+
+.labItem:nth-child(4) {
+  top: 194px;
+  left: 871px;
+}
+
+.labItem:nth-child(5) {
+  top: 194px;
+  left: 494px;
+}
+
+.labItem:nth-child(6) {
+  top: 194px;
+  left: 126px;
+}
+
+.labName {
   position: absolute;
+  top: 90.04%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 130%;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+.labImage {
+  height: 87.82%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 12.18%;
+  left: 0;
   border-radius: 19.37px;
   max-width: 100%;
   overflow: hidden;
+  max-height: 100%;
   object-fit: cover;
   opacity: 0.8;
-}
-.icon2 {
-  height: 27.55%;
-  width: calc(100% - 996px);
-  top: 61.05%;
-  right: 870px;
-  bottom: 11.41%;
-  left: 126px;
-  max-height: 100%;
-}
-.icon3,
-.icon4 {
-  width: calc(100% - 995px);
-  top: 194px;
-  right: 125px;
-  left: 870px;
-  height: 229.2px;
-}
-.icon4 {
-  width: calc(100% - 987px);
-  top: 194.1px;
-  right: 493.5px;
-  left: 493.5px;
-}
-.club,
-.lab,
-.tab {
-  position: absolute;
-  top: 10px;
-}
-.club {
-  left: 61px;
   cursor: pointer;
 }
-.lab,
+
 .tab {
-  left: 137px;
-  color: var(--color-black);
-}
-.tab {
+  position: absolute;
   top: 113px;
   left: 526px;
   width: 227px;
   height: 44px;
   overflow: hidden;
   text-align: left;
-  color: var(--color-darkgray-200);
+  color: var(--color-black);
 }
-.search154734Icon {
+
+.club {
   position: absolute;
-  top: 12px;
-  left: 14px;
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
+  top: 10px;
+  left: 61px;
+  cursor: pointer;
 }
-.div,
+
+.lab {
+  position: absolute;
+  top: 10px;
+  left: 137px;
+  color: var(--color-black);
+}
+
 .nameSearch {
   position: absolute;
-  top: 14px;
-  left: 47px;
-}
-.nameSearch {
   top: 113px;
   left: 960px;
   border-radius: var(--br-xl);
@@ -101,6 +111,15 @@
   box-sizing: border-box;
   width: 237px;
   height: 44px;
+}
+
+.search154734Icon {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
 }
 
 .typeHere {
@@ -119,78 +138,4 @@
 
 .typeHere:focus {
   outline: none;
-}
-
-.div2 {
-  top: 90.04%;
-  left: 35.21%;
-  line-height: 130%;
-  font-weight: 500;
-}
-.div1,
-.div2,
-.icon5 {
-  position: absolute;
-}
-.icon5 {
-  height: 87.82%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 12.18%;
-  left: 0;
-  border-radius: 19.37px;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.div1 {
-  top: 194px;
-  left: 126px;
-  width: 284px;
-  height: 261px;
-}
-.div3,
-.div4,
-.div5,
-.div6,
-.div7 {
-  position: absolute;
-  top: 51.56%;
-  left: 48.44%;
-  line-height: 130%;
-  font-weight: 500;
-}
-.div4,
-.div5,
-.div6,
-.div7 {
-  left: 81.56%;
-}
-.div5,
-.div6,
-.div7 {
-  top: 89.3%;
-  left: 54.22%;
-}
-.div6,
-.div7 {
-  left: 21.95%;
-}
-.div7 {
-  left: 78.67%;
-}
-.labList {
-  width: 100%;
-  position: relative;
-  background-color: var(--color-floralwhite);
-  height: 832px;
-  overflow: hidden;
-  text-align: right;
-  font-size: var(--font-size-xl);
-  color: var(--color-darkslategray-200);
-  font-family: var(--font-inter);
 }

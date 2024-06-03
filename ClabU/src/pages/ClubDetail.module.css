@@ -1,150 +1,130 @@
-.div,
-.labdescription {
-  position: absolute;
-  width: calc(100% - 1007px);
-  top: 831px;
-  right: 956px;
-  left: 51px;
-  border-radius: 19.37px;
-  background-color: var(--color-whitesmoke-200);
-  border: 1.6px solid var(--color-darkslategray-200);
-  box-sizing: border-box;
-  height: 134px;
-  overflow: hidden;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.labdescription {
-  width: calc(100% - 110px);
-  top: 517px;
-  right: 59px;
-  height: 229px;
-}
-.codedang1 {
-  text-decoration: underline;
-}
-.codedang {
-  color: inherit;
-}
-.skkudingSkkuCoding {
-  margin: 0;
-}
-.skkudingSkkuCodingContainer {
-  position: absolute;
-  top: 529px;
-  left: 73px;
-  line-height: 130%;
-  display: inline-block;
-  width: 1122px;
-  height: 205px;
-}
-.b,
-.div1 {
-  position: absolute;
-}
-.b {
-  top: 846px;
-  left: 66px;
-  line-height: 130%;
-}
-.div1 {
-  width: calc(100% - 400px);
-  top: 831px;
-  right: 59px;
-  left: 341px;
-  border-radius: 19.37px;
-  background-color: var(--color-whitesmoke-200);
-  border: 1.6px solid var(--color-darkslategray-200);
-  box-sizing: border-box;
-  height: 134px;
-  overflow: hidden;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.onlinejudge {
-  position: absolute;
-  top: 850px;
-  left: 360px;
-  font-size: var(--font-size-5xl);
-  line-height: 130%;
-}
-.lablogoIcon {
-  position: absolute;
-  width: calc(100% - 980px);
-  top: 140px;
-  right: 920px;
-  left: 60px;
-  border-radius: 19.37px;
-  max-width: 100%;
-  overflow: hidden;
-  height: 300px;
-  object-fit: cover;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.b1,
-.b2,
-.b3,
-.skkuding1 {
-  position: absolute;
-  top: 465px;
-  left: 60px;
-  font-size: var(--font-size-7xl);
-  line-height: 130%;
-}
-.b2,
-.b3,
-.skkuding1 {
-  top: 783px;
-  left: 341px;
-}
-.b3,
-.skkuding1 {
-  top: 779px;
-  left: 60px;
-}
-.skkuding1 {
-  top: 146px;
-  left: 382px;
-  font-size: var(--font-size-17xl);
-}
-.p1 {
-  margin: 0;
-  white-space: pre-wrap;
-}
-.b4 {
-  top: 310px;
-  left: 382px;
-  display: inline-block;
-  width: 885px;
-}
-.b4,
-.b5,
-.httpswealthyHeliumFfenot {
-  position: absolute;
-  line-height: 130%;
-}
-.httpswealthyHeliumFfenot {
-  top: 246px;
-  left: 382px;
-  font-size: var(--font-size-lg);
-  text-decoration: underline;
-  font-weight: 700;
-  color: var(--color-blue);
-}
-.b5 {
-  top: 159px;
-  left: 1023px;
-  font-size: var(--font-size-5xl);
-}
 .clubDetail {
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 1400px;
+  min-height: 100vh;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--color-black);
   font-family: var(--font-inter);
+}
+
+.clubHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.lablogoIcon {
+  width: 300px;
+  height: 300px;
+  border-radius: 19.37px;
+  object-fit: cover;
+  opacity: 0.8;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.clubInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.skkuding1 {
+  font-size: var(--font-size-17xl);
+  margin-bottom: 20px;
+}
+
+.httpswealthyHeliumFfenot {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.b4 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.b5 {
+  font-size: var(--font-size-5xl);
+}
+
+.clubDescription {
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.b1 {
+  font-size: var(--font-size-7xl);
+  margin-bottom: 20px;
+}
+
+.labdescription {
+  width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.skkudingSkkuCodingContainer {
+  line-height: 130%;
+  display: inline-block;
+  width: 100%;
+}
+
+.codedang1 {
+  text-decoration: underline;
+}
+
+.codedang {
+  color: inherit;
+}
+
+.clubDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.memberCount,
+.clubTags {
+  flex: 1;
+}
+
+.b3,
+.b2 {
+  font-size: var(--font-size-7xl);
+  margin-bottom: 20px;
+}
+
+.div,
+.div1 {
+  width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+.b {
+  margin-top: 10px;
+}
+
+.onlinejudge {
+  font-size: var(--font-size-5xl);
+  margin-top: 10px;
 }
