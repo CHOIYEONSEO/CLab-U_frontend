@@ -13,7 +13,7 @@ const Search = () => {
 
   const onListContainerClick = useCallback(() => {
     navigate("/club-list");
-  }, [navigate]);
+  }, [navigate])
 
   const onSearchContainerClick = useCallback(() => {
     navigate("/search");
@@ -60,19 +60,19 @@ const Search = () => {
         <div className={styles.div2}>
           <p
             className={styles.p}
-          >{`율전 캠퍼스에서 학부연구생이 있는 인공지능 관련 연구실에는 다음과 같은 연구실이 있습니다. `}</p>
+          >{`자연과학 캠퍼스에서 학부연구생이 있는 인공지능 관련 연구실에는 다음과 같은 연구실이 있습니다. `}</p><br/>
           <ul className={styles.ul}>
             <li className={styles.li}>
               <span>자연어 처리 연구실 (고영중 교수)</span>
             </li>
             <li className={styles.li}>
-              <span>인공지능을 활용한 보안연구실 (구형준 교수)</span>
+              <span>인간언어지능연구실 (박진영 교수)</span>
             </li>
             <li className={styles.li}>
-              <span>인공지능융합연구실 (김광수 교수)</span>
+              <span>기계학습-데이터마이닝 연구실 (박호건 교수)</span>
             </li>
             <li className={styles.li}>
-              <span className={styles.span}>...</span>
+              <span>데이터지능및학습연구실 (이종욱 교수)</span>
             </li>
           </ul>
         </div>
@@ -80,7 +80,7 @@ const Search = () => {
       </div>
       <div className={styles.firstchat2}>
         <b className={styles.b}>
-          율전 캠퍼스에 인공지능 관련 연구실 중 학부연구생이 있는 연구실이 있어?
+          자연과학 캠퍼스에 자연어 처리 관련 연구실을 추천해줘.
         </b>
       </div>
       <div className={styles.inputfield}>
