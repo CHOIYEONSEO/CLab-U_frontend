@@ -15,6 +15,7 @@
     {
       "source": "/image/:path*",
       "destination": "http://3.38.183.31:3000/image/:path*"
-    }
+    },
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
