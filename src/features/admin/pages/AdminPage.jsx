@@ -1,30 +1,10 @@
 import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import Navigation1 from "../components/Navigation1";
+import { Link, useNavigate } from "react-router-dom";
+import Navigation from "../../../components/navigation/Navigation";
 import styles from "./AdminPage.module.css";
 
 const AdminPage = () => {
   const navigate = useNavigate();
-
-  const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
-  const onListContainerClick = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainerClick = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUTextClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIconClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
 
   const onClubNameContainerClick = useCallback(() => {
     navigate("/admin-club");
@@ -44,42 +24,30 @@ const AdminPage = () => {
 
   return (
     <div className={styles.adminPage}>
-      <div className={styles.clubName} onClick={onClubNameContainerClick}>
+      <Link className={styles.clubName} to="/admin/clubs/1">
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-      </div>
-      <div className={styles.clubName1} onClick={onClubNameContainer1Click}>
+      </Link>
+      <Link className={styles.clubName1} to="/admin/clubs/1">
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.b}>동아리 이름</b>
         <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-      </div>
-      <div className={styles.labName} onClick={onLabNameContainerClick}>
+      </Link>
+      <Link className={styles.labName} to="/admin/labs/1">
         <b className={styles.b}>랩 이름</b>
         <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-      </div>
-      <div className={styles.labName1} onClick={onLabNameContainer1Click}>
+      </Link>
+      <Link className={styles.labName1} to="/admin/labs/1">
         <b className={styles.b}>랩 이름</b>
         <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-      </div>
-      <div className={styles.labName2}>
+      </Link>
+      <Link className={styles.labName2} to="/admin/labs/1">
         <b className={styles.b}>랩 이름</b>
         <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-      </div>
-      <Navigation1
-        logIn="/login@2x.png"
-        account1="/account-1@2x.png"
-        logo="/logo@2x.png"
-        propWidth="100%"
-        propRight="0px"
-        onApplicationContainerClick={onApplicationContainerClick}
-        onListContainerClick={onListContainerClick}
-        onSearchContainerClick={onSearchContainerClick}
-        onClabUTextClick={onClabUTextClick}
-        onLogoIconClick={onLogoIconClick}
-      />
+      </Link>
       <b className={styles.b9}>랩 신청 및 수정 목록</b>
       <b className={styles.b10}>동아리 신청 및 수정 목록</b>
     </div>

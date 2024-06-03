@@ -1,31 +1,10 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import Navigation1 from "../components/Navigation1";
 import styles from "./ClubList.module.css";
-import React, {useState} from "react";
+import { useState } from "react";
 
 const ClubList = () => {
   const navigate = useNavigate();
-
-  const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
-  const onListContainerClick = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainerClick = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUTextClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIconClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
 
   const onImageClick = useCallback(() => {
     navigate("/club-detail");
@@ -62,10 +41,9 @@ const ClubList = () => {
   const [clubQuery, setclubQuery] = useState("");
 
   const activeEnter = (e) => {
-    if(e.key === "Enter") {
-      
+    if (e.key === "Enter") {
     }
-  }
+  };
 
   return (
     <div className={styles.clubList}>
@@ -129,29 +107,18 @@ const ClubList = () => {
           lab
         </div>
       </div>
-      <Navigation1
-        logIn="/login@2x.png"
-        account1="/account-1@2x.png"
-        logo="/logo@2x.png"
-        propWidth="100%"
-        propRight="0px"
-        onApplicationContainerClick={onApplicationContainerClick}
-        onListContainerClick={onListContainerClick}
-        onSearchContainerClick={onSearchContainerClick}
-        onClabUTextClick={onClabUTextClick}
-        onLogoIconClick={onLogoIconClick}
-      />
       <div className={styles.nameSearch}>
         <img
           className={styles.search154734Icon}
           alt=""
           src="/search-154734@2x.png"
         />
-        <input className={styles.typeHere}
+        <input
+          className={styles.typeHere}
           placeholder="동아리명으로 검색"
           type="text"
           value={clubQuery}
-          onChange={(e)=>setclubQuery(e.target.value)}
+          onChange={(e) => setclubQuery(e.target.value)}
           onKeyDown={(e) => activeEnter(e)}
         />
       </div>

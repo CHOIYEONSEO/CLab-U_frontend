@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+html,
 body {
   margin: 0;
+  height: 100%;
   line-height: normal;
 }
 :root {
@@ -53,4 +55,26 @@ body {
   --br-xl: 20px;
   --br-base: 16px;
   --br-lgi-4: 19.4px;
+}
+#root {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  background-color: var(--color-floralwhite);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

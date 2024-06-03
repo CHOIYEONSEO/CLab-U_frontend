@@ -1,38 +1,10 @@
-import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Navigation1 from "../components/Navigation1";
+import { useState } from "react";
 import styles from "./ApplicationLogin.module.css";
 
 const ApplicationLogin = () => {
-  const navigate = useNavigate();
-
-  const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
-  const onListContainerClick = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainerClick = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUTextClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIconClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogInContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
   const [logInForm, setLogInForm] = useState({
-    id: '',
-    password: '',
+    id: "",
+    password: "",
   });
 
   const handleChange = (e) => {
@@ -53,11 +25,12 @@ const ApplicationLogin = () => {
           아이디와 비밀번호 찾기는 관리자에게 문의하세요
         </b>
       </div>
-      <div className={styles.login} onClick={onLogInContainerClick}>
+      <div className={styles.login} to="/">
         <b className={styles.b1}>로그인</b>
       </div>
       <div className={styles.passwd}>
-      <input className={styles.passwdInput}
+        <input
+          className={styles.passwdInput}
           onFocus={() => {
             setIsPasswdInputClicked(true);
           }}
@@ -68,13 +41,14 @@ const ApplicationLogin = () => {
           placeholder={isPasswdInputClicked === true ? "" : "비밀번호"}
           type="password"
           name="passwd"
-          value={logInForm.password} 
+          value={logInForm.password}
           onChange={handleChange}
-          />
+        />
         <img className={styles.passwdIcon} alt="" src="/passwd-icon@2x.png" />
       </div>
       <div className={styles.id}>
-      <input className={styles.idInput}
+        <input
+          className={styles.idInput}
           onFocus={() => {
             setIsIdInputClicked(true);
           }}
@@ -85,23 +59,11 @@ const ApplicationLogin = () => {
           placeholder={isIdInputClicked === true ? "" : "아이디"}
           type="text"
           name="id"
-          value={logInForm.id} 
-          onChange={handleChange} 
-          />
+          value={logInForm.id}
+          onChange={handleChange}
+        />
         <img className={styles.idIcon} alt="" src="/id-icon@2x.png" />
       </div>
-      <Navigation1
-        logIn="/login@2x.png"
-        account1="/account-1@2x.png"
-        logo="/logo@2x.png"
-        propWidth="100%"
-        propRight="0px"
-        onApplicationContainerClick={onApplicationContainerClick}
-        onListContainerClick={onListContainerClick}
-        onSearchContainerClick={onSearchContainerClick}
-        onClabUTextClick={onClabUTextClick}
-        onLogoIconClick={onLogoIconClick}
-      />
     </div>
   );
 };

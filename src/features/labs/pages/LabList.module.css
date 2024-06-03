@@ -1,0 +1,89 @@
+.tab {
+  width: 227px;
+  height: 44px;
+  text-align: center;
+  color: var(--color-darkgray-200);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.lab {
+  color: var(--color-black);
+}
+.nameSearch {
+  position: absolute;
+
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  width: 237px;
+  height: 44px;
+
+  right: -20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search154734Icon {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.typeHere {
+  background-color: var(--color-white);
+  border: 1px solid white;
+  box-sizing: border-box;
+  width: 180px;
+  height: 36px;
+  text-align: left;
+  font-size: var(--font-size-mini);
+}
+
+.typeHere:focus {
+  outline: none;
+}
+.icon5 {
+  height: 87.82%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 12.18%;
+  left: 0;
+  border-radius: 19.37px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.labList {
+  max-width: 1600px;
+  width: 80vw;
+  min-width: 1000px;
+  position: relative;
+  text-align: right;
+  font-size: var(--font-size-xl);
+  color: var(--color-darkslategray-200);
+  font-family: var(--font-inter);
+
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  text-align: right;
+}

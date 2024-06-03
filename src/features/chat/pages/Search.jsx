@@ -1,43 +1,55 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import Navigation1 from "../components/Navigation1";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useChatMutation } from "../hooks/query";
 import styles from "./Search.module.css";
-import React, {useState} from "react";
 
 const Search = () => {
-  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const { mutate, isPending, isSuccess } = useChatMutation();
 
-  const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
-  const onListContainerClick = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainerClick = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUTextClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIconClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onIconClick = useCallback(() => {
-    
-  }, [navigate]);
-
+  const [history, setHistory] = useState([]);
   const [question, setQuestion] = useState("");
 
+  const sendChat = useCallback(
+    (query) => {
+      console.log(query);
+      if (query.trim().length > 0) {
+        setHistory((prev) => [...prev, { sender: "me", content: query }]);
+        mutate(query, {
+          onSuccess: (data) => {
+            setHistory((prev) => [...prev, { sender: "ai", content: data }]);
+          },
+          onError: (error) => {
+            setHistory((prev) => [
+              ...prev,
+              { sender: "ai", content: error.message },
+            ]);
+          },
+        });
+      }
+    },
+    [mutate]
+  );
+
   const activeEnter = (e) => {
-    if(e.key === "Enter") {
-      onIconClick();
+    if (e.key === "Enter") {
+      sendChat(question);
     }
-  }
+  };
+
+  useEffect(() => {
+    const query = searchParams.get("query");
+    if (query && query.trim().length > 0) {
+      sendChat(query);
+    }
+    return () => {
+      setHistory([]);
+    };
+  }, [searchParams, sendChat]);
+
+  useEffect(() => {
+    console.log(history);
+  }, [history]);
 
   return (
     <div className={styles.search}>
@@ -72,7 +84,7 @@ const Search = () => {
               <span>인공지능융합연구실 (김광수 교수)</span>
             </li>
             <li className={styles.li}>
-              <span className={styles.span}>...</span>
+              <span className={styles.span}>..</span>
             </li>
           </ul>
         </div>
@@ -84,37 +96,27 @@ const Search = () => {
         </b>
       </div>
       <div className={styles.inputfield}>
-        <input className={styles.typeHere}
+        <input
+          className={styles.typeHere}
           placeholder="무엇이든 물어보세요!"
           type="text"
           value={question}
-          onChange={(e)=>setQuestion(e.target.value)}
+          onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={(e) => activeEnter(e)}
-          />
+        />
         <img
           className={styles.icon}
           alt=""
           src="/icon@2x.png"
-          onClick={onIconClick}
+          onClick={sendChat}
         />
-        <img className={styles.icon}
-        alt=""
-        src="/icon@2x.png"
-        onClick={onIconClick}
+        <img
+          className={styles.icon}
+          alt=""
+          src="/icon@2x.png"
+          onClick={sendChat}
         />
       </div>
-      <Navigation1
-        logIn="/login@2x.png"
-        account1="/account-1@2x.png"
-        logo="/logo@2x.png"
-        propWidth="100%"
-        propRight="0px"
-        onApplicationContainerClick={onApplicationContainerClick}
-        onListContainerClick={onListContainerClick}
-        onSearchContainerClick={onSearchContainerClick}
-        onClabUTextClick={onClabUTextClick}
-        onLogoIconClick={onLogoIconClick}
-      />
     </div>
   );
 };

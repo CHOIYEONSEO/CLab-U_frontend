@@ -15,7 +15,7 @@ export default defineConfig({
         changeOrigin: true,
       },
       "/image": {
-        target: "http://3.38.183.31:8000",
+        target: "http://3.38.183.31:3000",
         changeOrigin: true,
       },
     },

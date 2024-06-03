@@ -1,23 +1,6 @@
 import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
-import AdminRejectReason from "./components/AdminRejectReason";
-import AdminClub from "./pages/AdminClub";
-import AdminLab from "./pages/AdminLab";
-import AdminPage from "./pages/AdminPage";
-import ApplicationFormClub from "./pages/ApplicationFormClub";
-import ApplicationFormLab from "./pages/ApplicationFormLab";
-import ApplicationLogin from "./pages/ApplicationLogin";
-import ClubDetail from "./pages/ClubDetail";
-import LabDetail from "./pages/LabDetail";
-import LabList from "./pages/LabList";
-import ClubList from "./pages/ClubList";
-import Search from "./pages/Search";
-import Main from "./pages/Main";
+import { Outlet, useLocation, useNavigationType } from "react-router-dom";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   const action = useNavigationType();
@@ -104,21 +87,18 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/admin-club" element={<AdminClub />} />
-      <Route path="/admin-lab" element={<AdminLab />} />
-      <Route path="/admin-page" element={<AdminPage />} />
-      <Route path="/application-form-club" element={<ApplicationFormClub />} />
-      <Route path="/application-form-lab" element={<ApplicationFormLab />} />
-      <Route path="/application-login" element={<ApplicationLogin />} />
-      <Route path="/club-detail" element={<ClubDetail />} />
-      <Route path="/lab-detail" element={<LabDetail />} />
-      <Route path="/lab-list" element={<LabList />} />
-      <Route path="/club-list" element={<ClubList />} />
-      <Route path="/search" element={<Search />} />
-      <Route path="/main" element={<Main />} />
-    </Routes>
+    <>
+      <Navigation
+        logIn="/login@2x.png"
+        account1="/account-1@2x.png"
+        logo="/logo@2x.png"
+        propWidth="100%"
+        propRight="0px"
+      />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
 export default App;

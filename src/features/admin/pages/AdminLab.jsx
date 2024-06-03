@@ -1,56 +1,13 @@
-import { useState, useCallback } from "react";
-import AdminAccept from "../components/AdminAccept";
-import PortalPopup from "../components/PortalPopup";
-import AdminReject from "../components/AdminReject";
-import { useNavigate } from "react-router-dom";
-import ClubLogo from "../components/ClubLogo";
-import Navigation1 from "../components/Navigation1";
+import { useCallback, useState } from "react";
+import AdminAccept from "../../../components/AdminAccept";
+import AdminReject from "../../../components/AdminReject";
+import ClubLogo from "../../../components/ClubLogo";
+import PortalPopup from "../../../components/PortalPopup";
 import styles from "./AdminLab.module.css";
 
 const AdminLab = () => {
   const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
   const [isAdminRejectOpen, setAdminRejectOpen] = useState(false);
-  const navigate = useNavigate();
-
-  const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-form-lab");
-  }, [navigate]);
-
-  const onListContainerClick = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainerClick = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUTextClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIconClick = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onApplicationContainer2Click = useCallback(() => {
-    navigate("/application-login");
-  }, [navigate]);
-
-  const onListContainer2Click = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainer2Click = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUText2Click = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIcon2Click = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
 
   const openAdminAccept = useCallback(() => {
     setAdminAcceptOpen(true);
@@ -111,18 +68,6 @@ const AdminLab = () => {
           prop1="연구실 로고"
           propTop="103px"
         />
-        <Navigation1
-          logIn="/login@2x.png"
-          account1="/account-1@2x.png"
-          logo="/logo@2x.png"
-          propWidth="100%"
-          propRight="0px"
-          onApplicationContainerClick={onApplicationContainerClick}
-          onListContainerClick={onListContainerClick}
-          onSearchContainerClick={onSearchContainerClick}
-          onClabUTextClick={onClabUTextClick}
-          onLogoIconClick={onLogoIconClick}
-        />
         <div className={styles.profName}>
           <div className={styles.profNameChild} />
           <b className={styles.b2}>{`<교수>`}</b>
@@ -161,18 +106,6 @@ const AdminLab = () => {
           prop={`<연구실 로고 업로드 기능>`}
           prop1="연구실 로고"
           propTop="103px"
-        />
-        <Navigation1
-          logIn="/login@2x.png"
-          account1="/account-1@2x.png"
-          logo="/logo@2x.png"
-          propWidth="1280px"
-          propRight="unset"
-          onApplicationContainerClick={onApplicationContainer2Click}
-          onListContainerClick={onListContainer2Click}
-          onSearchContainerClick={onSearchContainer2Click}
-          onClabUTextClick={onClabUText2Click}
-          onLogoIconClick={onLogoIcon2Click}
         />
         <div className={styles.profName2}>
           <div className={styles.profNameChild} />
