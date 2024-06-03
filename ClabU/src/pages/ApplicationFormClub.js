@@ -85,7 +85,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -104,7 +103,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -122,7 +120,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -140,7 +137,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -158,7 +154,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -176,7 +171,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -194,7 +188,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -212,7 +205,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -247,7 +239,6 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -263,12 +254,11 @@ const ApplicationFormClub = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
           placeholder={isInputClicked === true ? "" : "비밀번호를 입력해 주세요"}
-          type="text"
+          type="password"
           name="password"
           value={clubform.password} 
           onChange={handleChange} 

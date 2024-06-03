@@ -51,26 +51,6 @@ const ApplicationFormLab = () => {
     navigate("/main");
   }, [navigate]);
 
-  const onApplicationContainer2Click = useCallback(() => {
-    navigate("/application-login");
-  }, [navigate]);
-
-  const onListContainer2Click = useCallback(() => {
-    navigate("/club-list");
-  }, [navigate]);
-
-  const onSearchContainer2Click = useCallback(() => {
-    navigate("/search");
-  }, [navigate]);
-
-  const onClabUText2Click = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
-  const onLogoIcon2Click = useCallback(() => {
-    navigate("/main");
-  }, [navigate]);
-
   const onClubTextClick = useCallback(() => {
     navigate("/application-form-club");
   }, [navigate]);
@@ -122,7 +102,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -139,7 +118,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -156,7 +134,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -173,7 +150,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -193,7 +169,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -211,7 +186,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -229,7 +203,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -257,7 +230,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -275,7 +247,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -304,7 +275,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -322,7 +292,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -349,7 +318,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -367,7 +335,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -396,7 +363,6 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
@@ -412,12 +378,11 @@ const ApplicationFormLab = () => {
           onFocus={() => {
             setIsInputClicked(true);
           }}
-          // 클릭되어 있지 않을 때 작동(input 이외의 영역이 클릭되었을 때)
           onBlur={() => {
             setIsInputClicked(false);
           }}
           placeholder={isInputClicked === true ? "" : "비밀번호를 입력해 주세요"}
-          type="text"
+          type="password"
           name="password"
           value={labform.password} 
           onChange={handleChange} 

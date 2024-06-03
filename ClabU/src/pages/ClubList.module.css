@@ -159,11 +159,10 @@
   position: absolute;
   left: 42px;
   top: 3px;
-  border-radius: var(--br-xl);
   background-color: var(--color-white);
   border: 1px solid white;
   box-sizing: border-box;
-  width: 190px;
+  width: 180px;
   height: 36px;
   overflow: hidden;
   text-align: left;

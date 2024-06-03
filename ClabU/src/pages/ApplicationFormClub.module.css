@@ -14,6 +14,11 @@ line-height: 130%;
 display: flex;
 align-items: center;
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubNameInput:focus {
+  outline: none;
 }
 
 .clubDescInput {
@@ -32,6 +37,11 @@ line-height: 130%;
 display: flex;
 align-items: center;
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubDescInput:focus {
+  outline: none;
 }
 
 .clubTagInput {
@@ -50,6 +60,11 @@ line-height: 130%;
 display: flex;
 align-items: center;
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubTagInput:focus {
+  outline: none;
 }
 
 .clubLocInput {
@@ -68,6 +83,11 @@ line-height: 130%;
 display: flex;
 align-items: center;
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubLocInput:focus {
+  outline: none;
 }
 
 .clubRepInput {
@@ -85,8 +105,12 @@ line-height: 130%;
 /* or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubRepInput:focus {
+  outline: none;
 }
 
 .contactInput {
@@ -104,8 +128,12 @@ line-height: 130%;
 /* or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.contactInput:focus {
+  outline: none;
 }
 
 .pageInput {
@@ -123,8 +151,12 @@ line-height: 130%;
 /* or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pageInput:focus {
+  outline: none;
 }
 
 .idInput {
@@ -142,8 +174,12 @@ line-height: 130%;
 /* identical to box height, or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.idInput:focus {
+  outline: none;
 }
 
 .pwInput {
@@ -161,8 +197,12 @@ line-height: 130%;
 /* identical to box height, or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pwInput:focus {
+  outline: none;
 }
 
 .membersInput {
@@ -180,8 +220,12 @@ line-height: 130%;
 /* or 29px */
 display: flex;
 align-items: center;
-
 color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.membersInput:focus {
+  outline: none;
 }
 
 .clubMembersChild {
