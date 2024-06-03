@@ -1,3 +1,233 @@
+.clubNameInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubNameInput:focus {
+  outline: none;
+}
+
+.clubDescInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubDescInput:focus {
+  outline: none;
+}
+
+.clubTagInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubTagInput:focus {
+  outline: none;
+}
+
+.clubLocInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubLocInput:focus {
+  outline: none;
+}
+
+.clubRepInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.clubRepInput:focus {
+  outline: none;
+}
+
+.contactInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.contactInput:focus {
+  outline: none;
+}
+
+.pageInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pageInput:focus {
+  outline: none;
+}
+
+.idInput {
+position: absolute;
+width: 240px;
+height: 29px;
+left: 168px;
+top: 109px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.idInput:focus {
+  outline: none;
+}
+
+.pwInput {
+position: absolute;
+width: 240px;
+height: 29px;
+left: 168px;
+top: 181px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pwInput:focus {
+  outline: none;
+}
+
+.membersInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.membersInput:focus {
+  outline: none;
+}
+
 .clubMembersChild {
   position: absolute;
   top: 152.5px;
@@ -155,10 +385,9 @@
   height: 41px;
 }
 .b19 {
-  top: 112px;
-  left: 480px;
+  top: 10px;
+  left: 23px;
   font-size: var(--font-size-lg);
-  line-height: 130%;
 }
 .labIdPassword {
   top: 2131px;
@@ -218,14 +447,7 @@
   overflow: hidden;
   font-size: var(--font-size-xl);
 }
-.applicationFormClubChild {
-  position: absolute;
-  top: -47.3px;
-  left: 138px;
-  background-color: var(--color-gainsboro-200);
-  width: 100px;
-  height: 100px;
-}
+
 .applicationFormClub {
   width: 100%;
   position: relative;

@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./ClubLogo.module.css";
+import styles from "./LabLogo.module.css";
 
-const ClubLogo = ({ className = "", prop1, propTop }) => {
-  const clubLogoStyle = useMemo(() => {
+const LabLogo = ({ className = "", prop1, propTop }) => {
+  const labLogoStyle = useMemo(() => {
     return {
       top: propTop,
     };
@@ -21,23 +21,23 @@ const ClubLogo = ({ className = "", prop1, propTop }) => {
 
   return (
     <div
-      className={[styles.clubLogo, className].join(" ")}
-      style={clubLogoStyle}
+      className={[styles.labLogo, className].join(" ")}
+      style={labLogoStyle}
     >
-      <div className={styles.clubLogoChild} />
+      <div className={styles.labLogoChild} />
       <input 
       className={styles.b} 
       type="file" 
       accept='image/*'
       onChange={setViewImg}
       />
-      <img className={styles.clubLogo1} src={logoImg}/>
+      <img className={styles.labLogo1} src={logoImg}/>
       <b className={styles.b1}>{prop1}</b>
     </div>
   );
 };
 
-ClubLogo.propTypes = {
+LabLogo.propTypes = {
   className: PropTypes.string,
   prop1: PropTypes.string,
 
@@ -45,4 +45,4 @@ ClubLogo.propTypes = {
   propTop: PropTypes.any,
 };
 
-export default ClubLogo;
+export default LabLogo;

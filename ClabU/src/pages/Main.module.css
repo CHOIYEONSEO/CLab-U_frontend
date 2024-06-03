@@ -3,15 +3,24 @@
   position: absolute;
 }
 .typeHere {
-  top: calc(50% - 27.1px);
-  left: calc(50% - 536.9px);
+  position: absolute;
+  width: 960px;
+  height: 54px;
+  left: 15px;
+  background-color: var(--color-white);
+  border: 1.5px solid white;
+  box-sizing: border-box;
+  overflow: scroll;
+  font-size: medium;
+  top: calc(50% - 27px);
   line-height: 130%;
   display: flex;
   white-space: pre-wrap;
   align-items: center;
   justify-content: center;
-  width: 1034px;
-  height: 54px;
+}
+.typeHere:focus {
+  outline: none;
 }
 .icon {
   top: calc(50% - 12.4px);
@@ -23,14 +32,14 @@
 }
 .inputfield {
   position: absolute;
-  bottom: 172.8px;
+  width: 1034px;
+  height: 54px;
+  bottom: 170px;
   left: 103px;
-  border-radius: 23.21px;
+  border-radius: 23px;
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray-200);
   box-sizing: border-box;
-  width: 1073.8px;
-  height: 54.2px;
   overflow: hidden;
 }
 .logoIcon {

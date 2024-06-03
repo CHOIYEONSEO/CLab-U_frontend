@@ -1,3 +1,349 @@
+.labNameInput{
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.labNameInput:focus {
+  outline: none;
+}
+
+.labDescInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.labDescInput:focus {
+  outline: none;
+}
+
+.labTagInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.labTagInput:focus {
+  outline: none;
+}
+
+.locInput {
+position: absolute;
+width: 255px;
+height: 51px;
+left: 10px;
+bottom: 0px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.locInput:focus {
+  outline: none;
+}
+
+.professorInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.professorInput:focus {
+  outline: none;
+}
+
+.scholarInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.scholarInput:focus {
+  outline: none;
+}
+
+.repInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.repInput:focus {
+  outline: none;
+}
+
+.contactInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.contactInput:focus {
+  outline: none;
+}
+
+.pageInput {
+position: absolute;
+width: 1150px;
+height: 51px;
+left: 23px;
+top: 102px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pageInput:focus {
+  outline: none;
+}
+
+.undergradInput {
+position: absolute;
+width: 299px;
+height: 51px;
+left: 627px;
+top: 299px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.undergradInput:focus {
+  outline: none;
+}
+
+.masterInput {
+position: absolute;
+width: 299px;
+height: 51px;
+left: 27px;
+top: 299px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.masterInput:focus {
+  outline: none;
+}
+
+.docInput {
+position: absolute;
+width: 299px;
+height: 51px;
+left: 627px;
+top: 159px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.docInput:focus {
+  outline: none;
+}
+
+.postDocInput{
+position: absolute;
+width: 299px;
+height: 51px;
+left: 27px;
+top: 159px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.postDocInput:focus {
+  outline: none;
+}
+
+.idInput{
+position: absolute;
+width: 240px;
+height: 29px;
+left: 168px;
+top: 109px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.idInput:focus {
+  outline: none;
+}
+
+.pwInput{
+position: absolute;
+width: 240px;
+height: 29px;
+left: 168px;
+top: 181px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 130%;
+/* identical to box height, or 29px */
+display: flex;
+align-items: center;
+color: #000000;
+background-color: transparent;
+border-color: transparent;
+}
+.pwInput:focus {
+  outline: none;
+}
+
+
 .labMembersChild {
   position: absolute;
   top: 349.5px;
@@ -344,10 +690,9 @@
   cursor: pointer;
 }
 .b42 {
-  top: 112px;
-  left: 480px;
+  top: 10px;
+  left: 23px;
   font-size: var(--font-size-lg);
-  line-height: 130%;
 }
 .labIdPassword {
   position: absolute;

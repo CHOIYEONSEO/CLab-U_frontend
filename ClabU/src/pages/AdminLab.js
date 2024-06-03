@@ -13,7 +13,7 @@ const AdminLab = () => {
   const navigate = useNavigate();
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
@@ -115,8 +115,8 @@ const AdminLab = () => {
           logIn="/login@2x.png"
           account1="/account-1@2x.png"
           logo="/logo@2x.png"
-          propWidth="1280px"
-          propRight="unset"
+          propWidth="100%"
+          propRight="0px"
           onApplicationContainerClick={onApplicationContainerClick}
           onListContainerClick={onListContainerClick}
           onSearchContainerClick={onSearchContainerClick}

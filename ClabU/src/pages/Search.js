@@ -2,12 +2,13 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation1 from "../components/Navigation1";
 import styles from "./Search.module.css";
+import React, {useState} from "react";
 
 const Search = () => {
   const navigate = useNavigate();
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
@@ -26,10 +27,22 @@ const Search = () => {
     navigate("/main");
   }, [navigate]);
 
+  const onIconClick = useCallback(() => {
+    
+  }, [navigate]);
+
+  const [question, setQuestion] = useState("");
+
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      onIconClick();
+    }
+  }
+
   return (
     <div className={styles.search}>
       <div className={styles.firstchat}>
-        <div className={styles.div}>(캐릭터 이름)</div>
+        <div className={styles.div}>Clab-U</div>
         <div className={styles.clabuContainer}>
           <p className={styles.clabu}>
             소프트웨어융합대학의 동아리와 연구실을 쉽게 찾을 수 있도록 도와주는
@@ -43,7 +56,7 @@ const Search = () => {
         <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
       </div>
       <div className={styles.firstchat1}>
-        <div className={styles.div}>(캐릭터 이름)</div>
+        <div className={styles.div}>Clab-U</div>
         <div className={styles.div2}>
           <p
             className={styles.p}
@@ -71,15 +84,31 @@ const Search = () => {
         </b>
       </div>
       <div className={styles.inputfield}>
-        <img className={styles.icon} alt="" src="/icon@2x.png" />
-        <b className={styles.text}>{`  `}</b>
+        <input className={styles.typeHere}
+          placeholder="무엇이든 물어보세요!"
+          type="text"
+          value={question}
+          onChange={(e)=>setQuestion(e.target.value)}
+          onKeyDown={(e) => activeEnter(e)}
+          />
+        <img
+          className={styles.icon}
+          alt=""
+          src="/icon@2x.png"
+          onClick={onIconClick}
+        />
+        <img className={styles.icon}
+        alt=""
+        src="/icon@2x.png"
+        onClick={onIconClick}
+        />
       </div>
       <Navigation1
         logIn="/login@2x.png"
         account1="/account-1@2x.png"
         logo="/logo@2x.png"
-        propWidth="1280px"
-        propRight="unset"
+        propWidth="100%"
+        propRight="0px"
         onApplicationContainerClick={onApplicationContainerClick}
         onListContainerClick={onListContainerClick}
         onSearchContainerClick={onSearchContainerClick}

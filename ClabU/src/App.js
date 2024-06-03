@@ -105,7 +105,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<AdminRejectReason />} />
+      <Route path="/" element={<Main />} />
       <Route path="/admin-club" element={<AdminClub />} />
       <Route path="/admin-lab" element={<AdminLab />} />
       <Route path="/admin-page" element={<AdminPage />} />

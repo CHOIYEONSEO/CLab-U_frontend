@@ -146,17 +146,33 @@
 }
 .nameSearch {
   top: 113px;
-  left: 983px;
+  left: 960px;
   border-radius: var(--br-xl);
   background-color: var(--color-white);
   border: 1px solid var(--color-darkslategray-200);
   box-sizing: border-box;
   width: 237px;
   height: 44px;
+}
+
+.typeHere {
+  position: absolute;
+  left: 42px;
+  top: 3px;
+  background-color: var(--color-white);
+  border: 1px solid white;
+  box-sizing: border-box;
+  width: 180px;
+  height: 36px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-mini);
 }
+
+.typeHere:focus {
+  outline: none;
+}
+
 .clubList {
   width: 100%;
   position: relative;

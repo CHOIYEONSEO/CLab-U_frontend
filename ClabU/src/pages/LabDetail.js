@@ -7,7 +7,7 @@ const LabDetail = () => {
   const navigate = useNavigate();
 
   const onApplicationContainerClick = useCallback(() => {
-    navigate("/application-login");
+    navigate("/application-form-lab");
   }, [navigate]);
 
   const onListContainerClick = useCallback(() => {
@@ -99,8 +99,8 @@ const LabDetail = () => {
         logIn="/login@2x.png"
         account1="/account-1@2x.png"
         logo="/logo@2x.png"
-        propWidth="1280px"
-        propRight="unset"
+        propWidth="100%"
+        propRight="0px"
         onApplicationContainerClick={onApplicationContainerClick}
         onListContainerClick={onListContainerClick}
         onSearchContainerClick={onSearchContainerClick}
@@ -120,7 +120,7 @@ const LabDetail = () => {
         <p className={styles.hci}>교수 : 고영중 교수</p>
         <p
           className={styles.hci}
-        >{`교수 Google Scholar:  https://scholar.google.com/citations?user=VQeFpwsAAAAJ&hl=en&oi=sra`}</p>
+        >{`교수 Google Scholar: https://scholar.google.com/citations?user=VQeFpwsAAAAJ&hl=en&oi=sra`}</p>
         <p className={styles.p}>대표자 : 고영중 교수</p>
         <p className={styles.hci}>대표자 이메일 : yjko@skku.edu</p>
       </b>
