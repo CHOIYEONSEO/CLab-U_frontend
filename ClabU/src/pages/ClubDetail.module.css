@@ -39,9 +39,9 @@
 
 .httpswealthyHeliumFfenot {
   font-size: var(--font-size-lg);
-  text-decoration: underline;
   font-weight: 700;
   margin-bottom: 10px;
+  color: black;
 }
 
 .b4 {
