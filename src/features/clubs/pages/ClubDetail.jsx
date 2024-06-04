@@ -1,7 +1,28 @@
 import styles from "./ClubDetail.module.css";
+import { useParams } from "react-router-dom";
+import { useFetchClub } from "../hooks/query";
+import { useEffect } from "react";
+
 
 const ClubDetail = () => {
+  
+// 컴포넌트 안에서 데이터를 변수에 담고 확인
+  const { clubId } = useParams();
+
+  const { data: club} = useFetchClub(clubId);
+
+  useEffect(() => {
+    console.log(club);
+  }, [club]);
+
   return (
+    <div>
+{/*       hihi{club.name}
+      {(club) => (
+          <div>{club.name}</div>
+      )} */}
+    </div>
+/*     
     <div className={styles.clubDetail}>
       <div className={styles.div} />
       <div className={styles.labdescription} />
@@ -55,7 +76,7 @@ const ClubDetail = () => {
         https://wealthy-helium-ffe.notion.site/2023-1-SKKUDING-fbfacf1d414d4057953cebbd42b44987
       </a>
       <b className={styles.b5}>{`<동아리 활동 장소>`}</b>
-    </div>
+    </div> */
   );
 };
 
