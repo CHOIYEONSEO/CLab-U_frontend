@@ -4,6 +4,12 @@
   left: 60px;
   line-height: 130%;
 }
+.bc {
+  position: relative;
+  line-height: 130%;
+  font-size: medium;
+  top: 2px;
+}
 .accept,
 .cancel {
   height: 100%;

@@ -1,8 +1,8 @@
 .clubNameInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -23,9 +23,9 @@ border-color: transparent;
 
 .clubDescInput {
 position: absolute;
-width: 95%;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -46,9 +46,9 @@ border-color: transparent;
 
 .clubTagInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -69,9 +69,9 @@ border-color: transparent;
 
 .clubLocInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -92,9 +92,9 @@ border-color: transparent;
 
 .clubRepInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -115,9 +115,9 @@ border-color: transparent;
 
 .contactInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -138,9 +138,9 @@ border-color: transparent;
 
 .pageInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -207,9 +207,9 @@ border-color: transparent;
 
 .membersInput {
 position: absolute;
-width: 1150px;
+width: 97%;
 height: 51px;
-left: 23px;
+left: 1.5%;
 top: 102px;
 
 font-family: 'Inter';
@@ -231,10 +231,10 @@ border-color: transparent;
 .clubMembersChild {
   position: absolute;
   top: 152.5px;
-  left: 26.5px;
+  left: 1.5%;
   border-top: 1px dashed var(--color-black);
   box-sizing: border-box;
-  width: 1151px;
+  width: 97%;
   height: 1px;
 }
 .b,
@@ -244,10 +244,10 @@ border-color: transparent;
 }
 .b {
   top: 102px;
-  left: 23px;
+  left: 2.5%;
   display: flex;
   align-items: center;
-  width: 1150px;
+  width: 95%;
   height: 51px;
 }
 .b1 {
@@ -263,11 +263,11 @@ border-color: transparent;
 .clubMembers,
 .clubPage,
 .clubRepEmail {
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -287,11 +287,11 @@ border-color: transparent;
 }
 .clubRepName {
   top: 1335px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -301,11 +301,11 @@ border-color: transparent;
 .clubDescription,
 .clubLocation,
 .clubTag {
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -325,11 +325,11 @@ border-color: transparent;
 }
 .clubName {
   top: 539px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -383,20 +383,23 @@ border-color: transparent;
   background-color: var(--color-silver);
   width: 163px;
   height: 41px;
+  cursor: pointer;
 }
 .b19 {
   top: 10px;
   left: 23px;
   font-size: var(--font-size-lg);
 }
+
+
 .labIdPassword {
   top: 2131px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
-  width: 1200px;
+  width: 95%;
   height: 289px;
   overflow: hidden;
 }
@@ -407,17 +410,17 @@ border-color: transparent;
 }
 .b20 {
   top: 12px;
-  left: 127px;
+  position: relative;
   line-height: 130%;
 }
 .submit {
-  top: 2473px;
-  left: 488px;
+  top: 2500px;
+  left: 40%;
   border-radius: var(--br-xl);
   background-color: var(--color-cornflowerblue);
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
-  width: 300px;
+  width: 20%;
   height: 55px;
   overflow: hidden;
   cursor: pointer;
@@ -441,23 +444,20 @@ border-color: transparent;
 }
 .tab {
   top: 130px;
-  left: 522px;
-  width: 227px;
+  left: 40%;
+  width: 20%;
   height: 44px;
   overflow: hidden;
-  font-size: var(--font-size-xl);
+  font-size: large;
 }
 
 .applicationFormClub {
   width: 100%;
-  position: relative;
+  position: absolute;
   background-color: var(--color-floralwhite);
-  height: 2657px;
+  height: 2800px;
   overflow: auto;
   font-size: var(--font-size-3xl);
   color: var(--color-black);
   font-family: var(--font-inter);
-  display: block;
-  text-align: center;
-  margin: '0 auto';
 }

@@ -211,13 +211,6 @@ const ApplicationFormLab = () => {
           />
           <b className={styles.googleScolar}>대표자 이름</b>
         </div>
-        <div className={styles.labLocation}>
-          <div className={styles.labPageChild} />
-          <b
-            className={styles.b9}
-          >{` (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
-          <b className={styles.googleScolar}>연구실 위치</b>
-        </div>
         <div className={styles.labDescription}>
           <div className={styles.labPageChild} />
           <b className={styles.googleScolar}>연구실 설명</b>
@@ -304,9 +297,6 @@ const ApplicationFormLab = () => {
         </div>
         <div className={styles.labLocation}>
           <div className={styles.labPageChild} />
-          <b
-            className={styles.b28}
-          >{`<좌: (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
           <b className={styles.googleScolar}>연구실 위치</b>
           <div className={styles.div}>
             <div className={styles.div1}>자과캠</div>
@@ -351,7 +341,7 @@ const ApplicationFormLab = () => {
           />
           <b className={styles.googleScolar}>연구실 태그</b>
         </div>
-        <LabLogo prop1="연구실 로고" propTop="220px" />
+        <LabLogo prop1="연구실 로고" propTop="220px"/>
         <div className={styles.tab}>
           <Link className={styles.club} to="/clubs/form">
             club
@@ -420,7 +410,7 @@ const ApplicationFormLab = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <Submit onClose={openSubmit} />
+          <Submit onClose={closeSubmit} />
         </PortalPopup>
       )}
     </>
