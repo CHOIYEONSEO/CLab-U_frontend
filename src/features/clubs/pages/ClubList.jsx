@@ -1,10 +1,13 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useCallback } from "react";
+//import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import styles from "./ClubList.module.css";
-import { useState } from "react";
+//import { useState } from "react";
+import { useFetchLabs } from "../hooks/query";
 
 const ClubList = () => {
-  const navigate = useNavigate();
+/*  const navigate = useNavigate();
 
   const onImageClick = useCallback(() => {
     navigate("/club-detail");
@@ -37,15 +40,68 @@ const ClubList = () => {
   const onIconClick = useCallback(() => {
     navigate("/search");
   }, [navigate]);
+*/
+  let [searchParams, setSearchParams] = useSearchParams();
+
+  const keyword = searchParams.get("keyword");
+
+  const { data: clubs, isLoading } = useFetchLabs(keyword);
 
   const [clubQuery, setclubQuery] = useState("");
 
   const activeEnter = (e) => {
     if (e.key === "Enter") {
+      setSearchParams({ keyword: clubQuery });
     }
   };
 
+  useEffect(() => {
+    console.log(clubs);
+  }, [clubs]);
+
   return (
+    <div className={styles.clubList}>
+      <div className={styles.tab}>
+        <Link className={styles.club} to="/clubs">
+          <b>club</b>
+        </Link>
+        <Link className={styles.lab} to="/labs">
+          lab
+        </Link>
+      </div>
+      <div className={styles.nameSearch}>
+        <img
+          className={styles.search154734Icon}
+          alt=""
+          src="/search-154734@2x.png"
+        />
+        <input
+          className={styles.typeHere}
+          placeholder="동아리명으로 검색"
+          type="text"
+          value={clubQuery}
+          onChange={(e) => setclubQuery(e.target.value)}
+          onKeyDown={(e) => activeEnter(e)}
+        />
+      </div>
+      {isLoading ? (
+        <div>Loading</div>
+      ) : (
+        <div className={styles.grid}>
+          {clubs.map((club) => (
+            <Link key={club.id} to={`/clubs/${club.id}`}>
+              <img
+                style={{ maxHeight: "100%", maxWidth: "100%" }}
+                alt=""
+                src={club.logoUrl}
+              />
+              <div>{club.name}</div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+/*    
     <div className={styles.clubList}>
       <div className={styles.div}>
         <div className={styles.div1}>MAV</div>
@@ -123,6 +179,7 @@ const ClubList = () => {
         />
       </div>
     </div>
+*/    
   );
 };
 
