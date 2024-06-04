@@ -36,12 +36,12 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
           <div className={styles.search1}>Search</div>
         </NavLink>
         <NavLink className={styles.list} to="/labs">
-          <div className={styles.application1}>List</div>
+          <div className={styles.list1}>List</div>
         </NavLink>
         <NavLink className={styles.application} to="/labs/form">
           <div className={styles.application1}>Application</div>
         </NavLink>
-        <div className={styles.application1}>
+        <div className={styles.logIn}>
           <Link to="/login">
             <img className={styles.loginIcon} alt="" src={logIn} />
           </Link>

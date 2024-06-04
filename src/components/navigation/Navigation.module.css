@@ -38,7 +38,6 @@
   align-items: center;
   justify-content: center;
   height: 38px;
-  border-radius: 3.09px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -55,17 +54,31 @@
 
 .list {
   width: 67px;
-  margin-left: 20px;
+  margin-left: 80px;
+}
+
+.list1 {
+  line-height: 130%;
+  font-weight: 600;
 }
 
 .application {
   width: 143px;
-  margin-left: 20px;
+  margin-left: 80px;
 }
 
 .application1 {
   line-height: 130%;
   font-weight: 600;
+}
+
+.logIn {
+  line-height: 130%;
+  font-weight: 600;
+  margin-top: 0.5%;
+  margin-bottom: 0.4%;
+  margin-left: 60px;
+  margin-right: 40px;
 }
 
 .account1Icon,

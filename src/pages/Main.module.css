@@ -1,18 +1,14 @@
-.icon,
 .typeHere {
   position: absolute;
-}
-.typeHere {
-  position: absolute;
-  width: 960px;
-  height: 54px;
-  left: 15px;
+  width: 100%;
+  top: 10%;
+  bottom: 10%;
+  left: 2%;
   background-color: var(--color-white);
   border: 1.5px solid white;
   box-sizing: border-box;
   overflow: scroll;
   font-size: medium;
-  top: calc(50% - 27px);
   line-height: 130%;
   display: flex;
   white-space: pre-wrap;
@@ -23,19 +19,20 @@
   outline: none;
 }
 .icon {
-  top: calc(50% - 12.4px);
-  right: 15.5px;
-  width: 24.8px;
-  height: 24.8px;
-  object-fit: cover;
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  width: 3%;
+  height: 100%;
+  object-fit: contain;
   cursor: pointer;
 }
 .inputfield {
   position: absolute;
-  width: 1034px;
-  height: 54px;
-  bottom: 170px;
-  left: 103px;
+  width: 90%;
+  height: 8%;
+  bottom: 20%;
+  left: 5%;
   border-radius: 23px;
   background-color: var(--color-white);
   border: 1.5px solid var(--color-gray-200);
@@ -43,12 +40,12 @@
   overflow: hidden;
 }
 .logoIcon {
-  position: absolute;
-  top: 286px;
-  left: 490px;
-  width: 299px;
-  height: 261px;
-  object-fit: cover;
+  position: relative;
+  top: 30%;
+  left: 0%;
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
 }
 .main {
   width: 100%;
