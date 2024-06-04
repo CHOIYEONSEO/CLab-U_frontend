@@ -39,7 +39,7 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
         <NavLink className={styles.list} to="/labs">
           <div className={styles.list1}>List</div>
         </NavLink>
-        <NavLink className={styles.application} to="/labs/form">
+        <NavLink className={styles.application} to="/admin">
           <div className={styles.application1}>Application</div>
         </NavLink>
         

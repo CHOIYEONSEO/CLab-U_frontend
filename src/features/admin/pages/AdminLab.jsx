@@ -29,34 +29,17 @@ const AdminLab = () => {
     <>
       <div className={styles.adminLab}>
         <div className={styles.accept} onClick={openAdminAccept}>
-          <b className={styles.b}>승인</b>
+          <b className={styles.bacc}>승인</b>
         </div>
         <div className={styles.reject} onClick={openAdminReject}>
-          <b className={styles.b}>반려</b>
-        </div>
-        <div className={styles.profName}>
-          <div className={styles.profNameChild} />
-          <b className={styles.b2}>{`<교수>`}</b>
-          <b className={styles.b3}>교수</b>
+          <b className={styles.brej}>반려</b>
         </div>
         <div className={styles.labLocation}>
           <div className={styles.profNameChild} />
           <b
             className={styles.b2}
-          >{`<좌: (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
+          >{`<연구실 위치>`}</b>
           <b className={styles.googleScolar}>연구실 위치</b>
-        </div>
-        <div className={styles.labTag}>
-          <div className={styles.profNameChild} />
-          <b className={styles.b2}>{`<연구실 태그>`}</b>
-          <b className={styles.googleScolar}>연구실 태그</b>
-        </div>
-        <div className={styles.labDescription}>
-          <div className={styles.profNameChild} />
-          <b className={styles.b2}>{`<연구실 설명>`}</b>
-          <b className={styles.googleScolar}>
-            연구실 설명(현재 진행 중인 연구 과제 중심으로 작성)
-          </b>
         </div>
         <div className={styles.labName}>
           <div className={styles.profNameChild} />
@@ -73,13 +56,6 @@ const AdminLab = () => {
           <b className={styles.b2}>{`<교수>`}</b>
           <b className={styles.b3}>교수</b>
         </div>
-        <div className={styles.labLocation}>
-          <div className={styles.profNameChild} />
-          <b
-            className={styles.b2}
-          >{`<좌: (드랍다운, 토글 등으로 인자캠 선택), 우: 방 번호 텍스트 입력란>`}</b>
-          <b className={styles.googleScolar}>연구실 위치</b>
-        </div>
         <div className={styles.labTag}>
           <div className={styles.profNameChild} />
           <b className={styles.b2}>{`<연구실 태그>`}</b>
@@ -89,13 +65,8 @@ const AdminLab = () => {
           <div className={styles.profNameChild} />
           <b className={styles.b2}>{`<연구실 설명>`}</b>
           <b className={styles.googleScolar}>
-            연구실 설명(현재 진행 중인 연구 과제 중심으로 작성)
+            연구실 설명
           </b>
-        </div>
-        <div className={styles.labName}>
-          <div className={styles.profNameChild} />
-          <b className={styles.b2}>{`<연구실 이름>`}</b>
-          <b className={styles.googleScolar}>연구실 이름</b>
         </div>
         <div className={styles.labRepName}>
           <div className={styles.profNameChild} />

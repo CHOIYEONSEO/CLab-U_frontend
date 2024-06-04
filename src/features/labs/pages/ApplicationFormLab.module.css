@@ -89,6 +89,11 @@ border-color: transparent;
 .locInput:focus {
   outline: none;
 }
+.Dropdown {
+  position: absolute;
+  left: 2%;
+  top: 105px;
+}
 
 .professorInput {
 position: absolute;

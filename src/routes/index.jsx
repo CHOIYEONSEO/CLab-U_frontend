@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import App from "../App";
 import AdminPage from "../features/admin/pages/AdminPage";
+import AdminLab from "../features/admin/pages/AdminLab";
+import AdminClub from "../features/admin/pages/AdminClub";
 import Main from "../pages/Main";
 import Search from "../features/chat/pages/Search";
 import LabDetail from "../features/labs/pages/LabDetail";
@@ -38,7 +40,8 @@ export const router = createBrowserRouter(
       </Route>
       <Route path="admin">
         <Route index element={<AdminPage></AdminPage>}></Route>
-        <Route path=":labId" element={<LabDetail></LabDetail>}></Route>
+        <Route path="labs/:labId" element={<AdminLab></AdminLab>}></Route>
+        <Route path="clubs/:clubId" element={<AdminClub></AdminClub>}></Route>
       </Route>
       <Route
         path="/login"

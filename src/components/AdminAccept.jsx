@@ -1,24 +1,23 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./AdminAccept.module.css";
 
-const AdminAccept = ({ className = "" }) => {
-  const navigate = useNavigate();
-
-  const onAcceptContainerClick = useCallback(() => {
-    navigate("/admin-page");
-  }, [navigate]);
+const AdminAccept = ({ className = "", onClose }) => {
+  const handleCancelClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
 
   return (
     <div className={[styles.adminAccept, className].join(" ")}>
       <div className={styles.div}>
-        <div className={styles.cancel}>
+        <div className={styles.cancel} onClick={handleCancelClick}>
           <b className={styles.b}>취소</b>
         </div>
-        <div className={styles.accept} onClick={onAcceptContainerClick}>
+        <NavLink className={styles.accept} to="/">
           <b className={styles.b}>확인</b>
-        </div>
+        </NavLink>
       </div>
       <b className={styles.b2}>승인하시겠습니까?</b>
     </div>

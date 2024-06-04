@@ -1,16 +1,15 @@
-.b {
-  position: absolute;
+.bacc {
+  position: relative;
   top: 12px;
-  left: 177px;
   line-height: 130%;
 }
 .accept {
   top: 2660px;
-  left: 740px;
+  left: 55%;
   border-radius: var(--br-xl);
   background-color: var(--color-cornflowerblue);
   border: 1px solid var(--color-darkgray-100);
-  width: 400px;
+  width: 20%;
   height: 55px;
   overflow: hidden;
   cursor: pointer;
@@ -23,13 +22,19 @@
   position: absolute;
   box-sizing: border-box;
 }
+.brej {
+  position: relative;
+  top: 12px;
+  left: 43%;
+  line-height: 130%;
+}
 .reject {
   top: 2660px;
-  left: 140px;
+  left: 25%;
   border-radius: var(--br-xl);
   background-color: var(--color-lightcoral);
   border: 1px solid var(--color-darkgray-100);
-  width: 400px;
+  width: 20%;
   height: 55px;
   overflow: hidden;
   cursor: pointer;
@@ -37,9 +42,9 @@
 }
 .profNameChild {
   top: 152.5px;
-  left: 26.5px;
+  left: 1.5%;
   border-top: 1px dashed var(--color-black);
-  width: 1151px;
+  width: 97%;
   height: 1px;
 }
 .b2,
@@ -71,12 +76,12 @@
 .profName {
   position: absolute;
   top: 1218px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -119,11 +124,11 @@
 }
 .profName2 {
   top: 1417px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
@@ -232,12 +237,12 @@
 .labRepEmail {
   position: absolute;
   top: 2213px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
-  width: 1200px;
+  width: 95%;
   height: 373px;
   overflow: hidden;
 }
@@ -253,8 +258,8 @@
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 2788px;
-  overflow: hidden;
+  height: 3000px;
+  overflow: auto;
   text-align: left;
   font-size: var(--font-size-3xl);
   color: var(--color-black);

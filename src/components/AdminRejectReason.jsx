@@ -1,26 +1,26 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./AdminRejectReason.module.css";
+import { NavLink } from "react-router-dom";
 
-const AdminRejectReason = ({ className = "" }) => {
-  const navigate = useNavigate();
-
-  const onAcceptContainerClick = useCallback(() => {
-    navigate("/admin-page");
-  }, [navigate]);
-
+const AdminRejectReason = ({ className = "", onClose }) => {
+  const handleCancelClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
   return (
     <div className={[styles.adminRejectReason, className].join(" ")}>
       <b className={styles.b}>반려 사유를 작성해주세요</b>
-      <div className={styles.adminRejectReasonChild} />
+      <div className={styles.adminRejectReasonChild}>
+        
+      </div>
       <div className={styles.div}>
-        <div className={styles.cancel}>
+        <div className={styles.cancel} onClick={handleCancelClick}>
           <b className={styles.b1}>취소</b>
         </div>
-        <div className={styles.accept} onClick={onAcceptContainerClick}>
+        <NavLink className={styles.accept} to="/">
           <b className={styles.b1}>확인</b>
-        </div>
+        </NavLink>
       </div>
       <b className={styles.text}>{` `}</b>
     </div>
