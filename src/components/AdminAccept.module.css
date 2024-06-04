@@ -20,6 +20,7 @@
   right: 54.95%;
   left: 0;
   background-color: var(--color-whitesmoke-100);
+  cursor: pointer;
 }
 .accept {
   right: 0;

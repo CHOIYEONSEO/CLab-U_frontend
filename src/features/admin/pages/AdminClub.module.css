@@ -1,10 +1,10 @@
 .clubMembersChild {
   position: absolute;
   top: 152.5px;
-  left: 26.5px;
+  left: 1.5%;
   border-top: 1px dashed var(--color-black);
   box-sizing: border-box;
-  width: 1151px;
+  width: 97%;
   height: 1px;
 }
 .b,
@@ -28,26 +28,25 @@
 .clubMembers {
   position: absolute;
   top: 1818px;
-  left: 40px;
+  left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
-  width: 1200px;
+  width: 95%;
   height: 180px;
   overflow: hidden;
 }
 .b2 {
-  position: absolute;
+  position: relative;
   top: 12px;
-  left: 177px;
   line-height: 130%;
 }
 .accept {
   top: 2070px;
-  left: 738px;
+  left: 55%;
   background-color: var(--color-cornflowerblue);
-  width: 400px;
+  width: 20%;
   height: 55px;
   cursor: pointer;
   text-align: center;
@@ -68,11 +67,18 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+.b2reject {
+  position: relative;
+  top: 12px;
+  left: 43%;
+  text-align: center;
+  line-height: 130%;
+}
 .reject {
   top: 2070px;
-  left: 138px;
+  left: 25%;
   background-color: var(--color-lightcoral);
-  width: 400px;
+  width: 20%;
   height: 55px;
   cursor: pointer;
   font-size: var(--font-size-5xl);
@@ -85,9 +91,9 @@
 .clubRepName,
 .clubTag {
   top: 1619px;
-  left: 40px;
+  left: 2.5%;
   background-color: var(--color-whitesmoke-100);
-  width: 1200px;
+  width: 95%;
   height: 180px;
 }
 .clubDescription,
@@ -127,8 +133,8 @@
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 2216px;
-  overflow: hidden;
+  height: 3000px;
+  overflow: auto;
   text-align: left;
   font-size: var(--font-size-3xl);
   color: var(--color-black);

@@ -37,7 +37,7 @@ const AdminClub = () => {
           <b className={styles.b2}>승인</b>
         </div>
         <div className={styles.reject} onClick={openAdminReject}>
-          <b className={styles.b2}>반려</b>
+          <b className={styles.b2reject}>반려</b>
         </div>
         <div className={styles.clubPage}>
           <div className={styles.clubMembersChild} />
