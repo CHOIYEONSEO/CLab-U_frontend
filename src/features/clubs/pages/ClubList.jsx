@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import styles from "./ClubList.module.css";
 //import { useState } from "react";
-import { useFetchLabs } from "../hooks/query";
+import { useFetchClubs } from "../hooks/query";
 
 const ClubList = () => {
 /*  const navigate = useNavigate();
@@ -45,7 +45,7 @@ const ClubList = () => {
 
   const keyword = searchParams.get("keyword");
 
-  const { data: clubs, isLoading } = useFetchLabs(keyword);
+  const { data: clubs, isLoading } = useFetchClubs(keyword);
 
   const [clubQuery, setclubQuery] = useState("");
 
