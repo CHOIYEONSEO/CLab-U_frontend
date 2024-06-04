@@ -1,139 +1,46 @@
-.div {
-  position: absolute;
-  top: 69px;
-  left: 22px;
-  color: var(--color-darkslategray-300);
-  font-family: "Niko Moji";
-  font-size: 12px;
+.search {
+  width: 100%;
+  position: relative;
+  backdrop-filter: blur(3.56px);
+  background-color: var(--color-floralwhite);
+  height: 100vh;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-3xs);
+  color: var(--color-black);
+  font-family: var(--font-inter);
 }
 
-.clabu,
-.div {
-  font-weight: 600;
-}
-.clabu,
-.p {
-  margin: 0;
-}
-.clabuContainer {
-  position: absolute;
-  top: 22px;
-  left: 86px;
-  font-size: var(--font-size-base);
-  line-height: 130%;
-  display: inline-block;
-  width: 853px;
-  height: 68px;
-}
-.logoIcon {
-  position: absolute;
-  top: 16.5px;
-  left: 19.3px;
-  width: 50.1px;
-  height: 50.1px;
-  object-fit: cover;
-}
-.myChat {
-  position: absolute;
-  width: calc(100% - 361px);
-  top: 313px;
-  right: 339px;
-  left: 22px;
-  border-radius: 17.19px;
-  background-color: var(--color-whitesmoke-100);
-  border: 1.4px solid var(--color-gainsboro-100);
-  box-sizing: border-box;
-  height: 103px;
-  overflow: hidden;
-}
-.li {
-  margin-bottom: 0;
-}
-.span {
-  color: var(--color-black);
-}
-.ul {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  padding-left: 21px;
-  color: var(--color-darkblue);
-}
-.div2 {
-  position: absolute;
-  top: 16px;
-  left: 90px;
-  font-size: var(--font-size-base);
-  line-height: 130%;
-  font-weight: 600;
-  display: inline-block;
-  width: 421px;
-  height: 154px;
-}
-.logoIcon1 {
-  top: 16.5px;
-  left: 19.3px;
-  width: 50.2px;
-  height: 50.2px;
-  object-fit: cover;
-}
-.b,
-.firstchat1,
-.logoIcon1 {
-  position: absolute;
-}
-.firstchat1 {
-  width: calc(100% - 754px);
-  top: 548px;
-  right: 732px;
-  left: 22px;
-  border-radius: 17.2px;
-  background-color: var(--color-whitesmoke-100);
-  border: 1.4px solid var(--color-gainsboro-100);
-  box-sizing: border-box;
-  height: 181px;
-  overflow: hidden;
-}
-.b {
-  top: 15px;
-  left: 14px;
-  line-height: 130%;
-}
-.firstchat2 {
-  width: calc(100% - 768px);
-  top: 448px;
-  right: 22px;
-  left: 746px;
-  border-radius: 17.98px;
-  background-color: #a7d5a8;
-  border: 1.5px solid var(--color-gainsboro-100);
-  box-sizing: border-box;
-  height: 50px;
-  overflow: hidden;
-  font-size: var(--font-size-base);
-}
-.firstchat2,
-.icon,
-.text {
-  position: absolute;
-}
-.icon {
-  top: calc(50% - 14.25px);
-  right: 7.1px;
-  width: 28.5px;
-  height: 28.5px;
-  object-fit: cover;
-}
-.text {
-  top: -0.7px;
-  left: -0.3px;
-  line-height: 130%;
+.chatContainer {
+  padding: 20px;
   display: flex;
-  white-space: pre-wrap;
-  align-items: center;
-  width: 1201px;
-  height: 63px;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  height: calc(100% - 100px);
 }
+
+.chat {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.myChat {
+  align-self: flex-end;
+  background-color: #a7d5a8;
+}
+
+.aiChat {
+  align-self: flex-start;
+  background-color: var(--color-whitesmoke-100);
+  border: 1.4px solid var(--color-gainsboro-100);
+}
+
+.chatContent {
+  line-height: 130%;
+}
+
 .inputfield {
   position: fixed;
   bottom: 3%;
@@ -146,39 +53,31 @@
   height: 8%;
   overflow: hidden;
   font-size: var(--font-size-mid-7);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .typeHere {
-  position: absolute;
-  width: 1200px;
-  height: 62px;
+  flex: 1;
+  height: 100%;
   background-color: var(--color-white);
   border: none;
   box-sizing: border-box;
   overflow: scroll;
   font-size: medium;
-  top: calc(50% - 31px);
-  left: 10px;
   line-height: 130%;
-  display: flex;
   white-space: pre-wrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .typeHere:focus {
   outline: none;
 }
 
-.search {
-  width: 100%;
-  position: relative;
-  backdrop-filter: blur(3.56px);
-  background-color: var(--color-floralwhite);
-  height: 832px;
-  overflow: auto;
-  text-align: left;
-  font-size: var(--font-size-3xs);
-  color: var(--color-black);
-  font-family: var(--font-inter);
+.icon {
+  width: 28.5px;
+  height: 28.5px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 10px;
 }

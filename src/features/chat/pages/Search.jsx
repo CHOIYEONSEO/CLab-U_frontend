@@ -26,6 +26,7 @@ const Search = () => {
             ]);
           },
         });
+        setQuestion(""); // 채팅을 보낸 후 입력 필드 초기화
       }
     },
     [mutate]
@@ -34,6 +35,7 @@ const Search = () => {
   const activeEnter = (e) => {
     if (e.key === "Enter") {
       sendChat(question);
+      setQuestion(""); // Enter 키를 눌렀을 때 입력 필드 초기화
     }
   };
 
@@ -53,47 +55,17 @@ const Search = () => {
 
   return (
     <div className={styles.search}>
-      <div className={styles.firstchat}>
-        <div className={styles.div}>Clab-U</div>
-        <div className={styles.clabuContainer}>
-          <p className={styles.clabu}>
-            소프트웨어융합대학의 동아리와 연구실을 쉽게 찾을 수 있도록 도와주는
-            자연어 기반 대화형 검색 서비스인 CLab:U입니다!
-          </p>
-          <p className={styles.clabu}>&nbsp;</p>
-          <p className={styles.p}>
-            <b>{`무엇이든 물어보세요! `}</b>
-          </p>
-        </div>
-        <img className={styles.logoIcon} alt="" src="/logo@2x.png" />
-      </div>
-      <div className={styles.firstchat1}>
-        <div className={styles.div}>Clab-U</div>
-        <div className={styles.div2}>
-          <p
-            className={styles.p}
-          >{`율전 캠퍼스에서 학부연구생이 있는 인공지능 관련 연구실에는 다음과 같은 연구실이 있습니다. `}</p>
-          <ul className={styles.ul}>
-            <li className={styles.li}>
-              <span>자연어 처리 연구실 (고영중 교수)</span>
-            </li>
-            <li className={styles.li}>
-              <span>인공지능을 활용한 보안연구실 (구형준 교수)</span>
-            </li>
-            <li className={styles.li}>
-              <span>인공지능융합연구실 (김광수 교수)</span>
-            </li>
-            <li className={styles.li}>
-              <span className={styles.span}>..</span>
-            </li>
-          </ul>
-        </div>
-        <img className={styles.logoIcon1} alt="" src="/logo@2x.png" />
-      </div>
-      <div className={styles.firstchat2}>
-        <b className={styles.b}>
-          율전 캠퍼스에 인공지능 관련 연구실 중 학부연구생이 있는 연구실이 있어?
-        </b>
+      <div className={styles.chatContainer}>
+        {history.map((chat, index) => (
+          <div
+            key={index}
+            className={`${styles.chat} ${
+              chat.sender === "me" ? styles.myChat : styles.aiChat
+            }`}
+          >
+            <div className={styles.chatContent}>{chat.content}</div>
+          </div>
+        ))}
       </div>
       <div className={styles.inputfield}>
         <input
@@ -108,13 +80,7 @@ const Search = () => {
           className={styles.icon}
           alt=""
           src="/icon@2x.png"
-          onClick={sendChat}
-        />
-        <img
-          className={styles.icon}
-          alt=""
-          src="/icon@2x.png"
-          onClick={sendChat}
+          onClick={() => sendChat(question)}
         />
       </div>
     </div>
