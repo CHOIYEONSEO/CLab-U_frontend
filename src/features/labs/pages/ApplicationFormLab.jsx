@@ -5,6 +5,8 @@ import LabLogo from "../../../components/LabLogo";
 import PortalPopup from "../../../components/PortalPopup";
 import Submit from "../../../components/Submit";
 import styles from "./ApplicationFormLab.module.css";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
@@ -54,6 +56,8 @@ const ApplicationFormLab = () => {
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
+
+  const [selectedCampusTitle, setSelectedCampusTitle] = useState("캠퍼스 선택");
 
   const [uploadImgUrl, setUploadImgUrl] = useState("");
 
@@ -298,10 +302,25 @@ const ApplicationFormLab = () => {
         <div className={styles.labLocation}>
           <div className={styles.labPageChild} />
           <b className={styles.googleScolar}>연구실 위치</b>
-          <div className={styles.div}>
-            <div className={styles.div1}>자과캠</div>
-            <div className={styles.div2}>인사캠</div>
-          </div>
+          <DropdownButton
+          className={styles.Dropdown}
+          id="campus"
+          title={selectedCampusTitle}>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '인사캠'
+              }));
+              setSelectedCampusTitle('인사캠'); // 선택된 캠퍼스 이름을 업데이트
+            }}>인사캠</Dropdown.Item>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '자과캠'
+              }));
+              setSelectedCampusTitle('자과캠'); // 선택된 캠퍼스 이름을 업데이트
+            }}>자과캠</Dropdown.Item>
+            </DropdownButton>
           <div className={styles.wrapper}>
             <input
               className={styles.locInput}
