@@ -33,7 +33,7 @@
   height: 50.1px;
   object-fit: cover;
 }
-.firstchat {
+.myChat {
   position: absolute;
   width: calc(100% - 361px);
   top: 313px;
@@ -135,7 +135,7 @@
   height: 63px;
 }
 .inputfield {
-  position: absolute;
+  position: fixed;
   bottom: 3%;
   left: 2.5%;
   border-radius: 17.81px;

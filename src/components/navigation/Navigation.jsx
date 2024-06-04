@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "../../fonts/Font.css";
 import Account from "../Account";
+import Account1 from "../Account1";
 import PortalPopup from "../PortalPopup";
 import styles from "./Navigation.module.css";
 
@@ -41,6 +42,7 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
         <NavLink className={styles.application} to="/labs/form">
           <div className={styles.application1}>Application</div>
         </NavLink>
+        
         <div className={styles.logIn}>
           <Link to="/login">
             <img className={styles.loginIcon} alt="" src={logIn} />

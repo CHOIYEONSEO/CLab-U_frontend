@@ -1,12 +1,18 @@
 import PropTypes from "prop-types";
 import styles from "./Frame.module.css";
 
-const Frame = ({ className = "" }) => {
+const Frame = ({ className = "", onClose }) => {
+  const handleAcceptClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
     <div className={[styles.div, className].join(" ")}>
-      <div className={styles.accept}>
+      <button className={styles.accept} onClick={handleAcceptClick}>
         <b className={styles.b}>확인</b>
-      </div>
+      </button>
       <b className={styles.b1}>사용 가능한 아이디입니다</b>
     </div>
   );

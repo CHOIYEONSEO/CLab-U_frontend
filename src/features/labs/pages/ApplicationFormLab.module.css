@@ -741,12 +741,11 @@ border-color: transparent;
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 3447px;
+  height: 100%;
   overflow: auto;
   font-size: var(--font-size-3xl);
   color: var(--color-black);
   font-family: var(--font-inter);
   display: block;
   text-align: center;
-  margin: '0 auto';
 }

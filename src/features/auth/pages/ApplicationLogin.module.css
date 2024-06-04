@@ -124,7 +124,7 @@
   text-align: left;
 }
 .applicationLogin {
-  width: 100%;
+  width: 100vw;
   position: relative;
   background-color: var(--color-floralwhite);
   height: 832px;
