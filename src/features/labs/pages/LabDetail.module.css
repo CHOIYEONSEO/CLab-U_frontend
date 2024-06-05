@@ -1,153 +1,102 @@
-.div,
-.labdescription {
-  position: absolute;
-  width: calc(100% - 1007px);
-  top: 831px;
-  right: 956px;
-  left: 51px;
-  border-radius: 19.37px;
-  background-color: var(--color-whitesmoke-200);
-  border: 1.6px solid var(--color-darkslategray-200);
-  box-sizing: border-box;
-  height: 134px;
-  overflow: hidden;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.labdescription {
-  width: calc(100% - 110px);
-  top: 517px;
-  right: 59px;
-  height: 229px;
-}
-.hci {
-  margin: 0;
-}
-.span {
-  text-decoration: underline;
-}
-.a {
-  color: inherit;
-}
-.hciContainer {
-  position: absolute;
-  top: 529px;
-  left: 73px;
-  line-height: 130%;
-  display: inline-block;
-  width: 1122px;
-  height: 205px;
-}
-.p {
-  margin: 0;
-  white-space: pre-wrap;
-}
-.b {
-  top: 846px;
-  left: 66px;
-  line-height: 130%;
-}
-.b,
-.b1,
-.div1 {
-  position: absolute;
-}
-.div1 {
-  width: calc(100% - 400px);
-  top: 831px;
-  right: 59px;
-  left: 341px;
-  border-radius: 19.37px;
-  background-color: var(--color-whitesmoke-200);
-  border: 1.6px solid var(--color-darkslategray-200);
-  box-sizing: border-box;
-  height: 134px;
-  overflow: hidden;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.b1 {
-  top: 850px;
-  left: 360px;
-  font-size: var(--font-size-5xl);
-  line-height: 130%;
-}
-.b2,
-.b3,
-.b4,
-.lablogoIcon {
-  position: absolute;
-  left: 60px;
-}
-.lablogoIcon {
-  top: 140px;
-  right: 920px;
-  border-radius: 19.37px;
-  max-width: 100%;
-  overflow: hidden;
-  height: 300px;
-  object-fit: cover;
-  opacity: 0.8;
-  cursor: pointer;
-}
-.b2,
-.b3,
-.b4 {
-  top: 465px;
-  font-size: var(--font-size-7xl);
-  line-height: 130%;
-}
-.b3,
-.b4 {
-  top: 783px;
-  left: 341px;
-}
-.b4 {
-  top: 779px;
-  left: 60px;
-}
-.naturalLanguageProcessing {
-  margin: 0;
-  font-size: 32px;
-}
-.naturalLanguageProcessingContainer {
-  position: absolute;
-  top: 146px;
-  left: 382px;
-  line-height: 130%;
-  font-size: var(--font-size-17xl);
-}
-.googleScholarHttpsscholContainer {
-  position: absolute;
-  top: 310px;
-  left: 382px;
-  line-height: 130%;
-  display: inline-block;
-  width: 885px;
-}
-.b5,
-.httpsnlplabSkkugithubio {
-  position: absolute;
-  font-size: var(--font-size-5xl);
-  line-height: 130%;
-}
-.httpsnlplabSkkugithubio {
-  top: 246px;
-  left: 382px;
-  color: var(--color-blue);
-}
-.b5 {
-  top: 152px;
-  left: 984px;
-}
 .labDetail {
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  height: 1400px;
-  overflow: hidden;
+  overflow-y: auto;
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--color-black);
   font-family: var(--font-inter);
+}
+
+.labInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.lablogoIcon {
+  width: 300px;
+  height: 300px;
+  border-radius: 19.37px;
+  object-fit: cover;
+  opacity: 0.8;
+  margin-right: 40px;
+}
+
+.labDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.labName {
+  line-height: 130%;
+  font-size: var(--font-size-17xl);
+  margin-bottom: 20px;
+}
+
+.naturalLanguageProcessing {
+  margin: 0;
+  font-size: 32px;
+}
+
+.professorInfo,
+.labWebsite,
+.labLocation {
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.labWebsite {
+  color: var(--color-blue);
+  font-size: var(--font-size-5xl);
+}
+
+.labLocation {
+  font-size: var(--font-size-5xl);
+}
+
+.labDescription,
+.labMembers,
+.labTags {
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-7xl);
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+
+.labDescriptionText {
+  line-height: 130%;
+}
+
+.span {
+  text-decoration: underline;
+}
+
+.a {
+  color: inherit;
+}
+
+.memberInfo {
+  line-height: 130%;
+}
+
+.p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.tagList {
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+
+.hci {
+  margin: 0;
 }
