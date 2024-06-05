@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./AdminPage.module.css";
-import { useState } from 'react';
-import { useFetchClubs } from "../hooks/query";
+import { useState, useEffect } from 'react';
+import axios from "axios";
 
 const AdminPage = () => {
 
-  const { data: submittedCList, isLoading } = useFetchClubs();
+  const [submittedCList, setSubmittedCList] = useState([]);
+  const [submittedLList, setSubmittedLList] = useState([]);
 
-  const [submittedLList, setSubmittedLList] = useState([
-    {
-      id: 1,
-      name: "연구실 1",
-      sDate: "2024-06-01"
-    },
-    {
-      id: 2,
-      name: "연구실 2",
-      sDate: "2024-06-02"
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`/api/manage/forms`);
+      const { lab, club } = response.data;
+      setSubmittedCList(club);
+      setSubmittedLList(lab);
+    } catch (error) {
+      console.error("Failed to fetch data", error);
     }
-  ])
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className={styles.adminPage}>
@@ -26,33 +29,31 @@ const AdminPage = () => {
       <b className={styles.labManageList}>랩 신청 및 수정 목록</b>
 
       <div className={styles.clubManage}>
-        {/*submittedCList.map(
-          (club, index) => (
+        {submittedCList.map((club, index) => (
           <Link 
             key={index} 
             className={styles.clubName} 
-            to="/admin/clubs/1"
-            state={club.name}
-            >
+            to={`/admin/manage/forms/${club.id}`}
+            state={{ name: club.name }}
+          >
             <b className={styles.b}>{club.name}</b>
-            <b className={styles.yyyymmdd}>신청 일자: {club.sDate}</b>
-          </Link>)
-        )*/}
+            <b className={styles.yyyymmdd}>신청 일자: {club.createdAt.substring(0, 10)}</b>
+          </Link>
+        ))}
       </div>
       
       <div className={styles.labManage}>
-        {submittedLList.map(
-          (lab, index) => (
+        {submittedLList.map((lab, index) => (
           <Link 
-          key={index} 
-          className={styles.labName} 
-          to="/admin/labs/1"
-          state={lab.name}
+            key={index} 
+            className={styles.labName} 
+            to={`/admin/manage/forms/${lab.id}`}
+            state={{ name: lab.name }}
           >
             <b className={styles.b}>{lab.name}</b>
-            <b className={styles.yyyymmdd}>신청 일자: {lab.sDate}</b>
-          </Link>)
-        )}
+            <b className={styles.yyyymmdd}>신청 일자: {lab.createdAt.substring(0, 10)}</b>
+          </Link>
+        ))}
       </div>
     </div>
   );

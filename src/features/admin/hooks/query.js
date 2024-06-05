@@ -3,11 +3,11 @@ import api from "../../../api";
 
 export const useFetchClubs = (keyword) => {
   return useQuery({
-    queryKey: ["forms", { keyword }],
+    queryKey: ["clubs", { keyword }],
     queryFn: () => api.manage.getList(keyword),
   });
 };
 
 export const useFetchClub = (id) => {
-  return useQuery({ queryKey: ["forms", id], queryFn: () => api.manage.get(id) });
+  return useQuery({ queryKey: ["clubs", id], queryFn: () => api.manage.get(id) });
 };
