@@ -5,20 +5,20 @@ import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import Submit from "../../../components/Submit";
 import styles from "./ApplicationFormClub.module.css";
+import { useCreateClub } from "../hooks/query";
 
 const ApplicationFormClub = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
 
   const [clubform, setClubForm] = useState({
-    logo: "",
-    clubName: "",
+    groupName: "",
+    logoUrl: "",
     description: "",
-    clubTags: "",
-    clubLocation: "",
-    representativeName: "",
-    representativeContact: "",
-    website: "",
+    email: "",
+    homepageUrl: "",
+    tags: "",
+    location: "",
     members: "",
     username: "",
     password: "",
@@ -46,6 +46,13 @@ const ApplicationFormClub = () => {
       ...clubform,
       [name]: value,
     });
+  };
+
+  const { mutate: createClub } = useCreateClub();
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createClub(clubform);
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -90,8 +97,8 @@ const ApplicationFormClub = () => {
                 : "동아리 홈페이지 및 sns를 입력해주세요"
             }
             type="text"
-            name="website"
-            value={clubform.website}
+            name="homepageUrl"
+            value={clubform.homepageUrl}
             onChange={handleChange}
           />
           <b className={styles.b1}>동아리 홈페이지 / sns</b>
@@ -110,8 +117,8 @@ const ApplicationFormClub = () => {
               isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요>"
             }
             type="text"
-            name="representativeContact"
-            value={clubform.representativeContact}
+            name="email"
+            value={clubform.email}
             onChange={handleChange}
           />
           <b className={styles.b1}>대표자 연락처</b>
@@ -130,8 +137,8 @@ const ApplicationFormClub = () => {
               isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"
             }
             type="text"
-            name="representativeName"
-            value={clubform.representativeName}
+            name="professor"
+            value={clubform.professor}
             onChange={handleChange}
           />
           <b className={styles.b1}>대표자 이름</b>
@@ -152,8 +159,8 @@ const ApplicationFormClub = () => {
                 : "동아리방 번호와 활동 장소 위치를 입력해주세요"
             }
             type="text"
-            name="clubLocation"
-            value={clubform.clubLocation}
+            name="location"
+            value={clubform.location}
             onChange={handleChange}
           />
           <b className={styles.b1}>동아리방 / 활동 장소 위치</b>
@@ -172,8 +179,8 @@ const ApplicationFormClub = () => {
               isInputClicked === true ? "" : "동아리 태그를 입력해주세요"
             }
             type="text"
-            name="clubTags"
-            value={clubform.clubTags}
+            name="tags"
+            value={clubform.tags}
             onChange={handleChange}
           />
           <b className={styles.b1}>동아리 태그</b>
@@ -210,8 +217,8 @@ const ApplicationFormClub = () => {
               isInputClicked === true ? "" : "동아리 이름을 입력해 주세요"
             }
             type="text"
-            name="clubName"
-            value={clubform.clubName}
+            name="groupName"
+            value={clubform.groupName}
             onChange={handleChange}
           />
           <b className={styles.b1}>동아리 이름</b>

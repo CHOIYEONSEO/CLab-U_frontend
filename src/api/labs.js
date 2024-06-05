@@ -6,3 +6,9 @@ export const getList = (keyword) => {
     .get(`/api/labs`, { params: { keyword } })
     .then((res) => res.data);
 };
+
+export const create = (data) => {
+  return axios
+    .post(`/api/labs`, data)
+    .then((res) => res.data);
+};

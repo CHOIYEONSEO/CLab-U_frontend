@@ -7,28 +7,31 @@ import Submit from "../../../components/Submit";
 import styles from "./ApplicationFormLab.module.css";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { useCreateLab } from "../hooks/query";
 
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
 
   const [labform, setLabForm] = useState({
-    logo: "",
-    labName: "",
+    groupName: "",
+    logoUrl: "",
     description: "",
-    labTags: "",
-    labLocation: "",
+    email: "",
+    homepageUrl: "",
+    tags: "",
     professor: "",
-    professorGoogleScholar: "",
-    representativeName: "",
-    representativeContact: "",
-    website: "",
-    postdocs: "",
-    phdStudents: "",
-    mastersStudents: "",
-    undergradResearchers: "",
+    numPostDoc: "",
+    numPhd: "",
+    numMaster: "",
+    numUnderGraduate: "",
+    roomNo: "",
     username: "",
     password: "",
+
+    professorGoogleScholar: "",
+    representativeName: "",
+    campus: "",
   });
 
   const openFrame = useCallback(() => {
@@ -53,6 +56,13 @@ const ApplicationFormLab = () => {
       ...labform,
       [name]: value,
     });
+  };
+
+  const { mutate: createLab } = useCreateLab();
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createLab(labform);
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -89,8 +99,8 @@ const ApplicationFormLab = () => {
             }
             type="number"
             min="0"
-            name="undergradResearchers"
-            value={labform.undergradResearchers}
+            name="numUnderGraduate"
+            value={labform.numUnderGraduate}
             onChange={handleChange}
           />
           <b className={styles.b1}>학부연구생</b>
@@ -108,8 +118,8 @@ const ApplicationFormLab = () => {
             }
             type="number"
             min="0"
-            name="mastersStudents"
-            value={labform.mastersStudents}
+            name="numMaster"
+            value={labform.numMaster}
             onChange={handleChange}
           />
           <b className={styles.b3}>석사과정</b>
@@ -127,8 +137,8 @@ const ApplicationFormLab = () => {
             }
             type="number"
             min="0"
-            name="phdStudents"
-            value={labform.phdStudents}
+            name="numPhd"
+            value={labform.numPhd}
             onChange={handleChange}
           />
           <b className={styles.b5}>박사과정 / 석박 통합</b>
@@ -146,8 +156,8 @@ const ApplicationFormLab = () => {
             }
             type="number"
             min="0"
-            name="postdocs"
-            value={labform.postdocs}
+            name="numPostDoc"
+            value={labform.numPostDoc}
             onChange={handleChange}
           />
           <b className={styles.b7}>포닥</b>
@@ -169,8 +179,8 @@ const ApplicationFormLab = () => {
                 : "연구실 홈페이지 주소를 입력해 주세요"
             }
             type="text"
-            name="website"
-            value={labform.website}
+            name="homepageUrl"
+            value={labform.homepageUrl}
             onChange={handleChange}
           />
           <b className={styles.googleScolar}>홈페이지 주소</b>
@@ -189,8 +199,8 @@ const ApplicationFormLab = () => {
               isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요"
             }
             type="text"
-            name="representativeContact"
-            value={labform.representativeContact}
+            name="email"
+            value={labform.email}
             onChange={handleChange}
           />
           <b className={styles.googleScolar}>대표자 연락처</b>
@@ -252,8 +262,8 @@ const ApplicationFormLab = () => {
               isInputClicked === true ? "" : "연구실 이름을 입력해 주세요"
             }
             type="text"
-            name="labName"
-            value={labform.labName}
+            name="groupName"
+            value={labform.groupName}
             onChange={handleChange}
           />
         </div>
@@ -334,8 +344,8 @@ const ApplicationFormLab = () => {
                 isInputClicked === true ? "" : "연구실 번호를 입력해 주세요"
               }
               type="text"
-              name="labLocation"
-              value={labform.labLocation}
+              name="roomNo"
+              value={labform.roomNo}
               onChange={handleChange}
             />
           </div>
@@ -354,8 +364,8 @@ const ApplicationFormLab = () => {
               isInputClicked === true ? "" : "연구실 태그를 입력해 주세요"
             }
             type="text"
-            name="labTags"
-            value={labform.labTags}
+            name="tags"
+            value={labform.tags}
             onChange={handleChange}
           />
           <b className={styles.googleScolar}>연구실 태그</b>
@@ -410,7 +420,7 @@ const ApplicationFormLab = () => {
           </div>
         </div>
         <div className={styles.applicationFormLabChild} />
-        <div className={styles.submit} onClick={openSubmit}>
+        <div className={styles.submit} onClick={handleSubmit}>
           <b className={styles.b43}>제출</b>
         </div>
       </div>

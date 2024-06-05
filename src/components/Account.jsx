@@ -2,11 +2,13 @@ import PropTypes from "prop-types";
 import styles from "./Account.module.css";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
+import axios from "axios";
 
-const Account = ({ className = "", onClose}) => {
+const Account = ({ className = "", name, onClose}) => {
   const navigate = useNavigate();
 
   const onLogOutClick = useCallback(() => {
+    const response = axios.get(`/api/auth/logout`);
     navigate(0);
   }, [navigate]);
 
@@ -18,7 +20,7 @@ const Account = ({ className = "", onClose}) => {
   
   return (
     <div className={[styles.account, className].join(" ")}>
-      <div className={styles.npc}>안녕하세요, NPC 님!</div>
+      <div className={styles.npc}>{name}님 환영합니다!</div>
       <img
         className={styles.CloseIcon}
         alt=""

@@ -25,6 +25,19 @@ const AdminClub = () => {
     setAdminRejectOpen(false);
   }, []);
 
+  const [clubform, setClubForm] = useState({
+    groupName: "",
+    logoUrl: "",
+    description: "",
+    email: "",
+    homepageUrl: "",
+    tags: "",
+    location: "",
+    members: "",
+    username: "",
+    password: "",
+  });
+
   return (
     <>
       <div className={styles.adminClub}>

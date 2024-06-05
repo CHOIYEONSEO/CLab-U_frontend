@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import api from "../../../api";
 
 export const useFetchClubs = (keyword) => {
@@ -11,8 +11,3 @@ export const useFetchClubs = (keyword) => {
 export const useFetchClub = (id) => {
   return useQuery({ queryKey: ["clubs", id], queryFn: () => api.clubs.get(id) });
 };
-
-export const useCreateClub = () =>
-  useMutation({
-    mutationFn: (newClubData) => api.clubs.create(newClubData),
-});

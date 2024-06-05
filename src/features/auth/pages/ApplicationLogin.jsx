@@ -1,11 +1,18 @@
 import { useState } from "react";
+import axios from "axios";
 import styles from "./ApplicationLogin.module.css";
+import { useNavigate } from "react-router-dom";
 
 const ApplicationLogin = () => {
   const [logInForm, setLogInForm] = useState({
-    id: "",
+    username: "",
     password: "",
   });
+
+  const [isIdInputClicked, setIsIdInputClicked] = useState(false);
+  const [isPasswdInputClicked, setIsPasswdInputClicked] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,8 +22,24 @@ const ApplicationLogin = () => {
     });
   };
 
-  const [isIdInputClicked, setIsIdInputClicked] = useState(false);
-  const [isPasswdInputClicked, setIsPasswdInputClicked] = useState(false);
+  const activeEnter = (e) => {
+    if (e.key === "Enter") {
+      handleLogin();
+    }
+  };
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(`/api/auth/login`, logInForm);
+      if (response.status === 200) {
+        window.alert("로그인 성공");
+        navigate("/admin");
+      }
+    } catch (error) {
+      window.alert("로그인 실패");
+      setErrorMessage("로그인에 실패했습니다. 아이디와 비밀번호를 확인하세요.");
+    }
+  };
 
   return (
     <div className={styles.applicationLogin}>
@@ -25,16 +48,12 @@ const ApplicationLogin = () => {
           <div className={styles.id}>
             <input
               className={styles.idInput}
-              onFocus={() => {
-                setIsIdInputClicked(true);
-              }}
-              onBlur={() => {
-                setIsIdInputClicked(false);
-              }}
-              placeholder={isIdInputClicked === true ? "" : "아이디"}
+              onFocus={() => setIsIdInputClicked(true)}
+              onBlur={() => setIsIdInputClicked(false)}
+              placeholder={isIdInputClicked ? "" : "아이디"}
               type="text"
-              name="id"
-              value={logInForm.id}
+              name="username"
+              value={logInForm.username}
               onChange={handleChange}
             />
             <img className={styles.idIcon} alt="" src="/id-icon@2x.png" />
@@ -42,26 +61,26 @@ const ApplicationLogin = () => {
           <div className={styles.passwd}>
             <input
               className={styles.passwdInput}
-              onFocus={() => {
-                setIsPasswdInputClicked(true);
-              }}
-              onBlur={() => {
-                setIsPasswdInputClicked(false);
-              }}
-              placeholder={isPasswdInputClicked === true ? "" : "비밀번호"}
+              onFocus={() => setIsPasswdInputClicked(true)}
+              onBlur={() => setIsPasswdInputClicked(false)}
+              placeholder={isPasswdInputClicked ? "" : "비밀번호"}
               type="password"
               name="password"
               value={logInForm.password}
               onChange={handleChange}
+              onKeyDown={(e) => activeEnter(e)}
             />
             <img className={styles.passwdIcon} alt="" src="/passwd-icon@2x.png" />
           </div>
-          <div className={styles.login}>
+          <div className={styles.login} onClick={handleLogin}>
             <b className={styles.loginText}>로그인</b>
           </div>
-            <b className={styles.boundaryText}>
-              아이디와 비밀번호 찾기는 관리자에게 문의하세요
-            </b>
+          {errorMessage && (
+            <div className={styles.errorMessage}>{errorMessage}</div>
+          )}
+          <b className={styles.boundaryText}>
+            아이디와 비밀번호 찾기는 관리자에게 문의하세요
+          </b>
         </div>
       </div>
     </div>

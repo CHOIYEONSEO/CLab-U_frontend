@@ -25,6 +25,25 @@ const AdminLab = () => {
     setAdminRejectOpen(false);
   }, []);
 
+  const [labform, setLabForm] = useState({
+    logo: "",
+    labName: "",
+    description: "",
+    labTags: "",
+    labLocation: "",
+    professor: "",
+    professorGoogleScholar: "",
+    representativeName: "",
+    representativeContact: "",
+    website: "",
+    postdocs: "",
+    phdStudents: "",
+    mastersStudents: "",
+    undergradResearchers: "",
+    username: "",
+    password: "",
+  });
+
   return (
     <>
       <div className={styles.adminLab}>

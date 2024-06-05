@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import styles from "./AdminPage.module.css";
+import { useState } from 'react';
+import { useFetchClubs } from "../hooks/query";
 
 const AdminPage = () => {
+
+  const { data: submittedCList, isLoading } = useFetchClubs();
+
+  const [submittedLList, setSubmittedLList] = useState([
+    {
+      id: 1,
+      name: "연구실 1",
+      sDate: "2024-06-01"
+    },
+    {
+      id: 2,
+      name: "연구실 2",
+      sDate: "2024-06-02"
+    }
+  ])
 
   return (
     <div className={styles.adminPage}>
@@ -9,29 +26,33 @@ const AdminPage = () => {
       <b className={styles.labManageList}>랩 신청 및 수정 목록</b>
 
       <div className={styles.clubManage}>
-        <Link className={styles.clubName} to="/admin/clubs/1">
-          <b className={styles.b}>동아리 이름</b>
-          <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-        </Link>
-        <Link className={styles.clubName1} to="/admin/clubs/1">
-          <b className={styles.b}>동아리 이름</b>
-          <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-        </Link>
+        {/*submittedCList.map(
+          (club, index) => (
+          <Link 
+            key={index} 
+            className={styles.clubName} 
+            to="/admin/clubs/1"
+            state={club.name}
+            >
+            <b className={styles.b}>{club.name}</b>
+            <b className={styles.yyyymmdd}>신청 일자: {club.sDate}</b>
+          </Link>)
+        )*/}
       </div>
       
       <div className={styles.labManage}>
-        <Link className={styles.labName} to="/admin/labs/1">
-          <b className={styles.b}>랩 이름</b>
-          <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-        </Link>
-        <Link className={styles.labName1} to="/admin/labs/1">
-          <b className={styles.b}>랩 이름</b>
-          <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-        </Link>
-        <Link className={styles.labName2} to="/admin/labs/1">
-          <b className={styles.b}>랩 이름</b>
-          <b className={styles.yyyymmdd}>신청 일자: yyyy/mm/dd</b>
-        </Link>
+        {submittedLList.map(
+          (lab, index) => (
+          <Link 
+          key={index} 
+          className={styles.labName} 
+          to="/admin/labs/1"
+          state={lab.name}
+          >
+            <b className={styles.b}>{lab.name}</b>
+            <b className={styles.yyyymmdd}>신청 일자: {lab.sDate}</b>
+          </Link>)
+        )}
       </div>
     </div>
   );
