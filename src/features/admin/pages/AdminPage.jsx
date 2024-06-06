@@ -30,10 +30,10 @@ const AdminPage = () => {
 
       <div className={styles.clubManage}>
         {submittedCList.map((club, index) => (
-          <Link 
+          <Link
             key={index} 
             className={styles.clubName} 
-            to={`/admin/manage/forms/${club.id}`}
+            to={`/admin/clubs/1`}
             state={{ name: club.name }}
           >
             <b className={styles.b}>{club.name}</b>
@@ -47,7 +47,7 @@ const AdminPage = () => {
           <Link 
             key={index} 
             className={styles.labName} 
-            to={`/admin/manage/forms/${lab.id}`}
+            to={`/admin/labs/1`}
             state={{ name: lab.name }}
           >
             <b className={styles.b}>{lab.name}</b>

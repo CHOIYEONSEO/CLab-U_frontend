@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styles from "./SubmitClub.module.css";
 import axios from "axios";
 
-
 const Submit = ({ className = "", onClose, clubData }) => {
   const handleCancelClick = () => {
     if (onClose) {
@@ -19,6 +18,20 @@ const Submit = ({ className = "", onClose, clubData }) => {
       onClose();
     } catch (error) {
       console.error(error);
+    }
+    const formData = new FormData();
+    if (clubData.logoUrl) {
+      formData.append('file', clubData.logoUrl);
+    }
+    try {
+      const response = await axios.post('/api/files/image', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error); 
     }
   };
 

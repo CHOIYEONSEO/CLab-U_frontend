@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./AdminRejectReason.module.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const AdminRejectReason = ({ className = "", onClose }) => {
   const handleCancelClick = () => {
@@ -8,6 +9,10 @@ const AdminRejectReason = ({ className = "", onClose }) => {
       onClose();
     }
   };
+
+  const [isInputClicked, setIsInputClicked] = useState(false);
+  let [reason, setReason] = useState("");
+
   return (
     <div className={[styles.adminRejectReason, className].join(" ")}>
       <b className={styles.b}>반려 사유를 작성해주세요</b>
@@ -22,7 +27,13 @@ const AdminRejectReason = ({ className = "", onClose }) => {
           <b className={styles.b1}>확인</b>
         </NavLink>
       </div>
-      <b className={styles.text}>{` `}</b>
+      <b className={styles.text}>{` d`}</b>
+      <textarea
+            className={styles.text}
+            type="text"
+            name="reason"
+            value={reason}
+          />
     </div>
   );
 };

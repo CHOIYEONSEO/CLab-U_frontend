@@ -4,7 +4,7 @@ import PortalPopup from "./PortalPopup";
 import PropTypes from "prop-types";
 import styles from "./AdminReject.module.css";
 
-const AdminReject = ({ className = "", onClose }) => {
+const AdminReject = ({ className = "", onClose, clubid }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();

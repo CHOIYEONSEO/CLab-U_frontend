@@ -41,20 +41,22 @@ const ApplicationFormClub = () => {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    
+    const { name, value, files } = e.target;
+  
     if (name === "tags") {
       const tagsArray = value.split(',').map(tag => tag.trim());
       setClubForm({ ...clubform, [name]: tagsArray });
+    } else if (name === "logoUrl" && files && files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        setClubForm({ ...clubform, [name]: event.target.result });
+      };
+      reader.readAsDataURL(files[0]);
     } else {
       setClubForm({ ...clubform, [name]: value });
     }
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    openSubmit();
-  };
 
   let [logoImg, setImg] = useState("");
 
@@ -238,12 +240,13 @@ const ApplicationFormClub = () => {
         <div className={styles.clubLogo}>
           <div className={styles.clubLogoChild} />
           <input 
-          className={styles.logob} 
-          type="file" 
-          accept='image/*'
-          onChange={setViewImg}
+            className={styles.logob}
+            type="file" 
+            accept="image/*"
+            name="logoUrl"
+            onChange={handleChange}
           />
-        <img className={styles.clubLogo1} src={logoImg}/>
+        <img className={styles.clubLogo1} src={clubform.logoUrl}/>
         <b className={styles.logob1}>동아리 로고</b>
        </div>
 
