@@ -7,6 +7,9 @@ const Account1 = ({ className = "", onClose }) => {
   const navigate = useNavigate();
 
   const onTextClick = useCallback(() => {
+    if (onClose) {
+      onClose();
+    }
     navigate("/login");
   }, [navigate]);
 
@@ -17,6 +20,9 @@ const Account1 = ({ className = "", onClose }) => {
   };
 
   const onAccount2ImageClick = useCallback(() => {
+    if (onClose) {
+      onClose();
+    }
     navigate("/login");
   }, [navigate]);
 

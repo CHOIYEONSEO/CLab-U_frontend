@@ -8,6 +8,9 @@ const Account = ({ className = "", name, onClose}) => {
   const navigate = useNavigate();
 
   const onLogOutClick = useCallback(() => {
+    if (onClose) {
+      onClose();
+    }
     const response = axios.get(`/api/auth/logout`);
     navigate("/");
   }, [navigate]);

@@ -427,20 +427,22 @@ border-color: transparent;
   text-align: center;
   font-size: var(--font-size-5xl);
 }
-.club {
-  top: 10px;
-  left: 61px;
-}
 .club,
 .lab,
 .tab {
   position: absolute;
+  top: 10px;
+}
+.club {
+  left: 30%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: var(--color-black);
 }
 .lab {
-  top: 10px;
-  left: 137px;
-  color: var(--color-darkgray-200);
-  cursor: pointer;
+  left: 60%;
+  color: var(--color-black);
 }
 .tab {
   top: 130px;
@@ -449,6 +451,7 @@ border-color: transparent;
   height: 44px;
   overflow: hidden;
   font-size: large;
+  color: var(--color-darkgray-200);
 }
 
 .applicationFormClub {

@@ -623,13 +623,13 @@ border-color: transparent;
   top: 10px;
 }
 .club {
-  left: 61px;
+  left: 30%;
   cursor: pointer;
-  right: 50%;
+  display: flex;
+  justify-content: center;
 }
-.lab,
-.tab {
-  left: 137px;
+.lab {
+  left: 60%;
   color: var(--color-black);
 }
 .tab {
@@ -747,7 +747,7 @@ border-color: transparent;
   width: 100%;
   position: absolute;
   background-color: var(--color-floralwhite);
-  height: 3100px;
+  height: 3300px;
   overflow: auto;
   font-size: var(--font-size-3xl);
   color: var(--color-black);
