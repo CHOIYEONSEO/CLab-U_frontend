@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Frame from "../../../components/Frame";
 import LabLogo from "../../../components/LabLogo";
 import PortalPopup from "../../../components/PortalPopup";
-import Submit from "../../../components/Submit";
+import SubmitLab from "../../../components/SubmitLab";
 import styles from "./ApplicationFormLab.module.css";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -52,17 +52,13 @@ const ApplicationFormLab = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setLabForm({
-      ...labform,
-      [name]: value,
-    });
-  };
-
-  const { mutate: createLab } = useCreateLab();
-  
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    createLab(labform);
+    
+    if (name === "tags") {
+      const tagsArray = value.split(',').map(tag => tag.trim());
+      setLabForm({ ...labform, [name]: tagsArray });
+    } else {
+      setLabForm({ ...labform, [name]: value });
+    }
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -420,7 +416,7 @@ const ApplicationFormLab = () => {
           </div>
         </div>
         <div className={styles.applicationFormLabChild} />
-        <div className={styles.submit} onClick={handleSubmit}>
+        <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b43}>제출</b>
         </div>
       </div>
@@ -439,7 +435,7 @@ const ApplicationFormLab = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <Submit onClose={closeSubmit} />
+          <SubmitLab onClose={closeSubmit} labData={labform} />
         </PortalPopup>
       )}
     </>

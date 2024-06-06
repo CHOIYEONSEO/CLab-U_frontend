@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ClubLogo from "../../../components/ClubLogo";
 import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
-import Submit from "../../../components/Submit";
+import SubmitClub from "../../../components/SubmitClub";
 import styles from "./ApplicationFormClub.module.css";
 
 const ApplicationFormClub = () => {
@@ -16,11 +16,13 @@ const ApplicationFormClub = () => {
     description: "",
     email: "",
     homepageUrl: "",
-    tags: "",
+    tags: [],
     location: "",
     members: "",
     username: "",
     password: "",
+
+    representative: "",
   });
 
   const openFrame = useCallback(() => {
@@ -41,10 +43,18 @@ const ApplicationFormClub = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setClubForm({
-      ...clubform,
-      [name]: value,
-    });
+    
+    if (name === "tags") {
+      const tagsArray = value.split(',').map(tag => tag.trim());
+      setClubForm({ ...clubform, [name]: tagsArray });
+    } else {
+      setClubForm({ ...clubform, [name]: value });
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    openSubmit();
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -106,7 +116,7 @@ const ApplicationFormClub = () => {
               setIsInputClicked(false);
             }}
             placeholder={
-              isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요>"
+              isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요"
             }
             type="text"
             name="email"
@@ -129,8 +139,8 @@ const ApplicationFormClub = () => {
               isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"
             }
             type="text"
-            name="professor"
-            value={clubform.professor}
+            name="representative"
+            value={clubform.representative}
             onChange={handleChange}
           />
           <b className={styles.b1}>대표자 이름</b>
@@ -284,7 +294,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <Submit onClose={closeSubmit} clubData={clubform}/>
+          <SubmitClub onClose={closeSubmit} clubData={clubform}/>
         </PortalPopup>
       )}
     </>

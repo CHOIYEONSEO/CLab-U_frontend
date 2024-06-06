@@ -9,7 +9,7 @@ const Account = ({ className = "", name, onClose}) => {
 
   const onLogOutClick = useCallback(() => {
     const response = axios.get(`/api/auth/logout`);
-    navigate(0);
+    navigate("/");
   }, [navigate]);
 
   const handleCancelClick = () => {

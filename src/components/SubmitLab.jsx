@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import styles from "./Submit.module.css";
+import styles from "./SubmitLab.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, clubData }) => {
+const Submit = ({ className = "", onClose, labData }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -13,8 +13,9 @@ const Submit = ({ className = "", onClose, clubData }) => {
 
   const submitData = async () => {
     try {
-      const response = await axios.post('/api/clubs', clubData);
-      console.log(clubData);
+      console.log(labData);
+      const response = await axios.post('/api/labs', labData);
+      console.log(response.data);
       onClose();
     } catch (error) {
       console.error(error);
@@ -22,7 +23,8 @@ const Submit = ({ className = "", onClose, clubData }) => {
   };
 
   return (
-    <div className={[styles.Sumbit, className].join(" ")}>
+    <div className={styles.Sumbit}>
+      <b className={styles.b2}>제출하시겠습니까?</b>
       <div className={styles.div}>
       <button className={styles.cancel} onClick={handleCancelClick}>
           <b className={styles.bc}>취소</b>
@@ -31,7 +33,6 @@ const Submit = ({ className = "", onClose, clubData }) => {
           <b className={styles.b}>확인</b>
         </Link>
       </div>
-      <b className={styles.b2}>제출하시겠습니까?</b>
     </div>
   );
 };
