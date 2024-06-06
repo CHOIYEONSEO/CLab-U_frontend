@@ -68,8 +68,6 @@ const ApplicationFormClub = () => {
     reader.readAsDataURL(e.target.files[0]);
   }
 
-  const [isInputClicked, setIsInputClicked] = useState(false);
-
   return (
     <>
       <div className={styles.applicationFormClub}>
@@ -77,15 +75,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.membersInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "몇명인지 입력해 주세요"
-            }
+            placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
             name="members"
@@ -98,17 +88,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.pageInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true
-                ? ""
-                : "동아리 홈페이지 및 sns를 입력해주세요"
-            }
+            placeholder="동아리 홈페이지 및 sns를 입력해주세요"
             type="text"
             name="homepageUrl"
             value={clubform.homepageUrl}
@@ -120,15 +100,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.contactInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요"
-            }
+            placeholder="대표자 이메일을 입력해 주세요"
             type="text"
             name="email"
             value={clubform.email}
@@ -140,15 +112,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.clubRepInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"
-            }
+            placeholder="대표자 이름을 입력해 주세요"
             type="text"
             name="representative"
             value={clubform.representative}
@@ -160,17 +124,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.clubLocInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true
-                ? ""
-                : "동아리방 번호와 활동 장소 위치를 입력해주세요"
-            }
+            placeholder="동아리방 번호와 활동 장소 위치를 입력해주세요"
             type="text"
             name="location"
             value={clubform.location}
@@ -182,15 +136,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.clubTagInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "동아리 태그를 입력해주세요"
-            }
+            placeholder="동아리 태그를 입력해주세요"
             type="text"
             name="tags"
             value={clubform.tags}
@@ -202,13 +148,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.clubDescInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={isInputClicked === true ? "" : "동아리를 설명해주세요"}
+            placeholder="동아리를 설명해주세요"
             type="text"
             name="description"
             value={clubform.description}
@@ -220,15 +160,7 @@ const ApplicationFormClub = () => {
           <div className={styles.clubMembersChild} />
           <input
             className={styles.clubNameInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "동아리 이름을 입력해 주세요"
-            }
+            placeholder="동아리 이름을 입력해 주세요"
             type="text"
             name="groupName"
             value={clubform.groupName}
@@ -239,31 +171,23 @@ const ApplicationFormClub = () => {
 
         <div className={styles.clubLogo}>
           <div className={styles.clubLogoChild} />
-          <input 
+          <input
             className={styles.logob}
-            type="file" 
+            type="file"
             accept="image/*"
             name="logoUrl"
             onChange={handleChange}
           />
-        <img className={styles.clubLogo1} src={clubform.logoUrl}/>
-        <b className={styles.logob1}>동아리 로고</b>
-       </div>
+          <img className={styles.clubLogo1} src={clubform.logoUrl} />
+          <b className={styles.logob1}>동아리 로고</b>
+        </div>
 
         <div className={styles.labIdPassword}>
           <div className={styles.labIdPasswordChild} />
           <b className={styles.b14}>아이디</b>
           <input
             className={styles.idInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "아이디를 입력해 주세요"
-            }
+            placeholder="아이디를 입력해 주세요"
             type="text"
             name="username"
             value={clubform.username}
@@ -273,15 +197,7 @@ const ApplicationFormClub = () => {
           <b className={styles.b16}>비밀번호</b>
           <input
             className={styles.pwInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "비밀번호를 입력해 주세요"
-            }
+            placeholder="비밀번호를 입력해 주세요"
             type="password"
             name="password"
             value={clubform.password}
@@ -318,7 +234,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitClub onClose={closeSubmit} clubData={clubform}/>
+          <SubmitClub onClose={closeSubmit} clubData={clubform} />
         </PortalPopup>
       )}
     </>

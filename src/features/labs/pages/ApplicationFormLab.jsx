@@ -59,8 +59,6 @@ const ApplicationFormLab = () => {
     }
   };
 
-  const [isInputClicked, setIsInputClicked] = useState(false);
-
   const [selectedCampusTitle, setSelectedCampusTitle] = useState("캠퍼스 선택");
 
   let [logoImg, setImg] = useState("");
@@ -80,15 +78,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labMembersChild} />
           <input
             className={styles.undergradInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "몇명인지 입력해 주세요"
-            }
+            placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
             name="numUnderGraduate"
@@ -99,15 +89,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labMembersItem} />
           <input
             className={styles.masterInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "몇명인지 입력해 주세요"
-            }
+            placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
             name="numMaster"
@@ -118,15 +100,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labMembersInner} />
           <input
             className={styles.docInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "몇명인지 입력해 주세요"
-            }
+            placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
             name="numPhd"
@@ -137,15 +111,7 @@ const ApplicationFormLab = () => {
           <div className={styles.lineDiv} />
           <input
             className={styles.postDocInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "몇명인지 입력해 주세요"
-            }
+            placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
             name="numPostDoc"
@@ -159,17 +125,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.pageInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true
-                ? ""
-                : "연구실 홈페이지 주소를 입력해 주세요"
-            }
+            placeholder="연구실 홈페이지 주소를 입력해 주세요"
             type="text"
             name="homepageUrl"
             value={labform.homepageUrl}
@@ -181,15 +137,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.contactInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "대표자 이메일을 입력해 주세요"
-            }
+            placeholder="대표자 이메일을 입력해 주세요"
             type="text"
             name="email"
             value={labform.email}
@@ -201,15 +149,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.repInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "대표자 이름을 입력해 주세요"
-            }
+            placeholder="대표자 이름을 입력해 주세요"
             type="text"
             name="representativeName"
             value={labform.representativeName}
@@ -222,17 +162,7 @@ const ApplicationFormLab = () => {
           <b className={styles.googleScolar}>연구실 설명</b>
           <input
             className={styles.labDescInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true
-                ? ""
-                : "현재 진행 중인 연구 과제를 중심으로 작성해 주세요"
-            }
+            placeholder="현재 진행 중인 연구 과제를 중심으로 작성해 주세요"
             type="text"
             name="description"
             value={labform.description}
@@ -244,15 +174,7 @@ const ApplicationFormLab = () => {
           <b className={styles.googleScolar}>연구실 이름</b>
           <input
             className={styles.labNameInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "연구실 이름을 입력해 주세요"
-            }
+            placeholder="연구실 이름을 입력해 주세요"
             type="text"
             name="groupName"
             value={labform.groupName}
@@ -263,15 +185,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.professorInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "교수님 이름을 입력해 주세요"
-            }
+            placeholder="교수님 이름을 입력해 주세요"
             type="text"
             name="professor"
             value={labform.professor}
@@ -283,17 +197,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.scholarInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true
-                ? ""
-                : "교수님 Google scolar 링크를 입력해 주세요"
-            }
+            placeholder="교수님 Google scolar 링크를 입력해 주세요"
             type="text"
             name="professorGoogleScholar"
             value={labform.professorGoogleScholar}
@@ -326,15 +230,7 @@ const ApplicationFormLab = () => {
           <div className={styles.wrapper}>
             <input
               className={styles.locInput}
-              onFocus={() => {
-                setIsInputClicked(true);
-              }}
-              onBlur={() => {
-                setIsInputClicked(false);
-              }}
-              placeholder={
-                isInputClicked === true ? "" : "연구실 번호를 입력해 주세요"
-              }
+              placeholder="연구실 번호를 입력해 주세요"
               type="text"
               name="roomNo"
               value={labform.roomNo}
@@ -346,15 +242,7 @@ const ApplicationFormLab = () => {
           <div className={styles.labPageChild} />
           <input
             className={styles.labTagInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "연구실 태그를 입력해 주세요"
-            }
+            placeholder="연구실 태그를 입력해 주세요"
             type="text"
             name="tags"
             value={labform.tags}
@@ -365,7 +253,7 @@ const ApplicationFormLab = () => {
         
         <div className={styles.labLogo}>
           <div className={styles.labLogoChild} />
-          <input 
+          <input
           className={styles.logob} 
           type="file" 
           accept='image/*'
@@ -386,15 +274,7 @@ const ApplicationFormLab = () => {
           <b className={styles.b37}>아이디</b>
           <input
             className={styles.idInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "아이디를 입력해 주세요"
-            }
+            placeholder="아이디를 입력해 주세요"
             type="text"
             name="username"
             value={labform.username}
@@ -404,15 +284,7 @@ const ApplicationFormLab = () => {
           <b className={styles.b39}>비밀번호</b>
           <input
             className={styles.pwInput}
-            onFocus={() => {
-              setIsInputClicked(true);
-            }}
-            onBlur={() => {
-              setIsInputClicked(false);
-            }}
-            placeholder={
-              isInputClicked === true ? "" : "비밀번호를 입력해 주세요"
-            }
+            placeholder="비밀번호를 입력해 주세요"
             type="password"
             name="password"
             value={labform.password}
