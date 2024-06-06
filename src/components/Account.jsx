@@ -13,6 +13,7 @@ const Account = ({ className = "", name, onClose}) => {
     }
     const response = axios.get(`/api/auth/logout`);
     navigate("/");
+    window.location.reload(); //임시방편. Application으로 바뀌는데 지연있음.
   }, [navigate]);
 
   const handleCancelClick = () => {

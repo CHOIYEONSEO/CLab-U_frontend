@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "./ApplicationLogin.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, redirect } from "react-router-dom";
 
 const ApplicationLogin = () => {
   const [logInForm, setLogInForm] = useState({
@@ -34,6 +34,7 @@ const ApplicationLogin = () => {
       if (response.status === 200) {
         window.alert("로그인 성공");
         navigate("/admin");
+        window.location.reload(); //임시방편. Manage로 바뀌는데 지연있음.
       }
     } catch (error) {
       window.alert("로그인 실패");
