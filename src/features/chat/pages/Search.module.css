@@ -81,3 +81,9 @@
   cursor: pointer;
   margin-left: 10px;
 }
+
+.chatCharacter {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

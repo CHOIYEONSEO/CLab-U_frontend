@@ -10,6 +10,16 @@ const Search = () => {
   const [history, setHistory] = useState([]);
   const [question, setQuestion] = useState("");
 
+  useEffect(() => {
+    setHistory([
+      {
+        sender: "ai",
+        content:
+          "소프트웨어융합대학의 동아리와 연구실을 쉽게 찾을 수 있도록 도와주는 자연어 기반 대화형 검색 서비스인 CLab:U입니다! 무엇이든 물어보세요!",
+      },
+    ]);
+  }, []);
+
   const sendChat = useCallback(
     (query) => {
       console.log(query);
@@ -44,9 +54,6 @@ const Search = () => {
     if (query && query.trim().length > 0) {
       sendChat(query);
     }
-    return () => {
-      setHistory([]);
-    };
   }, [searchParams, sendChat]);
 
   useEffect(() => {
@@ -63,6 +70,13 @@ const Search = () => {
               chat.sender === "me" ? styles.myChat : styles.aiChat
             }`}
           >
+            {chat.sender === "ai" && (
+              <img
+                className={styles.chatCharacter}
+                alt="Chat Character"
+                src="./../../../../public/logo@2x.png"
+              />
+            )}
             <div className={styles.chatContent}>{chat.content}</div>
           </div>
         ))}
