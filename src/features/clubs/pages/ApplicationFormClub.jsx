@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import ClubLogo from "../../../components/ClubLogo";
 import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import SubmitClub from "../../../components/SubmitClub";
@@ -56,6 +55,16 @@ const ApplicationFormClub = () => {
     event.preventDefault();
     openSubmit();
   };
+
+  let [logoImg, setImg] = useState("");
+
+  const setViewImg = (e) => {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      setImg(e.target.result);
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  }
 
   const [isInputClicked, setIsInputClicked] = useState(false);
 
@@ -225,7 +234,19 @@ const ApplicationFormClub = () => {
           />
           <b className={styles.b1}>동아리 이름</b>
         </div>
-        <ClubLogo prop1="동아리 로고" propTop="220px" />
+
+        <div className={styles.clubLogo}>
+          <div className={styles.clubLogoChild} />
+          <input 
+          className={styles.logob} 
+          type="file" 
+          accept='image/*'
+          onChange={setViewImg}
+          />
+        <img className={styles.clubLogo1} src={logoImg}/>
+        <b className={styles.logob1}>동아리 로고</b>
+       </div>
+
         <div className={styles.labIdPassword}>
           <div className={styles.labIdPasswordChild} />
           <b className={styles.b14}>아이디</b>

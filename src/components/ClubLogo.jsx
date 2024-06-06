@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./ClubLogo.module.css";
 
-const ClubLogo = ({ className = "", prop1, propTop }) => {
+const ClubLogo = ({ className = "", propTop }) => {
   const clubLogoStyle = useMemo(() => {
     return {
       top: propTop,
@@ -32,7 +32,7 @@ const ClubLogo = ({ className = "", prop1, propTop }) => {
       onChange={setViewImg}
       />
       <img className={styles.clubLogo1} src={logoImg}/>
-      <b className={styles.b1}>{prop1}</b>
+      <b className={styles.b1}>연구실 로고</b>
     </div>
   );
 };

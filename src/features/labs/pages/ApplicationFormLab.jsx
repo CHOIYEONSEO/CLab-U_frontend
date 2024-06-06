@@ -1,13 +1,11 @@
 import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import Frame from "../../../components/Frame";
-import LabLogo from "../../../components/LabLogo";
 import PortalPopup from "../../../components/PortalPopup";
 import SubmitLab from "../../../components/SubmitLab";
 import styles from "./ApplicationFormLab.module.css";
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import { useCreateLab } from "../hooks/query";
 
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
@@ -19,7 +17,7 @@ const ApplicationFormLab = () => {
     description: "",
     email: "",
     homepageUrl: "",
-    tags: "",
+    tags: [],
     professor: "",
     numPostDoc: "",
     numPhd: "",
@@ -65,17 +63,15 @@ const ApplicationFormLab = () => {
 
   const [selectedCampusTitle, setSelectedCampusTitle] = useState("캠퍼스 선택");
 
-  const [uploadImgUrl, setUploadImgUrl] = useState("");
+  let [logoImg, setImg] = useState("");
 
-  const onchangeImageUpload = (e) => {
-    const { files } = e.target;
-    const uploadFile = files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(uploadFile);
-    reader.onloadend = () => {
-      setUploadImgUrl(reader.result);
+  const setViewImg = (e) => {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      setImg(e.target.result);
     };
-  };
+    reader.readAsDataURL(e.target.files[0]);
+  }
 
   return (
     <>
@@ -366,7 +362,19 @@ const ApplicationFormLab = () => {
           />
           <b className={styles.googleScolar}>연구실 태그</b>
         </div>
-        <LabLogo prop1="연구실 로고" propTop="220px"/>
+        
+        <div className={styles.labLogo}>
+          <div className={styles.labLogoChild} />
+          <input 
+          className={styles.logob} 
+          type="file" 
+          accept='image/*'
+          onChange={setViewImg}
+          />
+        <img className={styles.labLogo1} src={logoImg}/>
+        <b className={styles.logob1}>연구실 로고</b>
+       </div>
+
         <div className={styles.tab}>
           <Link className={styles.club} to="/clubs/form">
             club
