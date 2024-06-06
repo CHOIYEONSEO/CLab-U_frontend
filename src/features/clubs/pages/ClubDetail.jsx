@@ -22,48 +22,47 @@ const ClubDetail = () => {
       ) : (
         <div>
           <div className={styles.clubHeader}>
-            <img className={styles.lablogoIcon} alt="" src={club.logoUrl}/>
+            <img className={styles.clublogoIcon} alt="로고이미지" src={club.logoUrl}/>
             <div className={styles.clubInfo}>
-              <b className={styles.skkuding1}>
-                <p className={styles.skkudingSkkuCoding}>{club.name}</p>
+              <b className={styles.clubName}>
+                <p className={styles.title}>{club.name}</p>
               </b>
+              <p className={styles.representInfo}>
+                <p className={styles.represent}>대표자 : {club.represent}</p>
+                <p className={styles.representEmail}>대표자 이메일 : {club.email}</p>
+              </p>
               <a
-                className={styles.httpswealthyHeliumFfenot}
+                className={styles.clubWebsite}
                 href={club.homepageUrl}
                 target="_blank"
               >
                 동아리 홈페이지 바로가기
               </a>
-              <b className={styles.b4}>
-                <p className={styles.p1}>대표자 : {club.represent}</p>
-                <p
-                  className={styles.skkudingSkkuCoding}
-                >대표자 이메일 : {club.email}</p>
-              </b>
-              <b className={styles.b5}>{club.location}</b>
+            </div>
+            <div className={styles.clubLocation}>
+              <p className={styles.locationText}>{club.location}</p>
             </div>
           </div>
           <div className={styles.clubDescription}>
-            <b className={styles.b1}>동아리 설명</b>
-            <div className={styles.labdescription}>
-              <b className={styles.skkudingSkkuCodingContainer}>
-                <p className={styles.skkudingSkkuCoding}>
-                  {club.description}
-                </p>
-              </b>
+            <b className={styles.sectionTitle}>동아리 설명</b>
+            <div className={styles.sectionContainer}>
+              <p className={styles.descriptionText}>
+                {club.description}
+              </p>
             </div>
           </div>
           <div className={styles.clubDetails}>
-            <div className={styles.memberCount}>
-              <b className={styles.b3}>구성원</b>
-              <div className={styles.div} >
-                <b className={styles.b}>{club.members}</b>
+            <div className={styles.clubMembers}>
+              <b className={styles.sectionTitle}>구성원</b>
+              <div className={styles.sectionContainer1} >
+                <p className={styles.memberText}>{club.members}</p>
               </div>
             </div>
             <div className={styles.clubTags}>
-              <b className={styles.b2}>동아리 태그</b>
-              <div className={styles.div1} >
-              <b className={styles.onlinejudge}>{club.tags}</b></div>
+              <b className={styles.sectionTitle}>동아리 태그</b>
+              <div className={styles.tagList} >
+                <p className={styles.tagText}>{club.tags}</p>
+              </div>
             </div>
           </div>
         </div>

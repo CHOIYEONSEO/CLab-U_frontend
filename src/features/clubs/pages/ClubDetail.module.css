@@ -2,129 +2,139 @@
   width: 100%;
   position: relative;
   background-color: var(--color-floralwhite);
-  min-height: 100vh;
   overflow-y: auto;
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--color-black);
-  font-family: var(--font-inter);
+  font-family: "NanumSquareNeo";
+  padding-left: 70px;
+  padding-right: 70px;
+  /*min-height: 100vh;*/
 }
 
 .clubHeader {
   display: flex;
   align-items: center;
-  margin-top: 60px;
-  margin-left: 60px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding: 0 60px;
 }
 
-.lablogoIcon {
+.clublogoIcon {
   width: 300px;
   height: 300px;
   border-radius: 19.37px;
   object-fit: cover;
   opacity: 0.8;
-  cursor: pointer;
   margin-right: 40px;
+  border: 1.6px solid var(--color-darkslategray-200);
 }
 
 .clubInfo {
   display: flex;
   flex-direction: column;
+  width: 700px;
 }
 
-.skkuding1 {
+.clubName{
   font-size: var(--font-size-17xl);
   margin-bottom: 20px;
 }
 
-.httpswealthyHeliumFfenot {
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: black;
+.title{
+  margin: 0px;
 }
 
-.b4 {
-  display: inline-block;
-  width: 100%;
+.representInfo{
+  line-height: 130%;
   margin-bottom: 10px;
 }
 
-.b5 {
+.represent{
+  margin-bottom: 5px;
+}
+
+.clubWebsite{
+  line-height: 130%;
+  margin-bottom: 10px;
+  color: var();
   font-size: var(--font-size-5xl);
 }
 
+.clubLocation{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: right;
+  margin-bottom: 135px;
+}
+
+.locationText {
+  font-size: var(--font-size-3xl);
+}
+
 .clubDescription {
-  margin-top: 60px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-bottom: 60px;
+  padding: 0 60px;
 }
 
-.b1 {
+.sectionTitle {
   font-size: var(--font-size-7xl);
-  margin-bottom: 20px;
 }
 
-.labdescription {
+.sectionContainer {
   width: 100%;
   border-radius: 19.37px;
   background-color: var(--color-whitesmoke-200);
   border: 1.6px solid var(--color-darkslategray-200);
   box-sizing: border-box;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
   opacity: 0.8;
 }
 
-.skkudingSkkuCodingContainer {
-  line-height: 130%;
-  display: inline-block;
+.sectionContainer1 {
   width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 10px;
+  opacity: 0.8;
+  min-height: 150px;
 }
 
-.codedang1 {
-  text-decoration: underline;
-}
-
-.codedang {
-  color: inherit;
+.descriptionText {
+  padding-top: 10px;
+  line-height: 150%;
 }
 
 .clubDetails {
   display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-bottom: 100px;
 }
 
-.memberCount,
+.clubMembers {
+  width: 33%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.memberText{
+  padding-top: 20px;
+  line-height: 130%;
+}
+
 .clubTags {
-  flex: 1;
+  width: 67%;
+  height: 100%;
+  padding: 0 60px;
 }
 
-.b3,
-.b2 {
-  font-size: var(--font-size-7xl);
-  margin-bottom: 20px;
-}
-
-.div,
-.div1 {
-  width: 100%;
-  border-radius: 19.37px;
-  background-color: var(--color-whitesmoke-200);
-  border: 1.6px solid var(--color-darkslategray-200);
-  box-sizing: border-box;
-  padding: 20px;
-  opacity: 0.8;
-}
-
-.b {
-  margin-top: 10px;
-}
-
-.onlinejudge {
+.tagList {
   font-size: var(--font-size-5xl);
+  line-height: 130%;
+  padding: 20px;
   margin-top: 10px;
 }
