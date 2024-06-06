@@ -5,7 +5,6 @@ import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import Submit from "../../../components/Submit";
 import styles from "./ApplicationFormClub.module.css";
-import { useCreateClub } from "../hooks/query";
 
 const ApplicationFormClub = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
@@ -46,13 +45,6 @@ const ApplicationFormClub = () => {
       ...clubform,
       [name]: value,
     });
-  };
-
-  const { mutate: createClub } = useCreateClub();
-  
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    createClub(clubform);
   };
 
   const [isInputClicked, setIsInputClicked] = useState(false);
@@ -292,7 +284,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <Submit onClose={closeSubmit} />
+          <Submit onClose={closeSubmit} clubData={clubform}/>
         </PortalPopup>
       )}
     </>
