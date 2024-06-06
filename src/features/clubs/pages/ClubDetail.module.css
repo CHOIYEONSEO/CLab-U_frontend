@@ -38,7 +38,7 @@
 
 .clubName{
   font-size: var(--font-size-17xl);
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .title{
@@ -66,11 +66,12 @@
   flex-direction: column;
   width: 300px;
   text-align: right;
-  margin-bottom: 135px;
+  margin-bottom: 190px;
 }
 
 .locationText {
   font-size: var(--font-size-3xl);
+  line-height: 130%;
 }
 
 .clubDescription {

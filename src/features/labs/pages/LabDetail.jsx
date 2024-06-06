@@ -42,7 +42,7 @@ const LabDetail = () => {
             </div>
             <div className={styles.labLocation}>
               <p className={styles.locationText}>{lab.campus}</p>
-              <p>{lab.roomNo}</p>
+              <p className={styles.locationText1}>{lab.roomNo}</p>
             </div>
           </div>
           <div className={styles.labDescription}>

@@ -77,6 +77,10 @@
   font-weight: 600;
 }
 
+.locationText1 {
+  line-height: 130%;
+}
+
 .labDescription {
   margin-bottom: 60px;
   padding: 0 60px;
