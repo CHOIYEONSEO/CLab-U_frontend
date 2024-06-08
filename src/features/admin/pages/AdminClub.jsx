@@ -65,6 +65,7 @@ const AdminClub = () => {
             location: targetClub.location,
             numMembers: targetClub.numMembers,
             representativeName: targetClub.representativeName,
+            id: targetClub.id,
           });
         } else {
           console.warn(`Club with name ${name} not found`);
@@ -131,7 +132,7 @@ const AdminClub = () => {
         <div className={styles.reject} onClick={openAdminReject}>
           <b className={styles.b2reject}>반려</b>
         </div>
-        <div className={styles.accept} onClick={openAdminAccept} clubid={id}>
+        <div className={styles.accept} onClick={openAdminAccept}>
           <b className={styles.b2}>승인</b>
         </div>
 
@@ -142,7 +143,7 @@ const AdminClub = () => {
           placement="Centered"
           onOutsideClick={closeAdminAccept}
         >
-          <AdminAccept onClose={closeAdminAccept}/>
+          <AdminAccept onClose={closeAdminAccept} clubid={id}/>
         </PortalPopup>
       )}
       {isAdminRejectOpen && (
