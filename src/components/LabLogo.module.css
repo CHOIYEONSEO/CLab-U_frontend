@@ -1,0 +1,53 @@
+.labLogoChild {
+  position: absolute;
+  top: 274.5px;
+  left: 296.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 828px;
+  height: 1px;
+}
+.b {
+  position: absolute;
+  top: 240px;
+  left: 294px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 827px;
+  height: 51px;
+  font-size: medium;
+}
+.b1,
+.labLogo,
+.labLogo1 {
+  position: absolute;
+  left: 27px;
+}
+.b1 {
+  top: 26px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+.labLogo,
+.labLogo1 {
+  top: 75px;
+  background-color: var(--color-gainsboro-200);
+  width: 200px;
+  height: 200px;
+}
+.labLogo {
+  top: 106px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 300px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

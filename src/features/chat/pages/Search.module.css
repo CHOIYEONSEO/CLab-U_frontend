@@ -1,0 +1,89 @@
+.search {
+  width: 100%;
+  position: relative;
+  backdrop-filter: blur(3.56px);
+  background-color: var(--color-floralwhite);
+  height: 100vh;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-3xs);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.chatContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  height: calc(100% - 100px);
+}
+
+.chat {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.myChat {
+  align-self: flex-end;
+  background-color: #a7d5a8;
+}
+
+.aiChat {
+  align-self: flex-start;
+  background-color: var(--color-whitesmoke-100);
+  border: 1.4px solid var(--color-gainsboro-100);
+}
+
+.chatContent {
+  line-height: 130%;
+}
+
+.inputfield {
+  position: fixed;
+  bottom: 3%;
+  left: 2.5%;
+  border-radius: 17.81px;
+  background-color: var(--color-white);
+  border: 1.8px solid var(--color-gray-200);
+  box-sizing: border-box;
+  width: 95%;
+  height: 8%;
+  overflow: hidden;
+  font-size: var(--font-size-mid-7);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.typeHere {
+  flex: 1;
+  height: 100%;
+  background-color: var(--color-white);
+  border: none;
+  box-sizing: border-box;
+  overflow: scroll;
+  font-size: medium;
+  line-height: 130%;
+  white-space: pre-wrap;
+}
+
+.typeHere:focus {
+  outline: none;
+}
+
+.icon {
+  width: 28.5px;
+  height: 28.5px;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.chatCharacter {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

@@ -1,0 +1,60 @@
+.typeHere {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  bottom: 10%;
+  left: 2%;
+  background-color: var(--color-white);
+  border: 1.5px solid white;
+  box-sizing: border-box;
+  overflow: scroll;
+  font-size: medium;
+  line-height: 130%;
+  display: flex;
+  white-space: pre-wrap;
+  align-items: center;
+  justify-content: center;
+}
+.typeHere:focus {
+  outline: none;
+}
+.icon {
+  position: absolute;
+  bottom: 3%;
+  right: 2%;
+  width: 3%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.inputfield {
+  position: absolute;
+  width: 90%;
+  height: 8%;
+  bottom: 20%;
+  left: 5%;
+  border-radius: 23px;
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-gray-200);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.logoIcon {
+  position: relative;
+  top: 30%;
+  left: 0%;
+  width: 30%;
+  height: 30%;
+  object-fit: contain;
+}
+.main {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 832px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 15.5px;
+  color: rgba(0, 0, 0, 0.24);
+  font-family: var(--font-inter);
+}

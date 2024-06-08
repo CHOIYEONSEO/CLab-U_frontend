@@ -1,0 +1,321 @@
+.bacc {
+  position: relative;
+  top: 12px;
+  line-height: 130%;
+}
+.accept {
+  top: 2660px;
+  left: 55%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-cornflowerblue);
+  border: 1px solid var(--color-darkgray-100);
+  width: 20%;
+  height: 55px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+}
+.accept,
+.profNameChild,
+.reject {
+  position: absolute;
+  box-sizing: border-box;
+}
+.brej {
+  position: relative;
+  top: 12px;
+  left: 43%;
+  line-height: 130%;
+}
+.reject {
+  top: 2660px;
+  left: 25%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-lightcoral);
+  border: 1px solid var(--color-darkgray-100);
+  width: 20%;
+  height: 55px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: var(--font-size-5xl);
+}
+.profNameChild {
+  top: 152.5px;
+  left: 1.5%;
+  border-top: 1px dashed var(--color-black);
+  width: 97%;
+  height: 1px;
+}
+.b2,
+.b3 {
+  position: absolute;
+  line-height: 130%;
+}
+.b2 {
+  top: 102px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+.b3 {
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+  display: inline-block;
+  width: 134px;
+  height: 29px;
+}
+.labDescription,
+.labLocation,
+.labName,
+.labRepName,
+.labTag,
+.profName {
+  position: absolute;
+  top: 1218px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 180px;
+  overflow: hidden;
+}
+.labDescription,
+.labLocation,
+.labName,
+.labRepName,
+.labTag {
+  top: 1019px;
+}
+.labDescription,
+.labName,
+.labRepName,
+.labTag {
+  top: 820px;
+}
+.labDescription,
+.labName,
+.labRepName {
+  top: 621px;
+}
+.labName,
+.labRepName {
+  top: 422px;
+}
+.labRepName {
+  top: 1616px;
+}
+.googleScolar {
+  position: absolute;
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+.labMembersChild,
+.profName2 {
+  position: absolute;
+  box-sizing: border-box;
+}
+.profName2 {
+  top: 1417px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  width: 95%;
+  height: 180px;
+  overflow: hidden;
+}
+.labMembersChild {
+  top: 349.5px;
+  left: 627.5px;
+  border-top: 1px dashed var(--color-black);
+  width: 300px;
+  height: 1px;
+}
+.b25,
+.b26 {
+  position: absolute;
+  left: 627px;
+  line-height: 130%;
+}
+.b25 {
+  top: 299px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b26 {
+  top: 240px;
+}
+.labMembersItem {
+  position: absolute;
+  top: 349.5px;
+  left: 27.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b27,
+.b28 {
+  position: absolute;
+  left: 27px;
+  line-height: 130%;
+}
+.b27 {
+  top: 299px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b28 {
+  top: 240px;
+}
+.labMembersInner {
+  position: absolute;
+  top: 209.5px;
+  left: 627.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b29 {
+  top: 159px;
+  left: 627px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b29,
+.b30,
+.lineDiv {
+  position: absolute;
+}
+.b30 {
+  top: 100px;
+  left: 627px;
+  line-height: 130%;
+}
+.lineDiv {
+  top: 209.5px;
+  left: 27.5px;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 300px;
+  height: 1px;
+}
+.b31,
+.b32 {
+  position: absolute;
+  left: 27px;
+  line-height: 130%;
+}
+.b31 {
+  top: 159px;
+  display: flex;
+  align-items: center;
+  width: 299px;
+  height: 51px;
+}
+.b32 {
+  top: 100px;
+}
+.labMembers,
+.labPage,
+.labRepEmail {
+  position: absolute;
+  top: 2213px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 373px;
+  overflow: hidden;
+}
+.labPage,
+.labRepEmail {
+  top: 2014px;
+  height: 180px;
+}
+.labRepEmail {
+  top: 1815px;
+}
+.adminLab {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 3000px;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+
+.labLogoChild {
+  position: absolute;
+  top: 274.5px;
+  left: 296.5px;
+  box-sizing: border-box;
+  width: 828px;
+  height: 1px;
+}
+.logob {
+  position: absolute;
+  top: 240px;
+  left: 294px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 827px;
+  height: 51px;
+  font-size: medium;
+}
+.logob1,
+.labLogo,
+.labLogo1 {
+  position: absolute;
+  left: 27px;
+}
+.logob1 {
+  top: 26px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+.labLogo,
+.labLogo1 {
+  top: 75px;
+  background-color: var(--color-gainsboro-200);
+  width: 200px;
+  height: 200px;
+}
+.labLogo {
+  top: 110px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 300px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

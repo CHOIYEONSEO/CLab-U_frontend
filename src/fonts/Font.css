@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Niko Moji";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./Nico-Moji.woff") format("woff");
+  }
+
+@font-face {
+  font-family: "NanumSquareNeo";
+  src: url("./NanumSquareNeoOTF-Rg.otf");
+}

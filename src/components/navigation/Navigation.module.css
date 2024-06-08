@@ -1,0 +1,105 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-darkslategray-300);
+  height: 84px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-lg-6);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.clabu {
+  font-size: var(--font-size-18xl-1);
+  letter-spacing: -0.01em;
+  line-height: 100%;
+  font-family: "Niko Moji";
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-whitesmoke-300);
+  text-align: right;
+  margin-left: 15px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.search,
+.list,
+.application {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.search {
+  width: 104px;
+  margin-left: auto;
+}
+
+.search1 {
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.list {
+  width: 67px;
+  margin-left: 80px;
+}
+
+.list1 {
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.application {
+  width: 143px;
+  margin-left: 80px;
+}
+
+.application1 {
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.logIn {
+  line-height: 130%;
+  font-weight: 600;
+  margin-top: 0.5%;
+  margin-bottom: 0.4%;
+  margin-left: 60px;
+  margin-right: 40px;
+}
+
+.account1Icon,
+.loginIcon {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.loginIcon {
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+}
+
+.account1Icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  display: none;
+}

@@ -1,0 +1,141 @@
+.clubDetail {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  overflow-y: auto;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: "NanumSquareNeo";
+  padding-left: 70px;
+  padding-right: 70px;
+  /*min-height: 100vh;*/
+}
+
+.clubHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.clublogoIcon {
+  width: 300px;
+  height: 300px;
+  border-radius: 19.37px;
+  object-fit: cover;
+  opacity: 0.8;
+  margin-right: 40px;
+  border: 1.6px solid var(--color-darkslategray-200);
+}
+
+.clubInfo {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+.clubName{
+  font-size: var(--font-size-17xl);
+  margin-bottom: 80px;
+}
+
+.title{
+  margin: 0px;
+}
+
+.representInfo{
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.represent{
+  margin-bottom: 5px;
+}
+
+.clubWebsite{
+  line-height: 130%;
+  margin-bottom: 10px;
+  color: var();
+  font-size: var(--font-size-5xl);
+}
+
+.clubLocation{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: right;
+  margin-bottom: 190px;
+}
+
+.locationText {
+  font-size: var(--font-size-3xl);
+  line-height: 130%;
+}
+
+.clubDescription {
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-7xl);
+}
+
+.sectionContainer {
+  width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.sectionContainer1 {
+  width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 10px;
+  opacity: 0.8;
+  min-height: 150px;
+}
+
+.descriptionText {
+  padding-top: 10px;
+  line-height: 150%;
+}
+
+.clubDetails {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.clubMembers {
+  width: 33%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.memberText{
+  padding-top: 20px;
+  line-height: 130%;
+}
+
+.clubTags {
+  width: 67%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.tagList {
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+  padding: 20px;
+  margin-top: 10px;
+}

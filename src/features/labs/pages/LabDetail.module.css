@@ -1,0 +1,137 @@
+.labDetail {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  overflow-y: auto;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: "NanumSquareNeo";
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.labHeader {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.lablogoIcon {
+  width: 300px;
+  height: 300px;
+  border-radius: 19.37px;
+  object-fit: cover;
+  opacity: 0.8;
+  margin-right: 40px;
+  border: 1.6px solid var(--color-darkslategray-200);
+}
+
+.labInfo {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+.labName {
+  font-size: var(--font-size-17xl);
+  margin-bottom: 20px;
+}
+
+.title{
+  margin: 0px;
+}
+
+.professorInfo {
+  line-height: 130%;
+  margin-bottom: 10px;
+}
+
+.professorName{
+  margin-bottom: 5px;
+}
+
+.represent {
+  margin-bottom: 5px;
+}
+
+.labWebsite {
+  line-height: 130%;
+  margin-bottom: 10px;
+  color: var();
+  font-size: var(--font-size-5xl);
+}
+
+.labLocation {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: right;
+  margin-bottom: 135px;
+}
+
+.locationText {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+}
+
+.locationText1 {
+  line-height: 130%;
+}
+
+.labDescription {
+  margin-bottom: 60px;
+  padding: 0 60px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-7xl);
+}
+
+.sectionContainer {
+  width: 100%;
+  border-radius: 19.37px;
+  background-color: var(--color-whitesmoke-200);
+  border: 1.6px solid var(--color-darkslategray-200);
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.descriptionText {
+  padding-top: 10px;
+  line-height: 150%;
+}
+
+.labDetails {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.labMembers {
+  width: 33%;
+  height: 100%;
+  padding: 0 60px;
+  min-height: 300px;
+}
+
+.memberInfo {
+  padding-top: 20px;
+  line-height: 130%;
+}
+
+.labTags {
+  width: 67%;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.tagList {
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+  padding: 20px;
+  margin-top: 10px;
+}

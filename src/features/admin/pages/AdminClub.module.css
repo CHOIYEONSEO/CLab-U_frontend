@@ -1,0 +1,194 @@
+.clubMembersChild {
+  position: absolute;
+  top: 152.5px;
+  left: 1.5%;
+  border-top: 1px dashed var(--color-black);
+  box-sizing: border-box;
+  width: 97%;
+  height: 1px;
+}
+.b,
+.b1 {
+  position: absolute;
+  line-height: 130%;
+}
+.b {
+  top: 102px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+.b1 {
+  top: 26px;
+  left: 27px;
+  font-size: var(--font-size-5xl);
+}
+.clubMembers {
+  position: absolute;
+  top: 1818px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 180px;
+  overflow: hidden;
+}
+.b2 {
+  position: relative;
+  top: 12px;
+  line-height: 130%;
+}
+.accept {
+  top: 2070px;
+  left: 55%;
+  background-color: var(--color-cornflowerblue);
+  width: 20%;
+  height: 55px;
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+}
+.accept,
+.clubDescription,
+.clubLocation,
+.clubName,
+.clubPage,
+.clubRepEmail,
+.clubRepName,
+.clubTag,
+.reject {
+  position: absolute;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.b2reject {
+  position: relative;
+  top: 12px;
+  left: 43%;
+  text-align: center;
+  line-height: 130%;
+}
+.reject {
+  top: 2070px;
+  left: 25%;
+  background-color: var(--color-lightcoral);
+  width: 20%;
+  height: 55px;
+  cursor: pointer;
+  font-size: var(--font-size-5xl);
+}
+.clubDescription,
+.clubLocation,
+.clubName,
+.clubPage,
+.clubRepEmail,
+.clubRepName,
+.clubTag {
+  top: 1619px;
+  left: 2.5%;
+  background-color: var(--color-whitesmoke-100);
+  width: 95%;
+  height: 180px;
+}
+.clubDescription,
+.clubLocation,
+.clubName,
+.clubRepEmail,
+.clubRepName,
+.clubTag {
+  top: 1420px;
+}
+.clubDescription,
+.clubLocation,
+.clubName,
+.clubRepName,
+.clubTag {
+  top: 1221px;
+}
+.clubDescription,
+.clubLocation,
+.clubName,
+.clubTag {
+  top: 1022px;
+}
+.clubDescription,
+.clubName,
+.clubTag {
+  top: 823px;
+}
+.clubDescription,
+.clubName {
+  top: 624px;
+}
+.clubName {
+  top: 425px;
+}
+.adminClub {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-floralwhite);
+  height: 3300px;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.clubLogoChild {
+  position: absolute;
+  top: 274.5px;
+  left: 296.5px;
+  box-sizing: border-box;
+  width: 828px;
+  height: 1px;
+}
+.logob {
+  position: absolute;
+  top: 240px;
+  left: 294px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 827px;
+  height: 51px;
+  font-size: medium;
+}
+.logob1,
+.clubLogo,
+.clubLogo1 {
+  position: absolute;
+  left: 27px;
+}
+.logob1 {
+  top: 26px;
+  font-size: var(--font-size-5xl);
+  line-height: 130%;
+}
+.clubLogo,
+.clubLogo1 {
+  top: 75px;
+  background-color: var(--color-gainsboro-200);
+  width: 200px;
+  height: 200px;
+}
+.clubLogo {
+  top: 110px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+  height: 300px;
+  overflow: hidden;
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
