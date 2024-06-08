@@ -11,6 +11,7 @@ const AdminPage = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(`/api/manage/forms`);
+      console.log(response.data);
       const { lab, club } = response.data;
       setSubmittedCList(club);
       setSubmittedLList(lab);

@@ -69,10 +69,7 @@
   cursor: pointer;
   display: flex;
 }
-.manage {
-  display: flex;
-  align-items: center;
-}
+
 .b10 {
   position: absolute;
   left: 680px;
