@@ -28,7 +28,6 @@ const AdminPage = () => {
       <b className={styles.clubManageList}>동아리 신청 및 수정 목록</b>
       <b className={styles.labManageList}>랩 신청 및 수정 목록</b>
 
-      <div>
       <div className={styles.clubManage}>
         {submittedCList.map((club, index) => (
           <Link
@@ -55,7 +54,6 @@ const AdminPage = () => {
             <b className={styles.yyyymmdd}>신청 일자: {lab.createdAt.substring(0, 10)}</b>
           </Link>
         ))}
-      </div>
       </div>
     </div>
   );
