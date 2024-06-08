@@ -41,17 +41,25 @@ const ApplicationFormClub = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-  
-    if (name === "tags") {
+    
+    if (name === "numMembers") {
+      setClubForm(prevState => ({
+        ...prevState,
+        [name]: parseInt(value, 10) || 0,
+      }));
+    }
+    else if (name === "tags") {
       const tagsArray = value.split(',').map(tag => tag.trim());
       setClubForm({ ...clubform, [name]: tagsArray });
-    } else if (name === "logoUrl" && files && files[0]) {
+    } 
+    else if (name === "logoUrl" && files && files[0]) {
       const reader = new FileReader();
       reader.onload = function(event) {
         setClubForm({ ...clubform, [name]: event.target.result });
       };
       reader.readAsDataURL(files[0]);
-    } else {
+    } 
+    else {
       setClubForm({ ...clubform, [name]: value });
     }
   };

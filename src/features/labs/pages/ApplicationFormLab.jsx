@@ -19,10 +19,10 @@ const ApplicationFormLab = () => {
     homepageUrl: "",
     tags: [],
     professor: "",
-    numPostDoc: "",
-    numPhd: "",
-    numMaster: "",
-    numUnderGraduate: "",
+    numPostDoc: 0,
+    numPhd: 0,
+    numMaster: 0,
+    numUnderGraduate: 0,
     roomNo: "",
     googleScholarUrl: "",
     representativeName: "",
@@ -50,7 +50,13 @@ const ApplicationFormLab = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     
-    if (name === "tags") {
+    if (name === "numPostDoc" || name === "numPhd" || name === "numMaster" || name === "numUnderGraduate") {
+      setClubForm(prevState => ({
+        ...prevState,
+        [name]: parseInt(value, 10) || 0,
+      }));
+    }
+    else if (name === "tags") {
       const tagsArray = value.split(',').map(tag => tag.trim());
       setLabForm({ ...labform, [name]: tagsArray });
     } else {

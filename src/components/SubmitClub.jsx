@@ -18,6 +18,7 @@ const Submit = ({ className = "", onClose, clubData }) => {
       onClose();
     } catch (error) {
       console.error(error);
+      console.error(error.message);
     }
     /*const formData = new FormData();
     if (clubData.logoUrl) {
