@@ -34,13 +34,12 @@ const AdminLab = () => {
     homepageUrl: "",
     tags: [],
     professor: "",
-    numPostDoc: "",
-    numPhd: "",
-    numMaster: "",
-    numUnderGraduate: "",
+    numPostDoc: 0,
+    numPhd: 0,
+    numMaster: 0,
+    numUnderGraduate: 0,
     roomNo: "",
-
-    professorGoogleScholar: "",
+    googleScholarUrl: "",
     representativeName: "",
     campus: "",
   };
@@ -61,7 +60,7 @@ const AdminLab = () => {
         if (targetLab) {
           setLabForm({
             ...initialFormState, 
-            groupName: targetLab.groupName,
+            groupName: targetLab.name,
             logoUrl: targetLab.logoUrl,
             description: targetLab.description,
             email: targetLab.email,
@@ -73,8 +72,7 @@ const AdminLab = () => {
             numMaster: targetLab.numMaster,
             numUnderGraduate: targetLab.numUnderGraduate,
             roomNo: targetLab.roomNo,
-        
-            professorGoogleScholar: targetLab.professorGoogleScholar,
+            googleScholarUrl: targetLab.googleScholarUrl,
             representativeName: targetLab.representativeName,
             campus: targetLab.campus,
           });
@@ -126,7 +124,7 @@ const AdminLab = () => {
         </div>
         <div className={styles.profName2}>
           <div className={styles.profNameChild} />
-          <b className={styles.b2}>{labform.professorGoogleScholar}</b>
+          <b className={styles.b2}>{labform.googleScholarUrl}</b>
           <b className={styles.googleScolar}>교수 Google scolar 링크</b>
         </div>
         <div className={styles.labRepName}>

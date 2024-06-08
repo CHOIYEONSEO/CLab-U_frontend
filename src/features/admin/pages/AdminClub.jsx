@@ -35,8 +35,8 @@ const AdminClub = () => {
     homepageUrl: "",
     tags: [],
     location: "",
-    members: "",
-    representative: "",
+    numMembers: "",
+    representativeName: "",
   };
 
   const location = useLocation();
@@ -63,7 +63,8 @@ const AdminClub = () => {
             homepageUrl: targetClub.homepageUrl,
             tags: targetClub.tags,
             location: targetClub.location,
-            members: targetClub.members,
+            numMembers: targetClub.numMembers,
+            representativeName: targetClub.representativeName,
           });
         } else {
           console.warn(`Club with name ${name} not found`);
@@ -108,7 +109,7 @@ const AdminClub = () => {
         </div>
         <div className={styles.clubRepName}>
           <div className={styles.clubMembersChild} />
-          <b className={styles.b}>{clubform.representative}</b>
+          <b className={styles.b}>{clubform.representativeName}</b>
           <b className={styles.b1}>대표자 이름</b>
         </div>
         <div className={styles.clubRepEmail}>
@@ -123,7 +124,7 @@ const AdminClub = () => {
         </div>
         <div className={styles.clubMembers}>
           <div className={styles.clubMembersChild} />
-          <b className={styles.b}>{clubform.members}</b>
+          <b className={styles.b}>{clubform.numMembers}</b>
           <b className={styles.b1}>동아리 구성원 (명)</b>
         </div>
 

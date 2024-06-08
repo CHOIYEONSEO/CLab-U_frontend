@@ -47,7 +47,7 @@ const AdminPage = () => {
       <div className={styles.labManage}>
         {submittedLList.map((lab, index) => (
           <Link 
-            key={index} 
+            key={index}
             className={styles.labName} 
             to={`/admin/labs/1`}
             state={{ name: lab.name, id: lab.id }}
