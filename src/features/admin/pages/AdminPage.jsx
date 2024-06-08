@@ -13,6 +13,7 @@ const AdminPage = () => {
       const response = await axios.get(`/api/manage/forms`);
       console.log(response.data);
       const { lab, club } = response.data;
+      console.log(club);
       setSubmittedCList(club);
       setSubmittedLList(lab);
     } catch (error) {
