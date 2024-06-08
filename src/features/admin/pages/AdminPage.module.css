@@ -69,7 +69,10 @@
   cursor: pointer;
   display: flex;
 }
-
+.manage {
+  display: flex;
+  align-items: center;
+}
 .b10 {
   position: absolute;
   left: 680px;
@@ -87,6 +90,7 @@
 .adminPage {
   width: 100%;
   display: flex;
+  align-items: center;
   flex-direction: row;
   background-color: var(--color-floralwhite);
   height: 2000px;

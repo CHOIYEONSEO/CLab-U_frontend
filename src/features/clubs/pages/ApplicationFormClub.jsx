@@ -70,90 +70,18 @@ const ApplicationFormClub = () => {
   return (
     <>
       <div className={styles.applicationFormClub}>
-        <div className={styles.clubMembers}>
-          <div className={styles.clubMembersChild} />
+
+        <div className={styles.clubLogo}>
+          <div className={styles.clubLogoChild} />
           <input
-            className={styles.membersInput}
-            placeholder="몇명인지 입력해 주세요"
-            type="number"
-            min="0"
-            name="numMembers"
-            value={clubform.numMembers}
+            className={styles.logob}
+            type="file"
+            accept="image/*"
+            name="logoUrl"
             onChange={handleChange}
           />
-          <b className={styles.b1}>동아리 구성원 (명)</b>
-        </div>
-        <div className={styles.clubPage}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.pageInput}
-            placeholder="동아리 홈페이지 및 sns를 입력해주세요"
-            type="text"
-            name="homepageUrl"
-            value={clubform.homepageUrl}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>동아리 홈페이지 / sns</b>
-        </div>
-        <div className={styles.clubRepEmail}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.contactInput}
-            placeholder="대표자 이메일을 입력해 주세요"
-            type="email"
-            name="email"
-            value={clubform.email}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>대표자 연락처</b>
-        </div>
-        <div className={styles.clubRepName}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.clubRepInput}
-            placeholder="대표자 이름을 입력해 주세요"
-            type="text"
-            name="representativeName"
-            value={clubform.representativeName}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>대표자 이름</b>
-        </div>
-        <div className={styles.clubLocation}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.clubLocInput}
-            placeholder="동아리방 번호와 활동 장소 위치를 입력해주세요"
-            type="text"
-            name="location"
-            value={clubform.location}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>동아리방 / 활동 장소 위치</b>
-        </div>
-        <div className={styles.clubTag}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.clubTagInput}
-            placeholder="동아리 태그를 입력해주세요"
-            type="text"
-            name="tags"
-            value={clubform.tags}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>동아리 태그</b>
-        </div>
-        <div className={styles.clubDescription}>
-          <div className={styles.clubMembersChild} />
-          <input
-            className={styles.clubDescInput}
-            placeholder="동아리를 설명해주세요"
-            type="text"
-            name="description"
-            value={clubform.description}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>동아리 설명</b>
+          <img className={styles.clubLogo1} src={clubform.logoUrl} />
+          <b className={styles.logob1}>동아리 로고</b>
         </div>
         <div className={styles.clubName}>
           <div className={styles.clubMembersChild} />
@@ -167,18 +95,90 @@ const ApplicationFormClub = () => {
           />
           <b className={styles.b1}>동아리 이름</b>
         </div>
-
-        <div className={styles.clubLogo}>
-          <div className={styles.clubLogoChild} />
+        <div className={styles.clubDescription}>
+          <div className={styles.clubMembersChild} />
           <input
-            className={styles.logob}
-            type="file"
-            accept="image/*"
-            name="logoUrl"
+            className={styles.clubDescInput}
+            placeholder="동아리를 설명해주세요"
+            type="text"
+            name="description"
+            value={clubform.description}
             onChange={handleChange}
           />
-          <img className={styles.clubLogo1} src={clubform.logoUrl} />
-          <b className={styles.logob1}>동아리 로고</b>
+          <b className={styles.b1}>동아리 설명</b>
+        </div>
+        <div className={styles.clubTag}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.clubTagInput}
+            placeholder="동아리 태그를 입력해주세요"
+            type="text"
+            name="tags"
+            value={clubform.tags}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>동아리 태그</b>
+        </div>
+        <div className={styles.clubLocation}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.clubLocInput}
+            placeholder="동아리방 번호와 활동 장소 위치를 입력해주세요"
+            type="text"
+            name="location"
+            value={clubform.location}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>동아리방 / 활동 장소 위치</b>
+        </div>
+        <div className={styles.clubRepName}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.clubRepInput}
+            placeholder="대표자 이름을 입력해 주세요"
+            type="text"
+            name="representativeName"
+            value={clubform.representativeName}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>대표자 이름</b>
+        </div>
+        <div className={styles.clubRepEmail}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.contactInput}
+            placeholder="대표자 이메일을 입력해 주세요"
+            type="email"
+            name="email"
+            value={clubform.email}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>대표자 연락처</b>
+        </div>
+        <div className={styles.clubPage}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.pageInput}
+            placeholder="동아리 홈페이지 및 sns를 입력해주세요"
+            type="text"
+            name="homepageUrl"
+            value={clubform.homepageUrl}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>동아리 홈페이지 / sns</b>
+        </div>
+        <div className={styles.clubMembers}>
+          <div className={styles.clubMembersChild} />
+          <input
+            className={styles.membersInput}
+            placeholder="몇명인지 입력해 주세요"
+            type="number"
+            min="0"
+            name="numMembers"
+            value={clubform.numMembers}
+            onChange={handleChange}
+          />
+          <b className={styles.b1}>동아리 구성원 (명)</b>
         </div>
 
         <div className={styles.labIdPassword}>

@@ -73,6 +73,146 @@ const ApplicationFormLab = () => {
   return (
     <>
       <div className={styles.applicationFormLab}>
+      <div className={styles.labLogo}>
+          <div className={styles.labLogoChild} />
+          <input
+          className={styles.logob} 
+          type="file" 
+          accept='image/*'
+          onChange={setViewImg}
+          />
+        <img className={styles.labLogo1} src={logoImg}/>
+        <b className={styles.logob1}>연구실 로고</b>
+       </div>
+       <div className={styles.labName}>
+          <div className={styles.labPageChild} />
+          <b className={styles.googleScolar}>연구실 이름</b>
+          <input
+            className={styles.labNameInput}
+            placeholder="연구실 이름을 입력해 주세요"
+            type="text"
+            name="groupName"
+            value={labform.groupName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.labDescription}>
+          <div className={styles.labPageChild} />
+          <b className={styles.googleScolar}>연구실 설명</b>
+          <input
+            className={styles.labDescInput}
+            placeholder="현재 진행 중인 연구 과제를 중심으로 작성해 주세요"
+            type="text"
+            name="description"
+            value={labform.description}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.labTag}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.labTagInput}
+            placeholder="연구실 태그를 입력해 주세요"
+            type="text"
+            name="tags"
+            value={labform.tags}
+            onChange={handleChange}
+          />
+          <b className={styles.googleScolar}>연구실 태그</b>
+        </div>
+        <div className={styles.labLocation}>
+          <div className={styles.labPageChild} />
+          <b className={styles.googleScolar}>연구실 위치</b>
+          <DropdownButton
+          className={styles.Dropdown}
+          id="campus"
+          title={selectedCampusTitle}>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '인사캠'
+              }));
+              setSelectedCampusTitle('인사캠');
+            }}>인사캠</Dropdown.Item>
+            <Dropdown.Item onClick={() => {
+              setLabForm(prevState => ({
+              ...prevState,
+              campus: '자과캠'
+              }));
+              setSelectedCampusTitle('자과캠');
+            }}>자과캠</Dropdown.Item>
+            </DropdownButton>
+          <div className={styles.wrapper}>
+            <input
+              className={styles.locInput}
+              placeholder="연구실 번호를 입력해 주세요"
+              type="text"
+              name="roomNo"
+              value={labform.roomNo}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className={styles.profName}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.professorInput}
+            placeholder="교수님 이름을 입력해 주세요"
+            type="text"
+            name="professor"
+            value={labform.professor}
+            onChange={handleChange}
+          />
+          <b className={styles.b16}>교수</b>
+        </div>
+        <div className={styles.profName2}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.scholarInput}
+            placeholder="교수님 Google scolar 링크를 입력해 주세요"
+            type="url"
+            name="googleScholarUrl"
+            value={labform.googleScholarUrl}
+            onChange={handleChange}
+          />
+          <b className={styles.googleScolar}>교수 Google scolar 링크</b>
+        </div>
+        <div className={styles.labRepName}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.repInput}
+            placeholder="대표자 이름을 입력해 주세요"
+            type="text"
+            name="representativeName"
+            value={labform.representativeName}
+            onChange={handleChange}
+          />
+          <b className={styles.googleScolar}>대표자 이름</b>
+        </div>
+        <div className={styles.labRepEmail}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.contactInput}
+            placeholder="대표자 이메일을 입력해 주세요"
+            type="email"
+            name="email"
+            value={labform.email}
+            onChange={handleChange}
+          />
+          <b className={styles.googleScolar}>대표자 연락처</b>
+        </div>
+        <div className={styles.labPage}>
+          <div className={styles.labPageChild} />
+          <input
+            className={styles.pageInput}
+            placeholder="연구실 홈페이지 주소를 입력해 주세요"
+            type="url"
+            name="homepageUrl"
+            value={labform.homepageUrl}
+            onChange={handleChange}
+          />
+          <b className={styles.googleScolar}>홈페이지 주소</b>
+        </div>
         <div className={styles.labMembers}>
           <div className={styles.labMembersChild} />
           <input
@@ -120,147 +260,6 @@ const ApplicationFormLab = () => {
           <b className={styles.b7}>포닥</b>
           <b className={styles.googleScolar}>연구실 구성원 (명)</b>
         </div>
-        <div className={styles.labPage}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.pageInput}
-            placeholder="연구실 홈페이지 주소를 입력해 주세요"
-            type="url"
-            name="homepageUrl"
-            value={labform.homepageUrl}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>홈페이지 주소</b>
-        </div>
-        <div className={styles.labRepEmail}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.contactInput}
-            placeholder="대표자 이메일을 입력해 주세요"
-            type="email"
-            name="email"
-            value={labform.email}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>대표자 연락처</b>
-        </div>
-        <div className={styles.labRepName}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.repInput}
-            placeholder="대표자 이름을 입력해 주세요"
-            type="text"
-            name="representativeName"
-            value={labform.representativeName}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>대표자 이름</b>
-        </div>
-        <div className={styles.labDescription}>
-          <div className={styles.labPageChild} />
-          <b className={styles.googleScolar}>연구실 설명</b>
-          <input
-            className={styles.labDescInput}
-            placeholder="현재 진행 중인 연구 과제를 중심으로 작성해 주세요"
-            type="text"
-            name="description"
-            value={labform.description}
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.labName}>
-          <div className={styles.labPageChild} />
-          <b className={styles.googleScolar}>연구실 이름</b>
-          <input
-            className={styles.labNameInput}
-            placeholder="연구실 이름을 입력해 주세요"
-            type="text"
-            name="groupName"
-            value={labform.groupName}
-            onChange={handleChange}
-          />
-        </div>
-        <div className={styles.profName}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.professorInput}
-            placeholder="교수님 이름을 입력해 주세요"
-            type="text"
-            name="professor"
-            value={labform.professor}
-            onChange={handleChange}
-          />
-          <b className={styles.b16}>교수</b>
-        </div>
-        <div className={styles.profName2}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.scholarInput}
-            placeholder="교수님 Google scolar 링크를 입력해 주세요"
-            type="url"
-            name="googleScholarUrl"
-            value={labform.googleScholarUrl}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>교수 Google scolar 링크</b>
-        </div>
-        <div className={styles.labLocation}>
-          <div className={styles.labPageChild} />
-          <b className={styles.googleScolar}>연구실 위치</b>
-          <DropdownButton
-          className={styles.Dropdown}
-          id="campus"
-          title={selectedCampusTitle}>
-            <Dropdown.Item onClick={() => {
-              setLabForm(prevState => ({
-              ...prevState,
-              campus: '인사캠'
-              }));
-              setSelectedCampusTitle('인사캠');
-            }}>인사캠</Dropdown.Item>
-            <Dropdown.Item onClick={() => {
-              setLabForm(prevState => ({
-              ...prevState,
-              campus: '자과캠'
-              }));
-              setSelectedCampusTitle('자과캠');
-            }}>자과캠</Dropdown.Item>
-            </DropdownButton>
-          <div className={styles.wrapper}>
-            <input
-              className={styles.locInput}
-              placeholder="연구실 번호를 입력해 주세요"
-              type="text"
-              name="roomNo"
-              value={labform.roomNo}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-        <div className={styles.labTag}>
-          <div className={styles.labPageChild} />
-          <input
-            className={styles.labTagInput}
-            placeholder="연구실 태그를 입력해 주세요"
-            type="text"
-            name="tags"
-            value={labform.tags}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>연구실 태그</b>
-        </div>
-        
-        <div className={styles.labLogo}>
-          <div className={styles.labLogoChild} />
-          <input
-          className={styles.logob} 
-          type="file" 
-          accept='image/*'
-          onChange={setViewImg}
-          />
-        <img className={styles.labLogo1} src={logoImg}/>
-        <b className={styles.logob1}>연구실 로고</b>
-       </div>
 
         <div className={styles.tab}>
           <Link className={styles.club} to="/clubs/form">
