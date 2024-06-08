@@ -96,7 +96,7 @@ const AdminLab = () => {
       <div className={styles.adminLab}>
         <div className={styles.labLogo}>
           <div className={styles.labLogoChild} />
-          <img className={styles.labLogo1} src={labform.logoUrl}/>
+          <img className={styles.labLogo1} src={labform.logoUrl ? labform.logoUrl : '/SKKU.webp'}/>
           <b className={styles.logob1}>연구실 로고</b>
         </div>
         <div className={styles.labName}>

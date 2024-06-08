@@ -31,10 +31,10 @@ const AdminPage = () => {
       <div className={styles.clubManage}>
         {submittedCList.map((club, index) => (
           <Link
-            key={index} 
-            className={styles.clubName} 
+            key={index}
+            className={styles.clubName}
             to={`/admin/clubs/1`}
-            state={{ name: club.name }}
+            state={{ name: club.name, id: club.id }}
           >
             <b className={styles.b}>{club.name}</b>
             <b className={styles.yyyymmdd}>신청 일자: {club.createdAt.substring(0, 10)}</b>
@@ -48,7 +48,7 @@ const AdminPage = () => {
             key={index} 
             className={styles.labName} 
             to={`/admin/labs/1`}
-            state={{ name: lab.name }}
+            state={{ name: lab.name, id: lab.id }}
           >
             <b className={styles.b}>{lab.name}</b>
             <b className={styles.yyyymmdd}>신청 일자: {lab.createdAt.substring(0, 10)}</b>

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import styles from "./AdminRejectReason.module.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 const AdminRejectReason = ({ className = "", onClose }) => {
   const handleCancelClick = () => {

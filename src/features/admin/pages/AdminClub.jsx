@@ -7,6 +7,7 @@ import axios from "axios";
 import { useLocation } from 'react-router-dom';
 
 const AdminClub = () => {
+
   const [isAdminAcceptOpen, setAdminAcceptOpen] = useState(false);
   const [isAdminRejectOpen, setAdminRejectOpen] = useState(false);
 
@@ -39,7 +40,7 @@ const AdminClub = () => {
   };
 
   const location = useLocation();
-  const { name } = location.state || {};
+  const { name, id } = location.state || {};
   const [clubform, setClubForm] = useState(initialFormState);
   const [submittedCList, setSubmittedCList] = useState([]);
 
@@ -48,6 +49,7 @@ const AdminClub = () => {
       try {
         const response = await axios.get(`/api/manage/forms`);
         const data = response.data;
+        console.log(data);
       
         const targetClub = data.club.find((club) => club.name === name);
 
@@ -81,7 +83,7 @@ const AdminClub = () => {
       <div className={styles.adminClub}>
         <div className={styles.clubLogo}>
           <div className={styles.clubLogoChild} />
-          <img className={styles.clubLogo1} src={clubform.logoUrl}/>
+          <img className={styles.clubLogo1} src={clubform.logoUrl ? clubform.logoUrl : '/SKKU.webp'}/>
           <b className={styles.logob1}>동아리 로고</b>
         </div>
         <div className={styles.clubName}>
@@ -128,7 +130,7 @@ const AdminClub = () => {
         <div className={styles.reject} onClick={openAdminReject}>
           <b className={styles.b2reject}>반려</b>
         </div>
-        <div className={styles.accept} onClick={openAdminAccept}>
+        <div className={styles.accept} onClick={openAdminAccept} clubid={id}>
           <b className={styles.b2}>승인</b>
         </div>
 
@@ -139,7 +141,7 @@ const AdminClub = () => {
           placement="Centered"
           onOutsideClick={closeAdminAccept}
         >
-          <AdminAccept onClose={closeAdminAccept} clubid={10}/>
+          <AdminAccept onClose={closeAdminAccept}/>
         </PortalPopup>
       )}
       {isAdminRejectOpen && (

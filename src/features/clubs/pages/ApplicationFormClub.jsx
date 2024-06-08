@@ -101,7 +101,7 @@ const ApplicationFormClub = () => {
           <input
             className={styles.contactInput}
             placeholder="대표자 이메일을 입력해 주세요"
-            type="text"
+            type="email"
             name="email"
             value={clubform.email}
             onChange={handleChange}

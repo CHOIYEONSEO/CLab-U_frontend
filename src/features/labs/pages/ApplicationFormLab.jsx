@@ -26,7 +26,6 @@ const ApplicationFormLab = () => {
     roomNo: "",
     username: "",
     password: "",
-
     professorGoogleScholar: "",
     representativeName: "",
     campus: "",
@@ -126,7 +125,7 @@ const ApplicationFormLab = () => {
           <input
             className={styles.pageInput}
             placeholder="연구실 홈페이지 주소를 입력해 주세요"
-            type="text"
+            type="url"
             name="homepageUrl"
             value={labform.homepageUrl}
             onChange={handleChange}
@@ -138,7 +137,7 @@ const ApplicationFormLab = () => {
           <input
             className={styles.contactInput}
             placeholder="대표자 이메일을 입력해 주세요"
-            type="text"
+            type="email"
             name="email"
             value={labform.email}
             onChange={handleChange}
@@ -198,7 +197,7 @@ const ApplicationFormLab = () => {
           <input
             className={styles.scholarInput}
             placeholder="교수님 Google scolar 링크를 입력해 주세요"
-            type="text"
+            type="url"
             name="professorGoogleScholar"
             value={labform.professorGoogleScholar}
             onChange={handleChange}
@@ -217,14 +216,14 @@ const ApplicationFormLab = () => {
               ...prevState,
               campus: '인사캠'
               }));
-              setSelectedCampusTitle('인사캠'); // 선택된 캠퍼스 이름을 업데이트
+              setSelectedCampusTitle('인사캠');
             }}>인사캠</Dropdown.Item>
             <Dropdown.Item onClick={() => {
               setLabForm(prevState => ({
               ...prevState,
               campus: '자과캠'
               }));
-              setSelectedCampusTitle('자과캠'); // 선택된 캠퍼스 이름을 업데이트
+              setSelectedCampusTitle('자과캠');
             }}>자과캠</Dropdown.Item>
             </DropdownButton>
           <div className={styles.wrapper}>
