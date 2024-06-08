@@ -28,7 +28,7 @@ const AdminPage = () => {
       <b className={styles.clubManageList}>동아리 신청 및 수정 목록</b>
       <b className={styles.labManageList}>랩 신청 및 수정 목록</b>
 
-      <div className={styles.manage}>
+      <div>
       <div className={styles.clubManage}>
         {submittedCList.map((club, index) => (
           <Link
