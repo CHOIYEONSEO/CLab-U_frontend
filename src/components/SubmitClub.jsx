@@ -19,9 +19,9 @@ const Submit = ({ className = "", onClose, clubData }) => {
     } catch (error) {
       console.error(error);
     }
-    const formData = new FormData();
+    /*const formData = new FormData();
     if (clubData.logoUrl) {
-      formData.append('path', clubData.logoUrl);
+      formData.append('file', clubData.logoUrl);
     }
     try {
       const response = await axios.post('/api/files/image', formData, {
@@ -32,7 +32,7 @@ const Submit = ({ className = "", onClose, clubData }) => {
       console.log(response.data);
     } catch (error) {
       console.error(error); 
-    }
+    }*/
   };
 
   return (
