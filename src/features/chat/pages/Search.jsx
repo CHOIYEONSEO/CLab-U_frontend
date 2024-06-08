@@ -74,7 +74,7 @@ const Search = () => {
               <img
                 className={styles.chatCharacter}
                 alt="Chat Character"
-                src="./../../../../public/logo@2x.png"
+                src="/logo@2x.png"
               />
             )}
             <div className={styles.chatContent}>{chat.content}</div>

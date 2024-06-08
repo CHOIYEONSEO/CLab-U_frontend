@@ -24,11 +24,11 @@ const ApplicationFormLab = () => {
     numMaster: "",
     numUnderGraduate: "",
     roomNo: "",
-    username: "",
-    password: "",
-    professorGoogleScholar: "",
+    googleScholarUrl: "",
     representativeName: "",
     campus: "",
+    username: "",
+    password: "",
   });
 
   const openFrame = useCallback(() => {
@@ -198,8 +198,8 @@ const ApplicationFormLab = () => {
             className={styles.scholarInput}
             placeholder="교수님 Google scolar 링크를 입력해 주세요"
             type="url"
-            name="professorGoogleScholar"
-            value={labform.professorGoogleScholar}
+            name="googleScholarUrl"
+            value={labform.googleScholarUrl}
             onChange={handleChange}
           />
           <b className={styles.googleScolar}>교수 Google scolar 링크</b>

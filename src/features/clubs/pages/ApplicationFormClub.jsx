@@ -17,11 +17,10 @@ const ApplicationFormClub = () => {
     homepageUrl: "",
     tags: [],
     location: "",
-    members: "",
+    numMembers: "",
+    representativeName: "",
     username: "",
     password: "",
-
-    representative: "",
   });
 
   const openFrame = useCallback(() => {
@@ -78,8 +77,8 @@ const ApplicationFormClub = () => {
             placeholder="몇명인지 입력해 주세요"
             type="number"
             min="0"
-            name="members"
-            value={clubform.members}
+            name="numMembers"
+            value={clubform.numMembers}
             onChange={handleChange}
           />
           <b className={styles.b1}>동아리 구성원 (명)</b>
@@ -114,8 +113,8 @@ const ApplicationFormClub = () => {
             className={styles.clubRepInput}
             placeholder="대표자 이름을 입력해 주세요"
             type="text"
-            name="representative"
-            value={clubform.representative}
+            name="representativeName"
+            value={clubform.representativeName}
             onChange={handleChange}
           />
           <b className={styles.b1}>대표자 이름</b>
