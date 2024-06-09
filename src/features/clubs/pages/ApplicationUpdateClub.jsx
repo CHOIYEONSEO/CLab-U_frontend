@@ -16,22 +16,39 @@ const ApplicationFormClub = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchUserNameAndClub = async () => {
+    const fetchUserName = async () => {
       try {
         const userResponse = await axios.get(`/api/users/me`);
-        const id = userResponse.group.id;
-        setClubId(id);
+        const id = userResponse.data.group.id;
+        setClubId(id); 
         console.log(id);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
-      setIsLoading(isLoading);
     };
-    fetchUserNameAndClub();
-    const { data: club, isLoading } = useFetchClub(clubId);
-    console.log(club);
-    setClubForm(club);
-  }, [clubId]);
+  
+    fetchUserName();
+  }, []); 
+  
+  useEffect(() => {
+    if (clubId) {
+      const fetchClub = async () => {
+        setIsLoading(true); 
+        try {
+          const { data: club, isLoading: isLoadingClub } = useFetchClub(clubId);
+          console.log(club);
+          setClubForm(club); 
+        } catch (error) {
+          console.error("Error fetching club data:", error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+  
+      fetchClub();
+    }
+  }, [clubId]); 
+  
 
   
   const [formData, setFormData] = useState("");
@@ -83,10 +100,7 @@ const ApplicationFormClub = () => {
   };
 
   return (
-    <div>
-      {isLoading ? (
-        <div>Loading</div>
-      ) : (
+
     <>
       <div className={styles.applicationFormClub}>
 
@@ -256,8 +270,8 @@ const ApplicationFormClub = () => {
         </PortalPopup>
       )}
     </>
-    )}
-    </div>
+    
+    
   );
 };
 
