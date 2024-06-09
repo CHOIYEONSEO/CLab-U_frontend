@@ -59,9 +59,8 @@ const ApplicationFormClub = () => {
           const data = response.data;
           console.log(data);
         
-          const club = data.club.find((club) => club.id === clubId);
+          const club = data.find((club) => club.id === clubId);
           console.log(club);
-          //setClubForm(club);
           setClubForm({
             ...clubform, 
             groupName: club.name,
