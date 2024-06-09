@@ -28,13 +28,13 @@ const ClubDetail = () => {
             alt="로고이미지" 
             src={club.logoUrl ? club.logoUrl : '/SKKU.webp'}
             />
-            
+
             <div className={styles.clubInfo}>
               <b className={styles.clubName}>
                 <p className={styles.title}>{club.name}</p>
               </b>
               <p className={styles.representInfo}>
-                <p className={styles.represent}>대표자 : {club.represent}</p>
+                <p className={styles.represent}>대표자 : {club.representativeName}</p>
                 <p className={styles.representEmail}>대표자 이메일 : {club.email}</p>
               </p>
               <a
@@ -61,7 +61,7 @@ const ClubDetail = () => {
             <div className={styles.clubMembers}>
               <b className={styles.sectionTitle}>구성원</b>
               <div className={styles.sectionContainer1} >
-                <p className={styles.memberText}>{club.members}</p>
+                <p className={styles.memberText}>{club.numMembers}</p>
               </div>
             </div>
             <div className={styles.clubTags}>

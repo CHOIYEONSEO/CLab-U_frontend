@@ -25,7 +25,7 @@ const LabDetail = () => {
             alt="로고이미지" 
             src={lab.logoUrl ? lab.logoUrl : '/SKKU.webp'}
             />
-            
+
             <div className={styles.labInfo}>
               <b className={styles.labName}>
                 <p className={styles.title}>{lab.name}</p>
@@ -33,9 +33,9 @@ const LabDetail = () => {
               <p className={styles.professorInfo}>
                 <p className={styles.professorName}>교수 : {lab.professor}</p>
                 <p className={styles.professorUrl}>
-                  교수 Google Scholar : {lab.scholarUrl}
+                  교수 Google Scholar : {lab.googleScholarUrl}
                 </p>
-                <p className={styles.represent}>대표자 : {lab.represent}</p>
+                <p className={styles.represent}>대표자 : {lab.representativeName}</p>
                 <p className={styles.representEmail}>대표자 이메일 : {lab.email}</p>
               </p>
               <a
