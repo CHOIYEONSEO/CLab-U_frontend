@@ -21,19 +21,6 @@ const AdminReject = ({ className = "", onClose, clubid }) => {
     setAdminRejectReasonOpen(true);
   }, []);
 
-  const handleReject = async () => {
-    try {
-      console.log("clubid: %d", clubid);
-      const response = await axios.post('/api/manage/decline', { groupId: clubid });
-      console.log(response.data);
-      alert('동아리가 반려되었습니다.');
-      navigate('/');
-    } catch (error) {
-      console.error('승인 요청 실패:', error);
-      alert('클럽 반려 요청에 실패했습니다.');
-    }
-  };
-
   return (
     <>
       <div className={[styles.adminReject, className].join(" ")}>
@@ -42,7 +29,7 @@ const AdminReject = ({ className = "", onClose, clubid }) => {
           <div className={styles.cancel} onClick={handleCancelClick}>
             <b className={styles.b1}>취소</b>
           </div>
-          <div className={styles.accept} onClick={handleReject}>
+          <div className={styles.accept} onClick={openAdminRejectReason}>
             <b className={styles.b1}>확인</b>
           </div>
         </div>
@@ -53,7 +40,7 @@ const AdminReject = ({ className = "", onClose, clubid }) => {
           placement="Centered"
           onOutsideClick={handleCancelClick}
         >
-          <AdminRejectReason onClose={handleCancelClick} />
+          <AdminRejectReason onClose={handleCancelClick} clubid={clubid}/>
         </PortalPopup>
       )}
     </>
