@@ -14,8 +14,11 @@ import LabList from "../features/labs/pages/LabList";
 import ClubList from "../features/clubs/pages/ClubList";
 import ClubDetail from "../features/clubs/pages/ClubDetail";
 import ApplicationFormLab from "../features/labs/pages/ApplicationFormLab";
+import ApplicationUpdateLab from "../features/labs/pages/ApplicationUpdateLab";
 import ApplicationFormClub from "../features/clubs/pages/ApplicationFormClub";
+import ApplicationUpdateClub from "../features/clubs/pages/ApplicationUpdateClub";
 import ApplicationLogin from "../features/auth/pages/ApplicationLogin";
+
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +31,10 @@ export const router = createBrowserRouter(
           path="form"
           element={<ApplicationFormLab></ApplicationFormLab>}
         ></Route>
+        <Route
+          path="update"
+          element={<ApplicationUpdateLab></ApplicationUpdateLab>}
+        ></Route>
         <Route path=":labId" element={<LabDetail></LabDetail>}></Route>
       </Route>
       <Route path="clubs">
@@ -35,6 +42,10 @@ export const router = createBrowserRouter(
         <Route
           path="form"
           element={<ApplicationFormClub></ApplicationFormClub>}
+        ></Route>
+        <Route
+          path="update"
+          element={<ApplicationUpdateClub></ApplicationUpdateClub>}
         ></Route>
         <Route path=":clubId" element={<ClubDetail></ClubDetail>}></Route>
       </Route>

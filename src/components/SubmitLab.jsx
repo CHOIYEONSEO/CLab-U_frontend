@@ -4,7 +4,7 @@ import styles from "./SubmitLab.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, labData, form }) => {
+const Submit = ({ className = "", onClose, labData, form, isUpdate }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -12,27 +12,49 @@ const Submit = ({ className = "", onClose, labData, form }) => {
   };
 
   const submitData = async () => {
-    try {
-      const response = await axios.post('/api/files/image', form, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      console.log(response.data);
-      labData.logoUrl = response.data.path;
-    } catch (error) {
-      console.error(error); 
-    }
+    if (isUpdate) {
+      try {
+        const response = await axios.put('/api/files/image', form, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        console.log(response.data);
+        labData.logoUrl = response.data.path;
+      } catch (error) {
+        console.error(error); 
+      }
 
-    try {
-      console.log(labData);
-      const response = await axios.post('/api/labs', labData);
-      console.log(response.data);
-      onClose();
-    } catch (error) {
-      console.error(error);
-    }
-  };
+      try {
+        console.log(labData);
+        const response = await axios.put('/api/labs', labData);
+        console.log(response.data);
+        onClose();
+      } catch (error) {
+        console.error(error);
+      }} else {
+        try {
+          const response = await axios.post('/api/files/image', form, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+          console.log(response.data);
+          labData.logoUrl = response.data.path;
+        } catch (error) {
+          console.error(error); 
+        }
+  
+        try {
+          console.log(labData);
+          const response = await axios.post('/api/labs', labData);
+          console.log(response.data);
+          onClose();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
 
   return (
     <div className={styles.Sumbit}>

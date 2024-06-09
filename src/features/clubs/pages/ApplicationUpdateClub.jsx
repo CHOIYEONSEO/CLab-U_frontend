@@ -5,23 +5,42 @@ import PortalPopup from "../../../components/PortalPopup";
 import SubmitClub from "../../../components/SubmitClub";
 import styles from "./ApplicationFormClub.module.css";
 
+
 const ApplicationFormClub = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
+  const [clubform, setClubForm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [userName, setUserName] = useState("");
+  const { clubId } = useParams();
 
-  const [clubform, setClubForm] = useState({
-    groupName: "",
-    logoUrl: "",
-    description: "",
-    email: "",
-    homepageUrl: "",
-    tags: [],
-    location: "",
-    numMembers: "",
-    representativeName: "",
-    username: "",
-    password: "",
-  });
+  useEffect(() => {
+    const fetchUserNameAndClub = async () => {
+      try {
+        const userResponse = await axios.get(`/api/users/me`);
+        const loginStatus = userResponse.data;
+        const name = loginStatus.name;
+        setUserName(name);
+        console.log(name);
+
+        const clubResponse = await axios.get(`/api/clubs/${clubId}`, {
+          params: { userName: name }
+        });
+        setClubForm(clubResponse.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchUserNameAndClub();
+  }, [clubId]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
@@ -236,7 +255,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitClub onClose={closeSubmit} clubData={clubform} form={formData} isUpdate={false}/>
+          <SubmitClub onClose={closeSubmit} clubData={clubform} form={formData} isUpdate={true}/>
         </PortalPopup>
       )}
     </>

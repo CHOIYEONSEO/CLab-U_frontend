@@ -4,7 +4,7 @@ import styles from "./SubmitClub.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, clubData, form }) => {
+const Submit = ({ className = "", onClose, clubData, form, isUpdate }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -12,26 +12,48 @@ const Submit = ({ className = "", onClose, clubData, form }) => {
   };
 
   const submitData = async () => {
-    try {
-      const response = await axios.post('/api/files/image', form, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      console.log(response.data);
-      clubData.logoUrl = response.data.path;
-    } catch (error) {
-      console.error(error); 
-    }
+    if (isUpdate) {
+      try {
+        const response = await axios.put('/api/files/image', form, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+        console.log(response.data);
+        clubData.logoUrl = response.data.path;
+      } catch (error) {
+        console.error(error); 
+      }
 
-    try {
-      console.log(clubData);
-      const response = await axios.post('/api/clubs', clubData);
-      console.log(response.data);
-      onClose();
-    } catch (error) {
-      console.error(error);
-    }
+      try {
+        console.log(clubData);
+        const response = await axios.put('/api/clubs', clubData);
+        console.log(response.data);
+        onClose();
+      } catch (error) {
+        console.error(error);
+      }} else {
+        try {
+          const response = await axios.post('/api/files/image', form, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+          console.log(response.data);
+          clubData.logoUrl = response.data.path;
+        } catch (error) {
+          console.error(error); 
+        }
+  
+        try {
+          console.log(clubData);
+          const response = await axios.post('/api/clubs', clubData);
+          console.log(response.data);
+          onClose();
+        } catch (error) {
+          console.error(error);
+        }
+      }
   };
 
   return (

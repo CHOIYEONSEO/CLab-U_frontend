@@ -10,26 +10,38 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
+  const [labform, setLabForm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+  const [userName, setUserName] = useState("");
+  const { labId } = useParams();
 
-  const [labform, setLabForm] = useState({
-    groupName: "",
-    logoUrl: "",
-    description: "",
-    email: "",
-    homepageUrl: "",
-    tags: [],
-    professor: "",
-    numPostDoc: "",
-    numPhd: "",
-    numMaster: "",
-    numUnderGraduate: "",
-    roomNo: "",
-    googleScholarUrl: "",
-    representativeName: "",
-    campus: "",
-    username: "",
-    password: "",
-  });
+  useEffect(() => {
+    const fetchUserNameAndLab = async () => {
+      try {
+        const userResponse = await axios.get(`/api/users/me`);
+        const loginStatus = userResponse.data;
+        const name = loginStatus.name;
+        setUserName(name);
+        console.log(name);
+
+        const labResponse = await axios.get(`/api/labs/${labId}`, {
+          params: { userName: name }
+        });
+        setLabForm(labResponse.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchUserNameAndLab();
+  }, [labId]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
@@ -333,7 +345,7 @@ const ApplicationFormLab = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitLab onClose={closeSubmit} labData={labform} form={formData} isUpdate={false}/>
+          <SubmitLab onClose={closeSubmit} labData={labform} form={formData} isUpdate={true}/>
         </PortalPopup>
       )}
     </>
