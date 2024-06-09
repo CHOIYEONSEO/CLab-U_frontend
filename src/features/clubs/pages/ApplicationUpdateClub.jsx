@@ -39,7 +39,7 @@ const ApplicationFormClub = () => {
     };
 
     fetchUserNameAndClub();
-  }, [clubId]);
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;
