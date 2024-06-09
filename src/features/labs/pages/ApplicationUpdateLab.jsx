@@ -10,7 +10,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
-  const [clubId, setClubId] = useState("");
+  const [labId, setLabId] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
   const [labform, setLabForm] = useState({
@@ -46,7 +46,7 @@ const ApplicationFormLab = () => {
   useEffect(() => {
     const fetchUserId = async () => {
       const userid = await getId();
-      setClubId(userid);
+      setLabId(userid);
       console.log(userid);
     };
   

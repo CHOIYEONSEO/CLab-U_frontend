@@ -53,7 +53,13 @@ const ApplicationFormClub = () => {
       const fetchClub = async () => {
         setIsLoading(true); 
         try {
-          const { data: club, isLoadingClub } = useFetchClub(clubId);
+          //const { data: club, isLoadingClub } = useFetchClub(clubId);
+
+          const response = await axios.get(`/api/manage/forms`);
+          const data = response.data;
+          console.log(data);
+        
+          const club = data.club.find((club) => club.id === clubId);
           console.log(club);
           //setClubForm(club);
           setClubForm({
