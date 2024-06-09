@@ -12,7 +12,17 @@ const ApplicationFormClub = () => {
   const [isSubmitOpen, setSubmitOpen] = useState(false);
 
   const [clubId, setClubId] = useState("");
-  const [clubform, setClubForm] = useState("");
+  const [clubform, setClubForm] = useState({
+    groupName: "",
+    logoUrl: "",
+    description: "",
+    email: "",
+    homepageUrl: "",
+    tags: [],
+    location: "",
+    numMembers: "",
+    representativeName: "",
+  });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -38,6 +48,18 @@ const ApplicationFormClub = () => {
           const { data: club, isLoading: isLoadingClub } = useFetchClub(clubId);
           console.log(club);
           setClubForm(club); 
+          setClubForm({
+            ...clubform, 
+            groupName: club.name,
+            logoUrl: club.logoUrl,
+            description: club.description,
+            email: club.email,
+            homepageUrl: club.homepageUrl,
+            tags: club.tags,
+            location: club.location,
+            numMembers: club.numMembers,
+            representativeName: club.representativeName,
+          });
         } catch (error) {
           console.error("Error fetching club data:", error);
         } finally {
@@ -214,32 +236,6 @@ const ApplicationFormClub = () => {
           <b className={styles.b1}>동아리 구성원 (명)</b>
         </div>
 
-        <div className={styles.labIdPassword}>
-          <div className={styles.labIdPasswordChild} />
-          <b className={styles.b14}>아이디</b>
-          <input
-            className={styles.idInput}
-            placeholder="아이디를 입력해 주세요"
-            type="text"
-            name="username"
-            value={clubform.username}
-            onChange={handleChange}
-          />
-          <div className={styles.labIdPasswordItem} />
-          <b className={styles.b16}>비밀번호</b>
-          <input
-            className={styles.pwInput}
-            placeholder="비밀번호를 입력해 주세요"
-            type="password"
-            name="password"
-            value={clubform.password}
-            onChange={handleChange}
-          />
-          <b className={styles.b1}>회원가입 아이디 및 비밀번호</b>
-          <div className={styles.div} onClick={openFrame}>
-            <b className={styles.b19}>아이디 중복 확인</b>
-          </div>
-        </div>
         <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b20}>제출</b>
         </div>
