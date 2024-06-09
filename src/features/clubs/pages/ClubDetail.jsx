@@ -22,7 +22,13 @@ const ClubDetail = () => {
       ) : (
         <div>
           <div className={styles.clubHeader}>
-            <img className={styles.clublogoIcon} alt="로고이미지" src={club.logoUrl}/>
+
+            <img 
+            className={styles.clublogoIcon} 
+            alt="로고이미지" 
+            src={club.logoUrl ? club.logoUrl : '/SKKU.webp'}
+            />
+            
             <div className={styles.clubInfo}>
               <b className={styles.clubName}>
                 <p className={styles.title}>{club.name}</p>

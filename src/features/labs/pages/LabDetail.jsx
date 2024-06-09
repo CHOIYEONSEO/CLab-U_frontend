@@ -19,7 +19,13 @@ const LabDetail = () => {
       ) : (
         <div>
           <div className={styles.labHeader}>
-            <img className={styles.lablogoIcon} alt="로고이미지" src={lab.logoUrl}/>
+
+            <img 
+            className={styles.lablogoIcon} 
+            alt="로고이미지" 
+            src={lab.logoUrl ? lab.logoUrl : '/SKKU.webp'}
+            />
+            
             <div className={styles.labInfo}>
               <b className={styles.labName}>
                 <p className={styles.title}>{lab.name}</p>
