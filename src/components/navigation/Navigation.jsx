@@ -28,9 +28,6 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
     try {
       const response = await axios.get(`/api/users/me`);
       const loginStatus = response.data;
-      console.log(loginStatus);
-      console.log(loginStatus.group.id);
-      console.log(loginStatus.group.professor);
       const name = loginStatus.name;
       console.log(name);
       return name;
