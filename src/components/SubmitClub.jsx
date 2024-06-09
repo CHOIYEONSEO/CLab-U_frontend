@@ -4,7 +4,7 @@ import styles from "./SubmitClub.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, clubData, form, isUpdate }) => {
+const Submit = ({ className = "", onClose, clubData, form, isUpdate, clubId }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -47,7 +47,7 @@ const Submit = ({ className = "", onClose, clubData, form, isUpdate }) => {
   
         try {
           console.log(clubData);
-          const response = await axios.post('/api/clubs', clubData);
+          const response = await axios.post(`/api/clubs/${clubId}`, clubData);
           console.log(response.data);
           onClose();
         } catch (error) {

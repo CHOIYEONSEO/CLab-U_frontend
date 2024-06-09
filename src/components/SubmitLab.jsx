@@ -4,7 +4,7 @@ import styles from "./SubmitLab.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, labData, form, isUpdate }) => {
+const Submit = ({ className = "", onClose, labData, form, isUpdate, labId }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -27,7 +27,7 @@ const Submit = ({ className = "", onClose, labData, form, isUpdate }) => {
 
       try {
         console.log(labData);
-        const response = await axios.put('/api/labs', labData);
+        const response = await axios.put(`/api/labs/${labId}`, labData);
         console.log(response.data);
         onClose();
       } catch (error) {

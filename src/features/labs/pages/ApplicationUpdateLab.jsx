@@ -62,7 +62,7 @@ const ApplicationFormLab = () => {
           const data = response.data;
           console.log(data);
         
-          const club = data.find((lab) => lab.id === labId);
+          const lab = data.find((lab) => lab.id === labId);
           console.log(lab);
           setLabForm({
             ...labform, 
@@ -396,7 +396,7 @@ const ApplicationFormLab = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitLab onClose={closeSubmit} labData={labform} form={formData} isUpdate={true}/>
+          <SubmitLab onClose={closeSubmit} labData={labform} form={formData} isUpdate={true} labId={labId}/>
         </PortalPopup>
       )}
     </>
