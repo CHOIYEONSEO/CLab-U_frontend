@@ -39,6 +39,8 @@
 
 .chatContent {
   line-height: 130%;
+  font-size: var(--font-size-base);
+  padding: 10px;
 }
 
 .inputfield {
@@ -85,5 +87,8 @@
 .chatCharacter {
   width: 40px;
   height: 40px;
+  margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 3px;
 }
