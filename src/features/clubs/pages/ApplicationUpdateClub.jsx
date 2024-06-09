@@ -53,7 +53,7 @@ const ApplicationFormClub = () => {
       const fetchClub = async () => {
         setIsLoading(true); 
         try {
-          const { data: club, isLoadingClub } = useFetchClub(string(clubId));
+          const { data: club, isLoadingClub } = useFetchClub(String(clubId));
           console.log(club);
           //setClubForm(club);
           setClubForm({
