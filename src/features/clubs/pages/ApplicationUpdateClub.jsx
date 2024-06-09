@@ -54,7 +54,7 @@ const ApplicationFormClub = () => {
         setIsLoading(true); 
         try {
 
-          const response = await axios.get(`/api/clubs`, {params:clubId});
+          const response = await axios.get(`/api/clubs`);
           const data = response.data;
           console.log(data);
         
