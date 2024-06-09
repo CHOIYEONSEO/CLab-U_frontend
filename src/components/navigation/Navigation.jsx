@@ -84,14 +84,6 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
         <NavLink className={styles.list} to="/labs">
           <div className={styles.list1}>List</div>
         </NavLink>
-        {/*{!(isLogined) && (
-        <NavLink className={styles.application} to="/labs/form">
-          <div className={styles.application1}>Application</div>
-        </NavLink>)}*/}
-        {/*{isLogined && (
-        <NavLink className={styles.application} to="/admin">
-          <div className={styles.application1}>Manage</div>
-        </NavLink>)}*/}
         {
           (name === 'clabu') ? (
             <NavLink className={styles.application} to="/admin">
@@ -99,7 +91,7 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
             </NavLink>
           ) : (
             isLogined ? (
-              <NavLink className={styles.application} to="/labs/form">
+              <NavLink className={styles.application} to="/labs/update">
                 <div className={styles.application1}>Update</div>
               </NavLink>
             ) : (

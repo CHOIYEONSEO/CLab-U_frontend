@@ -295,7 +295,7 @@ const ApplicationFormLab = () => {
         </div>
 
         <div className={styles.tab}>
-          <Link className={styles.club} to="/clubs/form">
+          <Link className={styles.club} to="/clubs/update">
             club
           </Link>
           <b className={styles.lab}>lab</b>
