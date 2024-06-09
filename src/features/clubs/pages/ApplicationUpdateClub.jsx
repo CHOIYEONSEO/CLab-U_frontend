@@ -274,7 +274,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitClub onClose={closeSubmit} clubData={clubform} form={formData} isUpdate={true}/>
+          <SubmitClub onClose={closeSubmit} clubData={clubform} form={formData} isUpdate={true} clubId={clubId}/>
         </PortalPopup>
       )}
     </>
