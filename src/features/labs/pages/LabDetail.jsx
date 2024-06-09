@@ -32,9 +32,9 @@ const LabDetail = () => {
               </b>
               <p className={styles.professorInfo}>
                 <p className={styles.professorName}>교수 : {lab.professor}</p>
-                <p className={styles.professorUrl}>
+                <a className={styles.professorUrl} href={lab.googleScholarUrl}>
                   교수 Google Scholar : {lab.googleScholarUrl}
-                </p>
+                </a>
                 <p className={styles.represent}>대표자 : {lab.representativeName}</p>
                 <p className={styles.representEmail}>대표자 이메일 : {lab.email}</p>
               </p>

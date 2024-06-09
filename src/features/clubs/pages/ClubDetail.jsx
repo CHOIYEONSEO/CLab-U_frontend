@@ -61,7 +61,7 @@ const ClubDetail = () => {
             <div className={styles.clubMembers}>
               <b className={styles.sectionTitle}>구성원</b>
               <div className={styles.sectionContainer1} >
-                <p className={styles.memberText}>{club.numMembers}</p>
+                <p className={styles.memberText}>{club.numMembers} 명</p>
               </div>
             </div>
             <div className={styles.clubTags}>
