@@ -40,6 +40,7 @@ const ApplicationFormClub = () => {
     const fetchUserId = async () => {
       const userid = await getId();
       setClubId(userid);
+      console.log(userid);
     };
   
     fetchUserId();
@@ -52,7 +53,7 @@ const ApplicationFormClub = () => {
         try {
           const { data: club, isLoading: isLoadingClub } = useFetchClub(clubId);
           console.log(club);
-          setClubForm(club); 
+          setClubForm(club);
           setClubForm({
             ...clubform, 
             groupName: club.name,
