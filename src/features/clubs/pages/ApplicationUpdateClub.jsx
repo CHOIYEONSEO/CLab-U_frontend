@@ -25,13 +25,13 @@ const ApplicationFormClub = () => {
       } catch (error) {
         console.error("Error fetching data:", error);
       }
+      setIsLoading(isLoading);
     };
     fetchUserNameAndClub();
     const { data: club, isLoading } = useFetchClub(clubId);
     console.log(club);
     setClubForm(club);
-    setIsLoading(isLoading);
-  }, []);
+  }, [clubId]);
 
   
   const [formData, setFormData] = useState("");
