@@ -43,41 +43,39 @@ const ApplicationFormClub = () => {
       const userid = await getId();
       setClubId(userid);
       console.log(userid);
+
+      if (clubId) {
+        const fetchClub = async () => {
+          setIsLoading(true); 
+          try {
+            const { data: club, isLoadingClub } = useFetchClub(clubId);
+            console.log(club);
+            //setClubForm(club);
+            setClubForm({
+              ...clubform, 
+              groupName: club.name,
+              logoUrl: club.logoUrl,
+              description: club.description,
+              email: club.email,
+              homepageUrl: club.homepageUrl,
+              tags: club.tags,
+              location: club.location,
+              numMembers: club.numMembers,
+              representativeName: club.representativeName,
+            });
+          } catch (error) {
+            console.error("Error fetching club data:", error);
+          } finally {
+            setIsLoading(false);
+          }
+        };
+    
+        fetchClub();
+      }
     };
   
     fetchUserId();
   }, []); 
-  
-  useEffect(() => {
-    if (clubId) {
-      const fetchClub = async () => {
-        setIsLoading(true); 
-        try {
-          const { data: club, isLoadingClub } = useFetchClub(String(clubId));
-          console.log(club);
-          //setClubForm(club);
-          setClubForm({
-            ...clubform, 
-            groupName: club.name,
-            logoUrl: club.logoUrl,
-            description: club.description,
-            email: club.email,
-            homepageUrl: club.homepageUrl,
-            tags: club.tags,
-            location: club.location,
-            numMembers: club.numMembers,
-            representativeName: club.representativeName,
-          });
-        } catch (error) {
-          console.error("Error fetching club data:", error);
-        } finally {
-          setIsLoading(false);
-        }
-      };
-  
-      fetchClub();
-    }
-  }, [clubId]); 
   
 
   

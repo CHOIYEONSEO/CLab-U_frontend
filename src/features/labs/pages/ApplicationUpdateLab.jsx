@@ -10,9 +10,38 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
-  const [labform, setLabForm] = useState("");
+  const [clubId, setClubId] = useState("");
+
   const [isLoading, setIsLoading] = useState(true);
-  const [userName, setUserName] = useState("");
+  const [labform, setLabForm] = useState({
+    groupName: "",
+    logoUrl: "",
+    description: "",
+    email: "",
+    homepageUrl: "",
+    tags: [],
+    professor: "",
+    numPostDoc: "",
+    numPhd: "",
+    numMaster: "",
+    numUnderGraduate: "",
+    roomNo: "",
+    googleScholarUrl: "",
+    representativeName: "",
+    campus: "",
+  });
+
+  const getId = async () => {
+    try {
+      const response = await axios.get(`/api/users/me`);
+      console.log(response);
+      const id = response.data.group.id;
+      console.log(id);
+      return id;
+    } catch (error) {
+      return false;
+    }
+  };
 
   useEffect(() => {
     const fetchUserNameAndLab = async () => {
