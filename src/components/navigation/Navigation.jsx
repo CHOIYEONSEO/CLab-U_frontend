@@ -16,6 +16,7 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
   const checkLoginStatus = async () => {
     try {
       const response = await axios.get(`/api/users/me`);
+      console.log(response);
       const loginStatus = response.data;
       const isLogined = loginStatus.activated;
       return isLogined;
