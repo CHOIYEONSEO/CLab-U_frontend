@@ -58,9 +58,12 @@ const ApplicationFormLab = () => {
       const fetchLab = async () => {
         setIsLoading(true); 
         try {
-          const { data: lab, isLoadingLab } = useFetchLab(labId);
-          console.log(club);
-          //setClubForm(club);
+          const response = await axios.get(`/api/labs`);
+          const data = response.data;
+          console.log(data);
+        
+          const club = data.find((lab) => lab.id === labId);
+          console.log(lab);
           setLabForm({
             ...labform, 
             groupName: lab.groupName,
