@@ -44,32 +44,51 @@ const ApplicationFormLab = () => {
   };
 
   useEffect(() => {
-    const fetchUserNameAndLab = async () => {
-      try {
-        const userResponse = await axios.get(`/api/users/me`);
-        const loginStatus = userResponse.data;
-        const name = loginStatus.name;
-        setUserName(name);
-        console.log(name);
-
-        const labResponse = await axios.get(`/api/labs`, {
-          params: { userName: name }
-        });
-        setLabForm(labResponse.data);
-        console.log(labform);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      } finally {
-        setIsLoading(false);
-      }
+    const fetchUserId = async () => {
+      const userid = await getId();
+      setClubId(userid);
+      console.log(userid);
     };
-
-    fetchUserNameAndLab();
-  }, [labId]);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  
+    fetchUserId();
+  }, []); 
+  
+  useEffect(() => {
+    if (labId) {
+      const fetchLab = async () => {
+        setIsLoading(true); 
+        try {
+          const { data: lab, isLoadingLab } = useFetchLab(labId);
+          console.log(club);
+          //setClubForm(club);
+          setLabForm({
+            ...labform, 
+            groupName: lab.groupName,
+            logoUrl: lab.logoUrl,
+            description: lab.description,
+            email: lab.email,
+            homepageUrl: lab.homepageUrl,
+            tags: lab.tags,
+            professor: lab.professor,
+            numPostDoc: lab.numPostDoc,
+            numPhd: lab.numPhd,
+            numMaster: lab.numMaster,
+            numUnderGraduate: lab.numUnderGraduate,
+            roomNo: lab.result,
+            googleScholarUrl: lab.googleScholarUrl,
+            representativeName: lab.representativeName,
+            campus: lab.campus,
+          });
+        } catch (error) {
+          console.error("Error fetching lab data:", error);
+        } finally {
+          setIsLoading(false);
+        }
+      };
+  
+      fetchLab();
+    }
+  }, [labId]); 
 
   const [formData, setFormData] = useState("");
 
