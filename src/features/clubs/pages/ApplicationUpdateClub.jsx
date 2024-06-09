@@ -9,41 +9,24 @@ import styles from "./ApplicationFormClub.module.css";
 const ApplicationFormClub = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
-  const [clubform, setClubForm] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-  const [userName, setUserName] = useState("");
+
+  const [clubId, setClubId] = useState("");
 
   useEffect(() => {
     const fetchUserNameAndClub = async () => {
       try {
         const userResponse = await axios.get(`/api/users/me`);
-        const loginStatus = userResponse.data;
-        const name = loginStatus.name;
-        setUserName(name);
-        console.log(name);
-        
-        const { data: clubResponse, isLoading } = useFetchClub(name);
-        console.log(clubResponse.data);
-        setClubForm(clubResponse.data);
-        /*
-        const clubResponse = await axios.get(`/api/clubs/${clubId}`, {
-          params: { userName: name }
-        });*/
-        setClubForm(clubResponse.data);
-        console.log(clubform);
+        const id = userResponse.group.id;
+        setClubId(id);
+        console.log(id);
       } catch (error) {
         console.error("Error fetching data:", error);
-      } finally {
-        setIsLoading(false);
       }
     };
-
     fetchUserNameAndClub();
   }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const { data: club, isLoading } = useFetchClub(clubId);
 
   const [formData, setFormData] = useState("");
 
