@@ -51,7 +51,7 @@ const ApplicationFormLab = () => {
     const { name, value } = e.target;
     
     if (name === "numPostDoc" || name === "numPhd" || name === "numMaster" || name === "numUnderGraduate") {
-      setClubForm(prevState => ({
+      setLabForm(prevState => ({
         ...prevState,
         [name]: parseInt(value, 10) || 0,
       }));
