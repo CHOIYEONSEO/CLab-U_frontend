@@ -12,6 +12,7 @@ const ApplicationFormClub = () => {
   const [isSubmitOpen, setSubmitOpen] = useState(false);
 
   const [clubId, setClubId] = useState("");
+  const [clubform, setClubForm] = useState("");
 
   useEffect(() => {
     const fetchUserNameAndClub = async () => {
@@ -25,9 +26,11 @@ const ApplicationFormClub = () => {
       }
     };
     fetchUserNameAndClub();
+    const { data: club, isLoading } = useFetchClub(clubId);
+    setClubForm(club);
   }, []);
 
-  const { data: clubform, isLoading } = useFetchClub(clubId);
+  
 
   const [formData, setFormData] = useState("");
 
