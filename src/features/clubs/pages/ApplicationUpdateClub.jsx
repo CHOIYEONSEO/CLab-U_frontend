@@ -28,6 +28,7 @@ const ApplicationFormClub = () => {
   const getId = async () => {
     try {
       const response = await axios.get(`/api/users/me`);
+      console.log(response);
       const id = response.data.group.id;
       console.log(id);
       return id;
