@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./AdminAccept.module.css";
 import axios from "axios";
+import { CloseButton } from "react-bootstrap";
 
 const AdminAccept = ({ className = "", onClose, clubid }) => {
   const handleCancelClick = () => {
@@ -12,7 +13,7 @@ const AdminAccept = ({ className = "", onClose, clubid }) => {
 
   const handleAccept = async () => {
     try {
-      console.log(clubid);
+      console.log("clubid: %d", clubid);
       const response = await axios.post('/api/manage/approve', { groupId: clubid });
       console.log(response.data);
       alert('동아리가 성공적으로 승인되었습니다.');

@@ -65,7 +65,6 @@ const AdminClub = () => {
             location: targetClub.location,
             numMembers: targetClub.numMembers,
             representativeName: targetClub.representativeName,
-            id: targetClub.id,
           });
         } else {
           console.warn(`Club with name ${name} not found`);
@@ -152,7 +151,7 @@ const AdminClub = () => {
           placement="Centered"
           onOutsideClick={closeAdminReject}
         >
-          <AdminReject onClose={closeAdminReject} />
+          <AdminReject onClose={closeAdminReject} clubid={id}/>
         </PortalPopup>
       )}
     </>
