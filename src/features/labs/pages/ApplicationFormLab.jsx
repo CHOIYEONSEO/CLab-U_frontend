@@ -30,6 +30,7 @@ const ApplicationFormLab = () => {
     username: "",
     password: "",
   });
+  const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -59,7 +60,20 @@ const ApplicationFormLab = () => {
     else if (name === "tags") {
       const tagsArray = value.split(',').map(tag => tag.trim());
       setLabForm({ ...labform, [name]: tagsArray });
-    } else {
+    }
+    else if (name === "logoUrl" && files && files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        setLabForm({ ...labform, [name]: event.target.result });
+      };
+      reader.readAsDataURL(files[0]);
+
+      const newFormData = new FormData();
+      newFormData.append('file', files[0], `${labform.groupName}.png`);
+      setFormData(newFormData);
+
+    }
+    else {
       setLabForm({ ...labform, [name]: value });
     }
   };
@@ -319,7 +333,7 @@ const ApplicationFormLab = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitLab onClose={closeSubmit} labData={labform} />
+          <SubmitLab onClose={closeSubmit} labData={labform} form={formData}/>
         </PortalPopup>
       )}
     </>

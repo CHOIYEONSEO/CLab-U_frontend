@@ -4,7 +4,7 @@ import styles from "./SubmitLab.module.css";
 import axios from "axios";
 
 
-const Submit = ({ className = "", onClose, labData }) => {
+const Submit = ({ className = "", onClose, labData, form }) => {
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
@@ -12,6 +12,18 @@ const Submit = ({ className = "", onClose, labData }) => {
   };
 
   const submitData = async () => {
+    try {
+      const response = await axios.post('/api/files/image', form, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log(response.data);
+      labData.logoUrl = response.data.path;
+    } catch (error) {
+      console.error(error); 
+    }
+
     try {
       console.log(labData);
       const response = await axios.post('/api/labs', labData);

@@ -22,6 +22,7 @@ const ApplicationFormClub = () => {
     username: "",
     password: "",
   });
+  const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
     setFrameOpen(true);
@@ -51,29 +52,23 @@ const ApplicationFormClub = () => {
     else if (name === "tags") {
       const tagsArray = value.split(',').map(tag => tag.trim());
       setClubForm({ ...clubform, [name]: tagsArray });
-    } 
+    }
     else if (name === "logoUrl" && files && files[0]) {
       const reader = new FileReader();
       reader.onload = function(event) {
         setClubForm({ ...clubform, [name]: event.target.result });
       };
       reader.readAsDataURL(files[0]);
-    } 
+
+      const newFormData = new FormData();
+      newFormData.append('file', files[0], `${clubform.groupName}.png`);
+      setFormData(newFormData);
+
+    }
     else {
       setClubForm({ ...clubform, [name]: value });
     }
   };
-
-
-  let [logoImg, setImg] = useState("");
-
-  const setViewImg = (e) => {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      setImg(e.target.result);
-    };
-    reader.readAsDataURL(e.target.files[0]);
-  }
 
   return (
     <>
@@ -241,7 +236,7 @@ const ApplicationFormClub = () => {
           placement="Centered"
           onOutsideClick={closeSubmit}
         >
-          <SubmitClub onClose={closeSubmit} clubData={clubform} />
+          <SubmitClub onClose={closeSubmit} clubData={clubform} form={formData}/>
         </PortalPopup>
       )}
     </>
