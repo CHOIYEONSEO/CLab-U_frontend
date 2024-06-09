@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import SubmitClub from "../../../components/SubmitClub";
