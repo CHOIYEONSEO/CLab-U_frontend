@@ -20,7 +20,7 @@ const Submit = ({ className = "", onClose, clubData }) => {
       console.error(error);
       console.error(error.message);
     }
-    /*const formData = new FormData();
+    const formData = new FormData();
     if (clubData.logoUrl) {
       formData.append('file', clubData.logoUrl);
     }
@@ -33,7 +33,7 @@ const Submit = ({ className = "", onClose, clubData }) => {
       console.log(response.data);
     } catch (error) {
       console.error(error); 
-    }*/
+    }
   };
 
   return (

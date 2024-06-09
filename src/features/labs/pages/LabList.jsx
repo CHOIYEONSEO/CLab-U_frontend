@@ -87,7 +87,7 @@ const LabList = () => {
               <img
                 style={{ maxHeight: "100%", maxWidth: "100%" }}
                 alt=""
-                src={lab.logoUrl}
+                src={lab.logoUrl ? lab.logoUrl : '/SKKU.webp'}
               />
               <div>{lab.name}</div>
             </Link>

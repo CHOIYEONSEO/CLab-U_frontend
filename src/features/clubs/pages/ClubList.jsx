@@ -93,7 +93,7 @@ const ClubList = () => {
               <img
                 style={{ maxHeight: "100%", maxWidth: "100%" }}
                 alt=""
-                src={club.logoUrl}
+                src={club.logoUrl ? club.logoUrl : '/SKKU.webp'}
               />
               <div>{club.name}</div>
             </Link>

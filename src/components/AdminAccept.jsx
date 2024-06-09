@@ -2,9 +2,10 @@ import { NavLink, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./AdminAccept.module.css";
 import axios from "axios";
-import { CloseButton } from "react-bootstrap";
 
 const AdminAccept = ({ className = "", onClose, clubid }) => {
+  const navigate = useNavigate();
+
   const handleCancelClick = () => {
     if (onClose) {
       onClose();
