@@ -33,7 +33,7 @@ const ApplicationLogin = () => {
       const response = await axios.post(`/api/auth/login`, logInForm);
       if (response.status === 200) {
         window.alert("로그인 성공");
-        navigate("/admin");
+        navigate("/");
         window.location.reload(); //임시방편. Manage로 바뀌는데 지연있음.
       }
     } catch (error) {
