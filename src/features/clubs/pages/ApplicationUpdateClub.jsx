@@ -25,19 +25,24 @@ const ApplicationFormClub = () => {
   });
   const [isLoading, setIsLoading] = useState(true);
 
+  const getId = async () => {
+    try {
+      const response = await axios.get(`/api/users/me`);
+      const id = response.group.id;
+      console.log(id);
+      return id;
+    } catch (error) {
+      return false;
+    }
+  };
+
   useEffect(() => {
-    const fetchUserName = async () => {
-      try {
-        const userResponse = await axios.get(`/api/users/me`);
-        const id = userResponse.data.group.id;
-        setClubId(id); 
-        console.log(id);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+    const fetchUserId = async () => {
+      const userid = await getName();
+      setClubId(userid);
     };
   
-    fetchUserName();
+    fetchUserId();
   }, []); 
   
   useEffect(() => {
