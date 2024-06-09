@@ -27,7 +27,7 @@ const ApplicationFormClub = () => {
     fetchUserNameAndClub();
   }, []);
 
-  const { data: club, isLoading } = useFetchClub(clubId);
+  const { data: clubform, isLoading } = useFetchClub(clubId);
 
   const [formData, setFormData] = useState("");
 
