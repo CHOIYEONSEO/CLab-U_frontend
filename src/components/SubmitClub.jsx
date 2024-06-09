@@ -27,7 +27,7 @@ const Submit = ({ className = "", onClose, clubData, form, isUpdate, clubId }) =
 
       try {
         console.log(clubData);
-        const response = await axios.put('/api/clubs', clubData);
+        const response = await axios.put(`/api/clubs/${clubId}`, clubData);
         console.log(response.data);
         onClose();
       } catch (error) {
@@ -47,7 +47,7 @@ const Submit = ({ className = "", onClose, clubData, form, isUpdate, clubId }) =
   
         try {
           console.log(clubData);
-          const response = await axios.post(`/api/clubs/${clubId}`, clubData);
+          const response = await axios.post('/api/clubs', clubData);
           console.log(response.data);
           onClose();
         } catch (error) {
