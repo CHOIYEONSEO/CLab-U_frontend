@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import SubmitLab from "../../../components/SubmitLab";
@@ -13,7 +13,6 @@ const ApplicationFormLab = () => {
   const [labform, setLabForm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [userName, setUserName] = useState("");
-  const { labId } = useParams();
 
   useEffect(() => {
     const fetchUserNameAndLab = async () => {
@@ -24,7 +23,7 @@ const ApplicationFormLab = () => {
         setUserName(name);
         console.log(name);
 
-        const labResponse = await axios.get(`/api/labs/${labId}`, {
+        const labResponse = await axios.get(`/api/labs`, {
           params: { userName: name }
         });
         setLabForm(labResponse.data);

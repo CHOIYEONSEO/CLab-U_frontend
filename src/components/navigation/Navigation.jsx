@@ -91,11 +91,11 @@ const Navigation = ({ className = "", logIn, account1, logo }) => {
             </NavLink>
           ) : (
             isLogined ? (
-              <NavLink className={styles.application} to="/labs/update">
+              <NavLink className={styles.application} to="/clubs/update">
                 <div className={styles.application1}>Update</div>
               </NavLink>
             ) : (
-              <NavLink className={styles.application} to="/labs/form">
+              <NavLink className={styles.application} to="/clubs/form">
                 <div className={styles.application1}>Application</div>
               </NavLink>
             )

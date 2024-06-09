@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Frame from "../../../components/Frame";
 import PortalPopup from "../../../components/PortalPopup";
 import SubmitClub from "../../../components/SubmitClub";
@@ -12,7 +12,6 @@ const ApplicationFormClub = () => {
   const [clubform, setClubForm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [userName, setUserName] = useState("");
-  const { clubId } = useParams();
 
   useEffect(() => {
     const fetchUserNameAndClub = async () => {
