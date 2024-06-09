@@ -23,10 +23,14 @@ const ApplicationFormClub = () => {
         setUserName(name);
         console.log(name);
 
+        const { data: clubResponse, isLoading } = useFetchClub(name);
+        setClubForm(clubResponse.data);
+        /*
         const clubResponse = await axios.get(`/api/clubs/${clubId}`, {
           params: { userName: name }
-        });
+        });*/
         setClubForm(clubResponse.data);
+        console.log(clubform);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
