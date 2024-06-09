@@ -13,6 +13,7 @@ const ApplicationFormClub = () => {
 
   const [clubId, setClubId] = useState("");
   const [clubform, setClubForm] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserNameAndClub = async () => {
@@ -28,10 +29,10 @@ const ApplicationFormClub = () => {
     fetchUserNameAndClub();
     const { data: club, isLoading } = useFetchClub(clubId);
     setClubForm(club);
+    setIsLoading(isLoading);
   }, []);
 
   
-
   const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
