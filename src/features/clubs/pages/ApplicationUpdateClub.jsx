@@ -38,7 +38,7 @@ const ApplicationFormClub = () => {
 
   useEffect(() => {
     const fetchUserId = async () => {
-      const userid = await getName();
+      const userid = await getId();
       setClubId(userid);
     };
   
