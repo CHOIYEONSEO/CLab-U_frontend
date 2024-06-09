@@ -31,7 +31,7 @@ const ApplicationFormClub = () => {
   }, []); 
   
   useEffect(() => {
-    if (clubId) { 
+    if (clubId) {
       const fetchClub = async () => {
         setIsLoading(true); 
         try {
@@ -100,10 +100,7 @@ const ApplicationFormClub = () => {
   };
 
   return (
-    <div>
-      {isLoading ? (
-        <div>Loading</div>
-      ) : (
+
     <>
       <div className={styles.applicationFormClub}>
 
@@ -273,8 +270,8 @@ const ApplicationFormClub = () => {
         </PortalPopup>
       )}
     </>
-    )}
-    </div>
+    
+    
   );
 };
 
