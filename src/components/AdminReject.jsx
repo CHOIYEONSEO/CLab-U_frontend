@@ -1,4 +1,5 @@
-import { useState, useCallback, useNavigate } from "react";
+import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import AdminRejectReason from "./AdminRejectReason";
 import PortalPopup from "./PortalPopup";
 import PropTypes from "prop-types";
