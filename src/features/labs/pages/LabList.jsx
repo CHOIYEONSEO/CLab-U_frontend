@@ -55,7 +55,7 @@ const LabList = () => {
                 alt=""
                 src={lab.logoUrl ? lab.logoUrl : '/SKKU.webp'}
               />
-              <div>{lab.name}</div>
+              <div className={styles.gridName}>{lab.name}</div>
             </Link>
           ))}
         </div>

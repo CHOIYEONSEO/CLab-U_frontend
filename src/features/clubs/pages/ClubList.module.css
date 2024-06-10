@@ -81,11 +81,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, 290px);
+  gap: 70px;
   text-align: center;
   justify-items: center;
-  width: 100%;
+  width: 90%;
+  margin-top: 50px;
 }
 
 .grid a {
@@ -97,9 +98,17 @@
 }
 
 .grid img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 260px;
+  height: 200px;
+  object-fit: contain;
+  padding: 13px;
   margin-bottom: 10px;
+  border-radius: var(--br-lgi-4);
+  border: 2.2px solid rgba(38, 72, 49, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.gridName{
+  width: 260px;
+  text-align: right;
 }

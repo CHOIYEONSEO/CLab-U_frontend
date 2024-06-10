@@ -57,7 +57,7 @@ const ClubList = () => {
                 alt=""
                 src={club.logoUrl ? club.logoUrl : '/SKKU.webp'}
               />
-              <div>{club.name}</div>
+              <div className={styles.gridName}>{club.name}</div>
             </Link>
           ))}
         </div>
