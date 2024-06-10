@@ -104,7 +104,7 @@ const AdminLab = () => {
         </div>
         <div className={styles.labDescription}>
           <div className={styles.profNameChild} />
-          <b className={styles.b2}>{labform.description}</b>
+          <b className={styles.b2_1}>{labform.description}</b>
           <b className={styles.googleScolar}>연구실 설명</b>
         </div>
         <div className={styles.labTag}>
