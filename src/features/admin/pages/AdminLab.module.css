@@ -78,7 +78,7 @@
   box-sizing: border-box;
   width: 95%;
   min-height: 180px;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .labLocation,
