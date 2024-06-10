@@ -4,6 +4,7 @@ body {
   margin: 0;
   height: 100%;
   line-height: normal;
+  background-color: var(--color-floralwhite);
 }
 :root {
   /* fonts */
@@ -65,7 +66,6 @@ body {
 
 main {
   flex: 1;
-  background-color: var(--color-floralwhite);
 
   display: flex;
   flex-direction: column;
