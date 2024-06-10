@@ -132,7 +132,7 @@
   top: 422px;
 }
 .labRepName {
-  top: 1616px;
+  top: 1666px;
 }
 .googleScolar {
   position: absolute;
@@ -147,7 +147,7 @@
   box-sizing: border-box;
 }
 .profName2 {
-  top: 1417px;
+  top: 1467px;
   left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
@@ -260,7 +260,7 @@
 .labPage,
 .labRepEmail {
   position: absolute;
-  top: 2213px;
+  top: 2263px;
   left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
@@ -272,11 +272,11 @@
 }
 .labPage,
 .labRepEmail {
-  top: 2014px;
+  top: 2064px;
   height: 180px;
 }
 .labRepEmail {
-  top: 1815px;
+  top: 1865px;
 }
 .adminLab {
   width: 80%;
