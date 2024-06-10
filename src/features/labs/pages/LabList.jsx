@@ -21,40 +21,7 @@ const LabList = () => {
   useEffect(() => {
     console.log(labs);
   }, [labs]);
-
-  // const labs = [
-  //   {
-  //     id: 1,
-  //     name: "인공지능을 활용한 보안",
-  //     logoUrl: "/@2x.png",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "데이터 기반 융합 보안",
-  //     logoUrl: "/-2@2x.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "컴퓨팅 플랫폼",
-  //     logoUrl: "/-3@2x.png",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "시스템 보안",
-  //     logoUrl: "/-4@2x.png",
-  //   },
-  //   {
-  //     id: 5,
-  //     name: "소프트웨어 공학",
-  //     logoUrl: "/-5@2x.png",
-  //   },
-  //   {
-  //     id: 6,
-  //     name: "자연어 처리 연구실",
-  //     logoUrl: "/-6@2x.png",
-  //   },
-  // ];
-
+  
   return (
     <div className={styles.labList}>
       <div className={styles.tab}>
@@ -85,7 +52,6 @@ const LabList = () => {
           {labs.map((lab) => (
             <Link key={lab.id} to={`/labs/${lab.id}`}>
               <img
-                style={{ maxHeight: "100%", maxWidth: "100%" }}
                 alt=""
                 src={lab.logoUrl ? lab.logoUrl : '/SKKU.webp'}
               />
