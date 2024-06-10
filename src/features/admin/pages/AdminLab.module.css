@@ -4,7 +4,7 @@
   line-height: 130%;
 }
 .accept {
-  top: 2660px;
+  top: 2710px;
   left: 55%;
   border-radius: var(--br-xl);
   background-color: var(--color-cornflowerblue);
@@ -29,7 +29,7 @@
   line-height: 130%;
 }
 .reject {
-  top: 2660px;
+  top: 2710px;
   left: 25%;
   border-radius: var(--br-xl);
   background-color: var(--color-lightcoral);
@@ -288,6 +288,7 @@
   font-size: var(--font-size-3xl);
   color: var(--color-black);
   font-family: var(--font-inter);
+  margin-bottom: 100px;
 }
 
 
