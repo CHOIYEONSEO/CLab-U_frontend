@@ -744,7 +744,7 @@ border-color: transparent;
   font-size: var(--font-size-5xl);
 }
 .applicationFormLab {
-  width: 100%;
+  width: 80%;
   position: absolute;
   background-color: var(--color-floralwhite);
   height: 3300px;

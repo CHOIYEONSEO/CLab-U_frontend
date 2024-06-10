@@ -454,7 +454,7 @@ border-color: transparent;
 }
 
 .applicationFormClub {
-  width: 100%;
+  width: 80%;
   position: absolute;
   background-color: var(--color-floralwhite);
   height: 2800px;
