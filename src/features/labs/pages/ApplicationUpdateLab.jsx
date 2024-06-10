@@ -10,9 +10,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 const ApplicationFormLab = () => {
   const [isFrameOpen, setFrameOpen] = useState(false);
   const [isSubmitOpen, setSubmitOpen] = useState(false);
-  const [labId, setLabId] = useState("");
 
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [labId, setLabId] = useState("");
   const [labform, setLabForm] = useState({
     groupName: "",
     logoUrl: "",
@@ -30,6 +30,7 @@ const ApplicationFormLab = () => {
     representativeName: "",
     campus: "",
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   const getId = async () => {
     try {
@@ -112,7 +113,7 @@ const ApplicationFormLab = () => {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, files } = e.target;
     
     if (name === "numPostDoc" || name === "numPhd" || name === "numMaster" || name === "numUnderGraduate") {
       setLabForm(prevState => ({
@@ -143,16 +144,6 @@ const ApplicationFormLab = () => {
 
   const [selectedCampusTitle, setSelectedCampusTitle] = useState("캠퍼스 선택");
 
-  let [logoImg, setImg] = useState("");
-
-  const setViewImg = (e) => {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      setImg(e.target.result);
-    };
-    reader.readAsDataURL(e.target.files[0]);
-  }
-
   return (
     <>
       <div className={styles.applicationFormLab}>
@@ -162,9 +153,10 @@ const ApplicationFormLab = () => {
           className={styles.logob} 
           type="file" 
           accept='image/*'
-          onChange={setViewImg}
+          name="logoUrl"
+          onChange={handleChange}
           />
-        <img className={styles.labLogo1} src={logoImg}/>
+        <img className={styles.labLogo1} src={labform.logoUrl}/>
         <b className={styles.logob1}>연구실 로고</b>
        </div>
        <div className={styles.labName}>

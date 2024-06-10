@@ -83,8 +83,6 @@ const ApplicationFormClub = () => {
     }
   }, [clubId]); 
   
-
-  
   const [formData, setFormData] = useState("");
 
   const openFrame = useCallback(() => {
@@ -132,6 +130,16 @@ const ApplicationFormClub = () => {
       setClubForm({ ...clubform, [name]: value });
     }
   };
+
+  let [logoImg, setImg] = useState("");
+
+  const setViewImg = (e) => {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      setImg(e.target.result);
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  }
 
   return (
 
