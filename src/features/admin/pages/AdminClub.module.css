@@ -20,6 +20,18 @@
   width: 1150px;
   height: 51px;
 }
+
+.b_1{
+  position: absolute;
+  line-height: 130%;
+  top: 102px;
+  left: 23px;
+  display: flex;
+  align-items: center;
+  width: 1150px;
+  height: 51px;
+}
+
 .b1 {
   top: 26px;
   left: 27px;

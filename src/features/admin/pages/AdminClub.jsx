@@ -94,7 +94,7 @@ const AdminClub = () => {
         </div>
         <div className={styles.clubDescription}>
           <div className={styles.clubMembersChild} />
-          <b className={styles.b}>{clubform.description}</b>
+          <b className={styles.b_1}>{clubform.description}</b>
           <b className={styles.b1}>동아리 설명</b>
         </div>
         <div className={styles.clubTag}>
