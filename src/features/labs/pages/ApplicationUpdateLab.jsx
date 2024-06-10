@@ -68,7 +68,7 @@ const ApplicationFormLab = () => {
           console.log(lab);
           setLabForm({
             ...labform, 
-            groupName: lab.groupName,
+            groupName: lab.name,
             logoUrl: lab.logoUrl,
             description: lab.description,
             email: lab.email,
@@ -83,6 +83,7 @@ const ApplicationFormLab = () => {
             googleScholarUrl: lab.googleScholarUrl,
             representativeName: lab.representativeName,
             campus: lab.campus,
+            roomNo: lab.roomNo,
           });
         } catch (error) {
           console.error("Error fetching lab data:", error);
@@ -343,32 +344,7 @@ const ApplicationFormLab = () => {
           </Link>
           <b className={styles.lab}>lab</b>
         </div>
-        <div className={styles.labIdPassword}>
-          <div className={styles.labIdPasswordChild} />
-          <b className={styles.b37}>아이디</b>
-          <input
-            className={styles.idInput}
-            placeholder="아이디를 입력해 주세요"
-            type="text"
-            name="username"
-            value={labform.username}
-            onChange={handleChange}
-          />
-          <div className={styles.labIdPasswordItem} />
-          <b className={styles.b39}>비밀번호</b>
-          <input
-            className={styles.pwInput}
-            placeholder="비밀번호를 입력해 주세요"
-            type="password"
-            name="password"
-            value={labform.password}
-            onChange={handleChange}
-          />
-          <b className={styles.googleScolar}>회원가입 아이디 및 비밀번호</b>
-          <div className={styles.div3} onClick={openFrame}>
-            <b className={styles.b42}>아이디 중복 확인</b>
-          </div>
-        </div>
+
         <div className={styles.applicationFormLabChild} />
         <div className={styles.submit} onClick={openSubmit}>
           <b className={styles.b43}>제출</b>
