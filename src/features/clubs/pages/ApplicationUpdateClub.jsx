@@ -67,7 +67,7 @@ const ApplicationFormClub = () => {
             description: club.description,
             email: club.email,
             homepageUrl: club.homepageUrl,
-            tags: club.tags,
+            tags: club.tags.split(','),
             location: club.location,
             numMembers: club.numMembers,
             representativeName: club.representativeName,
