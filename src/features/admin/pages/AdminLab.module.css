@@ -64,12 +64,12 @@
 .b2_1{
   position: absolute;
   line-height: 130%;
-  top: 102px;
+  top: 64px;
   left: 23px;
   display: flex;
-  align-items: center;
-  width: 1150px;
-  height: 30px;
+  width: 98%;
+  height: 90px;
+  overflow-y: auto;
 }
 
 .b3 {
@@ -89,8 +89,7 @@
   border: 1px solid var(--color-darkgray-100);
   box-sizing: border-box;
   width: 95%;
-  min-height: 180px;
-  overflow-y: auto;
+  height: 230px; /*180*/
 }
 
 .labLocation,
