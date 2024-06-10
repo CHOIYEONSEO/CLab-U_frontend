@@ -1,8 +1,7 @@
 .labDetail {
-  width: 100%;
+  width: 85%;
   position: relative;
   background-color: var(--color-floralwhite);
-  overflow-y: auto;
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--color-black);
@@ -23,16 +22,17 @@
   width: 300px;
   height: 300px;
   border-radius: 19.37px;
-  object-fit: cover;
-  opacity: 0.8;
+  object-fit: contain;
   margin-right: 40px;
   border: 1.6px solid var(--color-darkslategray-200);
+  padding: 20px;
 }
 
 .labInfo {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 800px;
+  margin-left: 20px;
 }
 
 .labName {
@@ -41,7 +41,8 @@
 }
 
 .title{
-  margin: 0px;
+  margin-top: 15px;
+  margin-bottom: 28px;
 }
 
 .professorInfo {
@@ -53,23 +54,34 @@
   margin-bottom: 5px;
 }
 
+.professorUrl:hover{
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .represent {
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
 .labWebsite {
   line-height: 130%;
   margin-bottom: 10px;
-  color: var();
+  color: rgba(14, 52, 27, 0.7);
   font-size: var(--font-size-5xl);
+}
+
+.labWebsite:hover {
+  text-decoration: underline;
 }
 
 .labLocation {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 440px;
   text-align: right;
   margin-bottom: 135px;
+  padding: 0px 80px;
 }
 
 .locationText {
