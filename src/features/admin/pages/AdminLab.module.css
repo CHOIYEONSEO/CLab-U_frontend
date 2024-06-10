@@ -68,7 +68,19 @@
   width: 134px;
   height: 29px;
 }
-.labDescription,
+.labDescription {
+  position: absolute;
+  top: 621px;
+  left: 2.5%;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  border: 1px solid var(--color-darkgray-100);
+  box-sizing: border-box;
+  width: 95%;
+
+  overflow: hidden;
+}
+
 .labLocation,
 .labName,
 .labRepName,
@@ -85,20 +97,20 @@
   height: 180px;
   overflow: hidden;
 }
-.labDescription,
+
 .labLocation,
 .labName,
 .labRepName,
 .labTag {
   top: 1019px;
 }
-.labDescription,
+
 .labName,
 .labRepName,
 .labTag {
   top: 820px;
 }
-.labDescription,
+
 .labName,
 .labRepName {
   top: 621px;
