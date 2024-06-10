@@ -80,6 +80,7 @@
   width: 134px;
   height: 29px;
 }
+
 .labDescription {
   position: absolute;
   top: 621px;
@@ -98,7 +99,7 @@
 .labTag,
 .profName {
   position: absolute;
-  top: 1218px;
+  top: 1268px;
   left: 2.5%;
   border-radius: var(--br-xl);
   background-color: var(--color-whitesmoke-100);
@@ -113,13 +114,13 @@
 .labName,
 .labRepName,
 .labTag {
-  top: 1019px;
+  top: 1069px;
 }
 
 .labName,
 .labRepName,
 .labTag {
-  top: 820px;
+  top: 870px;
 }
 
 .labName,
