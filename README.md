@@ -11,5 +11,6 @@ npm run dev
 ```
 <br>
 
-## SRS
+## 소프트웨어 요구사항 명세서(SRS)
+CLab:U 서비스의 SRS입니다.
 [Team9_ClabU_SRS.pdf](https://github.com/user-attachments/files/19725176/Team9_ClabU_SRS.pdf)
